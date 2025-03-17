@@ -2,23 +2,27 @@ body {
   font-family: Playfair sans-serif;
   display: flex;
   justify-content: center;
-  background-color: grey;
+  background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  padding-bottom: 50px;
 }
 
 #root {
-  background-color: white;
+  background-color: rgb(225, 223, 223);
   width: 600px;
+  min-height: 100vh;
   margin-top: 20px;
   border: solid rgb(242, 242, 242) 5px;
   border-radius: 20px;
   overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.448);
 }
 
 .journal-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: tomato;
+  background-color: rgb(216, 85, 62);
   width: 100%;
   height: 60px;
 }
