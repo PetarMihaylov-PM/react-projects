@@ -1,0 +1,35 @@
+body {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+
+#root {
+  background-color: white;
+  width: 600px;
+  height: 800px;
+  margin-top: 20px;
+  border: solid rgb(242, 242, 242) 5px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.journal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  width: 100%;
+  height: 60px;
+}
+
+.journal-header img {
+  width: 30px;
+  padding-right: 10px;
+}
+
+.journal-header span {
+  font-size: 16px;
+  color: white;
+}
