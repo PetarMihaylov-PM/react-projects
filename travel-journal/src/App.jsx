@@ -4,16 +4,14 @@ import travelData from '/src/data/data.js';
 
 export default function App() {
 
-  const entryData = travelData.map(destination => {
-  const {coutry, dates, googleMapsLink, img, text, title, id} = destination;
+  const entryData = travelData.map(entry => {
     return (
       <Entry 
-         key={id}
-         entry= {destination}
+         key={entry.id}
+         {...entry}
       />
     )
   })
-  console.log(entryData);
   return (
     <>
       <JournalHeader />
