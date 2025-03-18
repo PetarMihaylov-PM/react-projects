@@ -10,7 +10,6 @@ body {
 #root {
   background-color: rgb(225, 223, 223);
   width: 600px;
-  min-height: 100vh;
   margin-top: 20px;
   border: solid rgb(242, 242, 242) 5px;
   border-radius: 20px;
