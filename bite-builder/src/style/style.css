@@ -42,7 +42,7 @@ body {
 
 .inputAndButton input {
   margin-right: 10px;
-  width: 280px;
+  width: 300px;
   padding: 6px;
   border: solid rgba(128, 128, 128, 0.704) 1px;
   border-radius: 5px;
@@ -55,8 +55,15 @@ body {
 .inputAndButton button {
   color: white;
   background-color: black;
-  width: 150px;
-  padding: 6px;
+  padding: 6px 25px;
   border-radius: 5px;
   border: solid 1px black;
+}
+
+.ingredients-container {
+  padding-top: 10px;
+}
+
+.ingredients-container h1 {
+  margin-left: 10px;
 }
