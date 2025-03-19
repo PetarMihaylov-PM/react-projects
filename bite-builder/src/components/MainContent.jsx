@@ -12,11 +12,10 @@ export default function MainContent() {
   function handleSubmit(event){
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const newIngredient = formData.get('ingredient'); // using the name key of the form;
-    setIngredients(prevIngtedients => {
-      return[...prevIngtedients, newIngredient]
-    });
+    const newIngredient = formData.get('ingredient');
+    setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
   }
+
 
   return(
     <>

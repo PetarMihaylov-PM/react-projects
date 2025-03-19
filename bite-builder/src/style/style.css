@@ -19,13 +19,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(101, 219, 166);
-  padding: 10px;
+  background-color: rgb(200, 236, 220);
+  
   border-bottom: solid rgba(195, 195, 195, 0.671) 3px;
 }
 
 .app-header img {
-  width: 60px;
+  width: 80px;
 }
 
 .mainContent {
