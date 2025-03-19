@@ -21,7 +21,7 @@ body {
   justify-content: center;
   background-color: rgb(101, 219, 166);
   padding: 10px;
-  border-bottom: solid rgba(159, 159, 159, 0.658) 3px;
+  border-bottom: solid rgba(195, 195, 195, 0.671) 3px;
 }
 
 .app-header img {
@@ -31,7 +31,6 @@ body {
 .mainContent {
   padding: 45px 30px;
   background-color: rgb(187, 186, 186);
-  min-height: 450px;
 }
 
 .inputAndButton {
@@ -46,6 +45,7 @@ body {
   padding: 6px;
   border: solid rgba(128, 128, 128, 0.704) 1px;
   border-radius: 5px;
+  flex-grow: 1;
 }
 
 .inputAndButton input:focus {
@@ -53,11 +53,13 @@ body {
 }
 
 .inputAndButton button {
+  flex-shrink: 0;
   color: white;
   background-color: black;
   padding: 6px 25px;
   border-radius: 5px;
   border: solid 1px black;
+  cursor: pointer;
 }
 
 .ingredients-container {
