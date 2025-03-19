@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  width: 550px;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  border: solid rgba(195, 195, 195, 0.671) 4px;
+}
+
+.app-header {
+  font-family: Boldonse,sans-serif;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(101, 219, 166);
+  padding: 10px;
+  border-bottom: solid rgba(159, 159, 159, 0.658) 3px;
+}
+
+.app-header img {
+  width: 60px;
+}
+
+.mainContent {
+  padding: 45px 30px;
+  background-color: rgb(187, 186, 186);
+  min-height: 450px;
+}
+
+.inputAndButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputAndButton input {
+  margin-right: 10px;
+  width: 280px;
+  padding: 6px;
+  border: solid rgba(128, 128, 128, 0.704) 1px;
+  border-radius: 5px;
+}
+
+.inputAndButton input:focus {
+  outline: none;
+}
+
+.inputAndButton button {
+  color: white;
+  background-color: black;
+  width: 150px;
+  padding: 6px;
+  border-radius: 5px;
+  border: solid 1px black;
+}
