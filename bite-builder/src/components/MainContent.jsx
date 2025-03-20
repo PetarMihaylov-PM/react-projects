@@ -32,7 +32,7 @@ export default function MainContent() {
           <button>+ Add ingredient </button>
         </div>
         <div className="ingredients-container">
-          <h1>Ingredients on hand:</h1>
+          {mapIngredients.length > 0 ? <h1>{'Ingredients on hand'}</h1> : null}
           <ul>
             {mapIngredients}
           </ul>
