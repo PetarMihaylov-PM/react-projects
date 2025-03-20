@@ -9,17 +9,24 @@ export default function MainContent() {
     )
   });
 
-  function handleSubmit(event){
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+  //approach with onSubmit
+  /*
+    function handleSubmit(event){
+      event.preventDefault();
+      const formData = event.currentTarget;
+      const newIngredient = new FormData('ingredient') // using the name of the input
+    }
+
+    the approch below with action={}, gets the data from the form under the hood.
+  */
+
+  function addIngredient(formData){
     const newIngredient = formData.get('ingredient');
     setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
   }
-
-
   return(
     <>
-      <form className="mainContent" onSubmit={handleSubmit}>
+      <form className="mainContent" action={addIngredient}>
         <div className="inputAndButton">
           <input type="text" placeholder="e.g oregano" aria-label="Add ingredient" name="ingredient"/>
           <button>+ Add ingredient </button>
