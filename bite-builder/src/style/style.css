@@ -65,18 +65,25 @@ body {
   padding-top: 10px;
 }
 
+.ingredients-container ul { 
+  margin-left: 10px;
+  color: rgb(84, 84, 84);
+  font-size: 18px;
+}
+
 .ingredients-container h1 {
   margin-left: 10px;
 }
 
 .get-recipe-container {
+  margin-top: 50px;
   background-color: rgb(220, 220, 220);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   border:  none;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .get-recipe-container > button {
