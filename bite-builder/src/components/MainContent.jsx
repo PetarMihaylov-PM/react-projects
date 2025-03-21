@@ -33,9 +33,9 @@ export default function MainContent() {
           <button>+ Add ingredient </button>
         </div>
       </form>
-      <section>
+      {mapIngredients.length > 0? <section>
         <div className="ingredients-container">
-          {mapIngredients.length > 0 ? <h1>{'Ingredients on hand'}</h1> : null}
+          <h1>{'Ingredients on hand:'}</h1>
           <ul>
             {mapIngredients}
           </ul>
@@ -47,7 +47,7 @@ export default function MainContent() {
           </div>
           <button>Get a <br />recipe</button>
         </div>
-      </section>
+      </section> : null}
     </main>
       
     </> 
