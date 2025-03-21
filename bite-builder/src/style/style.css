@@ -20,7 +20,6 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgb(214, 171, 79);
-  
   border-bottom: solid rgba(195, 195, 195, 0.671) 3px;
 }
 
@@ -68,4 +67,23 @@ body {
 
 .ingredients-container h1 {
   margin-left: 10px;
+}
+
+.get-recipe-container {
+  background-color: rgb(203, 215, 158);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.get-recipe-container > button {
+  width: 90px;
+  height: 45px;
+  margin-left: 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(214, 171, 79);
+  color: white;
 }
