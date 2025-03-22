@@ -59,6 +59,16 @@ body {
   border-radius: 5px;
   border: solid 1px black;
   cursor: pointer;
+  transition: 0.15s all;
+}
+
+.inputAndButton button:hover {
+  background-color: white;
+  color: black;
+}
+
+.inputAndButton button:active {
+  opacity: 0.5;
 }
 
 .ingredients-container {
@@ -88,7 +98,7 @@ body {
 
 .get-recipe-container > button {
   width: 98px;
-  height: 50px;
+  height: 40px;
   margin-left: 8px;
   margin-right: 20px;
   border: none;

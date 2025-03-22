@@ -29,9 +29,8 @@ export default function MainContent() {
 
   function toggleRecipeShown(){
     setRecipeShown(prevRecipeShown => !prevRecipeShown);
-    console.log(recipeShown);
   }
-
+  
   return(
     <>
     <main className="mainContent">
@@ -55,7 +54,7 @@ export default function MainContent() {
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>
-          <button onClick={toggleRecipeShown}>Get a <br />recipe</button>
+          <button onClick={toggleRecipeShown}>{!recipeShown ? `Get a recipe` : `Hide recipe`}</button>
         </div> : null}
       </section>
 
