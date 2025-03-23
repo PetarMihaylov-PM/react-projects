@@ -1,5 +1,6 @@
 import React from "react";
-import RecipeSection from "./RecipeSection.jsx";
+import RecipeSection from "./recipeSection.jsx";
+import IngredientSection from "./IngredientSection.jsx";
 
 export default function MainContent() {
 
@@ -42,22 +43,7 @@ export default function MainContent() {
         </div>
 
       </form>
-      <section>
-        {mapIngredients.length > 0 ? <div className="ingredients-container">
-          <h1>{'Ingredients on hand:'}</h1>
-          <ul>
-            {mapIngredients}
-          </ul>
-        </div> : null}
-
-        {mapIngredients.length > 3 ? <div className="get-recipe-container">
-          <div>
-            <h3>Ready for a recipe?</h3>
-            <p>Generate a recipe from your list of ingredients.</p>
-          </div>
-          <button onClick={toggleRecipeShown}>{!recipeShown ? `Get a recipe` : `Hide recipe`}</button>
-        </div> : null}
-      </section>
+      <IngredientSection mapIngredients={mapIngredients} toggleRecipeShown={toggleRecipeShown} isRecipeShown={recipeShown}/>
 
       {recipeShown ? <RecipeSection /> : null}
     </main>
