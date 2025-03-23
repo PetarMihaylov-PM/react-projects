@@ -41,7 +41,6 @@ export default function MainContent() {
           <input type="text" placeholder="e.g oregano" aria-label="Add ingredient" name="ingredient"/>
           <button>+ Add ingredient </button>
         </div>
-
       </form>
       <IngredientSection mapIngredients={mapIngredients} toggleRecipeShown={toggleRecipeShown} isRecipeShown={recipeShown}/>
 

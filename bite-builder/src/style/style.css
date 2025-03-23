@@ -28,6 +28,7 @@ body {
 }
 
 .mainContent {
+  font-family: Inter;
   padding: 45px 30px;
   background-color: rgb(236, 236, 236);
 }
@@ -78,7 +79,7 @@ body {
 .ingredients-container ul { 
   margin-left: 10px;
   color: rgb(84, 84, 84);
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .ingredients-container h1 {
@@ -86,7 +87,7 @@ body {
 }
 
 .get-recipe-container {
-  margin-top: 50px;
+  margin-top: 60px;
   background-color: rgb(220, 220, 220);
   display: flex;
   justify-content: center;
@@ -126,4 +127,8 @@ body {
 .get-recipe-container p {
   color: rgb(106, 106, 106);
   font-size: 16px;
+}
+
+.get-recipe-container h3 {
+  font-size: 18px;
 }
