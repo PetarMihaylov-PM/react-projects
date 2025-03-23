@@ -1,5 +1,5 @@
 import React from "react";
-import RecipeSection from "./recipeSection.jsx";
+import RecipeSection from "./RecipeSection.jsx";
 import IngredientSection from "./IngredientSection.jsx";
 
 export default function MainContent() {
@@ -42,6 +42,7 @@ export default function MainContent() {
           <button>+ Add ingredient </button>
         </div>
       </form>
+
       <IngredientSection mapIngredients={mapIngredients} toggleRecipeShown={toggleRecipeShown} isRecipeShown={recipeShown}/>
 
       {recipeShown ? <RecipeSection /> : null}
