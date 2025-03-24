@@ -1,7 +1,7 @@
 import React from "react";
-import RecipeSection from "./recipeSection.jsx";
-import IngredientSection from "./IngredientSection.jsx";
 import IngredientForm from "./IngredientForm.jsx";
+import IngredientSection from "./IngredientSection.jsx";
+import RecipeSection from "./recipeSection.jsx";
 
 export default function MainContent() {
 
