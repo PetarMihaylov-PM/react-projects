@@ -1,8 +1,11 @@
+import Markdown from "react-markdown";
 
 export default function RecipeSection(props) {
   return (
       <section>
-        {props.recipe}
+        <Markdown>
+          {props.recipe}
+        </Markdown>
       </section>
   )
 }
