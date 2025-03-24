@@ -14,7 +14,7 @@ export default function MainContent() {
     )
   });
 
-  const [recipeShown, setRecipeShown] = React.useState(false);
+  const [recipe, setRecipe] = React.useState('');
 
   /*approach with onSubmit
 
@@ -34,7 +34,7 @@ export default function MainContent() {
 
   async function getRecipe(){
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
-    console.log(recipeMarkdown);
+    setRecipe(recipeMarkdown);
   }
   
   return(
@@ -42,9 +42,9 @@ export default function MainContent() {
     <main className="mainContent">
       <IngredientForm addIngredient={addIngredient}/>
 
-      <IngredientSection mapIngredients={mapIngredients} getRecipe={getRecipe} isRecipeShown={recipeShown}/>
+      <IngredientSection mapIngredients={mapIngredients} getRecipe={getRecipe} recipe={recipe}/>
 
-      {recipeShown ? <RecipeSection ingredients={ingredients}/> : null}
+      {recipe ? <RecipeSection recipe={recipe}/> : null}
     </main>
     </> 
   )

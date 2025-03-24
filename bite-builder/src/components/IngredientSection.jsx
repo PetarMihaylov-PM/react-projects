@@ -13,7 +13,7 @@ export default function IngredientSection(props) {
             <h3>Ready for a recipe?</h3>
             <p>Generate a recipe from your list of ingredients.</p>
           </div>
-          <button onClick={props.getRecipe}>{!props.isRecipeShown ? 'Get a recipe' : 'Hide recipe'}</button>
+          <button onClick={props.getRecipe}>{!props.recipe ? 'Get a recipe' : 'Hide recipe'}</button>
         </div> : null}
       </section>
   )
