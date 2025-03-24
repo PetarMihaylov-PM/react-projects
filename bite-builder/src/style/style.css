@@ -76,10 +76,11 @@ body {
   padding-top: 10px;
 }
 
-.ingredients-container ul { 
+.ingredients-container ul {
+  line-height: 25px; 
   margin-left: 10px;
   color: rgb(84, 84, 84);
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .ingredients-container h1 {
@@ -133,4 +134,16 @@ body {
 
 .get-recipe-container h3 {
   font-size: 18px;
+}
+
+.recipe-section{
+  padding-top: 20px;
+  color: rgb(60, 57, 57);
+  line-height: 28px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.recipe-section ul li, .recipe-section ol li {
+  margin-bottom: 8px;
 }
