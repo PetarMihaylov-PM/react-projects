@@ -2,6 +2,8 @@ import React from "react";
 import IngredientForm from "./IngredientForm.jsx";
 import IngredientSection from "./IngredientSection.jsx";
 import RecipeSection from "./recipeSection.jsx";
+import { getRecipeFromMistral } from "../ai/ai.js";
+
 
 export default function MainContent() {
 
@@ -30,8 +32,9 @@ export default function MainContent() {
     setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
   }
 
-  function toggleRecipeShown(){
-    setRecipeShown(prevRecipeShown => !prevRecipeShown);
+  async function getRecipe(){
+    const recipeMarkdown = await getRecipeFromMistral(ingredients);
+    console.log(recipeMarkdown);
   }
   
   return(
@@ -39,9 +42,9 @@ export default function MainContent() {
     <main className="mainContent">
       <IngredientForm addIngredient={addIngredient}/>
 
-      <IngredientSection mapIngredients={mapIngredients} toggleRecipeShown={toggleRecipeShown} isRecipeShown={recipeShown}/>
+      <IngredientSection mapIngredients={mapIngredients} getRecipe={getRecipe} isRecipeShown={recipeShown}/>
 
-      {recipeShown ? <RecipeSection /> : null}
+      {recipeShown ? <RecipeSection ingredients={ingredients}/> : null}
     </main>
     </> 
   )
