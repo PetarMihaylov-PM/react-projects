@@ -36,6 +36,7 @@ export default function MainContent() {
     setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
   }
 
+  // this is a fakeFetch func, for dev purposes. Use the second getRecipe() to test the real AI response.
   async function getRecipe(){
     setLoading(prevState => !prevState);
     const recipeMarkdown = await fakeFetch();
