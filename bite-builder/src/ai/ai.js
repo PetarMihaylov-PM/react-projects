@@ -7,7 +7,7 @@ You are an assistant that receives a list of ingredients that a user has and sug
 const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
 
 export async function getRecipeFromMistral(ingredientsArr) {
-    const ingredientsString = ingredientsArr.join(", ")
+    const ingredientsString = ingredientsArr.join(", ");
     try {
         const response = await hf.chatCompletion({
             model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
@@ -17,7 +17,9 @@ export async function getRecipeFromMistral(ingredientsArr) {
             ],
             max_tokens: 1024,
         });
-        return response.choices[0].message.content
+        return (
+            response.choices[0].message.content
+        )
     } catch (err) {
         console.error(err.message)
     }

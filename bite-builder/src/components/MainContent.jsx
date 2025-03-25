@@ -2,12 +2,13 @@ import React from "react";
 import IngredientForm from "./IngredientForm.jsx";
 import IngredientSection from "./IngredientSection.jsx";
 import RecipeSection from "./recipeSection.jsx";
+import LoadingBar from "./LoadingBar.jsx";
 import { getRecipeFromMistral } from "../ai/ai.js";
 
 
 export default function MainContent() {
 
-  const [ingredients, setIngredients] = React.useState([]);
+  const [ingredients, setIngredients] = React.useState(['beef','eggs','corn','beans']);
   const mapIngredients = ingredients.map(element => {
     return(
       <li key={element}> {element} </li>
@@ -15,6 +16,9 @@ export default function MainContent() {
   });
 
   const [recipe, setRecipe] = React.useState('');
+
+  const [loading, setLoading] = React.useState(false);
+
 
   /*approach with onSubmit
 
@@ -44,7 +48,7 @@ export default function MainContent() {
 
       <IngredientSection mapIngredients={mapIngredients} getRecipe={getRecipe} recipe={recipe}/>
 
-      {recipe ? <RecipeSection recipe={recipe}/> : null}
+      { recipe ? <RecipeSection recipe={recipe}/> : <LoadingBar/>}
     </main>
     </> 
   )
