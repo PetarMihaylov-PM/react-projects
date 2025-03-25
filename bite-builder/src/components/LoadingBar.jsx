@@ -1,5 +1,5 @@
-export default function LoadingBar(){
+export default function LoadingBar(props){
   return(
-    <div className="loading-bar"></div>
+    props.loading ? <div className="loading-bar"></div> : null
   )
 }

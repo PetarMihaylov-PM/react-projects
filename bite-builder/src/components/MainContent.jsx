@@ -37,8 +37,10 @@ export default function MainContent() {
   }
 
   async function getRecipe(){
+    setLoading(prevState => !prevState);
     const recipeMarkdown = await getRecipeFromMistral(ingredients);
     setRecipe(recipeMarkdown);
+    setLoading(prevState => !prevState);
   }
   
   return(
@@ -48,7 +50,7 @@ export default function MainContent() {
 
       <IngredientSection mapIngredients={mapIngredients} getRecipe={getRecipe} recipe={recipe}/>
 
-      { recipe ? <RecipeSection recipe={recipe}/> : <LoadingBar/>}
+      { recipe ? <RecipeSection recipe={recipe}/> : <LoadingBar loading={loading}/>}
     </main>
     </> 
   )
