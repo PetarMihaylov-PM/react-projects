@@ -3,7 +3,7 @@ import IngredientForm from "./IngredientForm.jsx";
 import IngredientSection from "./IngredientSection.jsx";
 import RecipeSection from "./recipeSection.jsx";
 import LoadingBar from "./LoadingBar.jsx";
-import { getRecipeFromMistral } from "../ai/ai.js";
+import { getRecipeFromMistral, fakeFetch } from "../ai/ai.js";
 
 
 export default function MainContent() {
@@ -38,10 +38,18 @@ export default function MainContent() {
 
   async function getRecipe(){
     setLoading(prevState => !prevState);
-    const recipeMarkdown = await getRecipeFromMistral(ingredients);
+    const recipeMarkdown = await fakeFetch();
     setRecipe(recipeMarkdown);
     setLoading(prevState => !prevState);
   }
+
+  /*
+  async function getRecipe(){
+    setLoading(prevState => !prevState);
+    const recipeMarkdown = await getRecipeFromMistral(ingredients);
+    setRecipe(recipeMarkdown);
+    setLoading(prevState => !prevState);
+  }*/
   
   return(
     <>

@@ -6,6 +6,12 @@ You are an assistant that receives a list of ingredients that a user has and sug
 
 const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
 
+
+export async function fakeFetch() {
+    await new Promise(resolve => {setTimeout(resolve,3000)});
+    return 'Fake AI fetch simulation.'
+}
+
 export async function getRecipeFromMistral(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ");
     try {
