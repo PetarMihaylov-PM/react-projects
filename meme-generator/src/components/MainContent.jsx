@@ -17,10 +17,10 @@ export default function Main() {
         </div>
       </div>
 
-      <button>Get a new meme image  <img src="/src/assets/img-icon.png" width='16px'/></button>
+      <button>Get a new meme image <img src="/src/assets/img-icon.png" width='16px'/></button>
 
       <div className="memeSection">
-        <img src="" alt="meme" />
+        <img src="https://cdn-useast1.kapwing.com/static/templates/old-man-cup-of-coffee-meme-template-full-f29f4df8.webp" alt="meme" />
       </div>
     </main>
   )

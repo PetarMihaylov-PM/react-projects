@@ -63,6 +63,7 @@ button {
   align-content: center;
   justify-content: center;
   width: 405px;
+  margin-top: 5px;
   letter-spacing: 1px;
   font-weight: 500;
   padding: 10px;
@@ -76,4 +77,17 @@ button {
 
 button:hover{
   background: linear-gradient(90deg, rgb(114, 1, 114), rgb(158, 73, 158));
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+.memeSection {
+  padding: 20px;
+  width: 400px;
+}
+
+.memeSection img {
+  width: 100%;
 }
