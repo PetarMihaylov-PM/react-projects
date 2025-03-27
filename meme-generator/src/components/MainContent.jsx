@@ -1,4 +1,14 @@
+import React from "react"
+
 export default function Main() {
+
+  const [meme, setMeme] = React.useState({
+    topText: 'One does not simply',
+    bottomText: 'Walk into Mordor',
+    imgUrl: "https://cdn-useast1.kapwing.com/static/templates/old-man-cup-of-coffee-meme-template-full-f29f4df8.webp"
+  });
+
+
   return(
     <main className="main">
       <div>
@@ -20,9 +30,9 @@ export default function Main() {
       <button>Get a new meme image <img src="/src/assets/img-icon.png" width='16px'/></button>
 
       <div className="memeSection">
-        <img src="https://cdn-useast1.kapwing.com/static/templates/old-man-cup-of-coffee-meme-template-full-f29f4df8.webp" alt="meme" />
-        <span className="top-text">One does not simply</span>
-        <span className="bottom-text">Walk into Mordor</span>
+        <img src={meme.imgUrl}/>
+        <span className="top-text">{meme.topText}</span>
+        <span className="bottom-text">{meme.bottomText}</span>
       </div>
     </main>
   )
