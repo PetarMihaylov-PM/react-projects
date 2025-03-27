@@ -8,21 +8,34 @@ export default function Main() {
     imgUrl: "https://cdn-useast1.kapwing.com/static/templates/old-man-cup-of-coffee-meme-template-full-f29f4df8.webp"
   });
 
+  function handleChange(event) {
+    const {value, name} = event.currentTarget;
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      [name]: value
+    }));
+  }
 
   return(
     <main className="main">
       <div>
         <div className="form">
           <label> Top Text
-            <input type="text" 
+            <input
+            type="text" 
             placeholder="One does not simply"
-            name="topText" />
+            name="topText"
+            onChange={handleChange}
+            value={meme.topText} />
           </label>
 
           <label> Bottom Text
-            <input type="text" 
+            <input 
+            type="text" 
             placeholder="Walk into Modor"
-            name="bottomText" />
+            name="bottomText"
+            onChange={handleChange}
+            value={meme.bottomText} />
           </label>
         </div>
       </div>
