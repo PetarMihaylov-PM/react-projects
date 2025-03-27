@@ -84,10 +84,48 @@ button:active {
 }
 
 .memeSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   width: 400px;
 }
 
 .memeSection img {
   width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+.memeSection span {
+  padding: 15px;
+  position: absolute;
+  text-align: center;
+  margin-block: 15px;
+  padding-inline: 5px;
+  font-family: impact, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.top-text{
+  top: 0;
+}
+
+.bottom-text{
+  bottom: 0;
 }

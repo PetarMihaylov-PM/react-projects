@@ -21,6 +21,8 @@ export default function Main() {
 
       <div className="memeSection">
         <img src="https://cdn-useast1.kapwing.com/static/templates/old-man-cup-of-coffee-meme-template-full-f29f4df8.webp" alt="meme" />
+        <span className="top-text">One does not simply</span>
+        <span className="bottom-text">Walk into Mordor</span>
       </div>
     </main>
   )
