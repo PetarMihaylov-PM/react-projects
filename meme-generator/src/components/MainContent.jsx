@@ -5,8 +5,26 @@ export default function Main() {
   const [meme, setMeme] = React.useState({
     topText: 'One does not simply',
     bottomText: 'Walk into Mordor',
-    imgUrl: "https://cdn-useast1.kapwing.com/static/templates/old-man-cup-of-coffee-meme-template-full-f29f4df8.webp"
+    imgUrl: "https://i.imgflip.com/1ur9b0.jpg"
   });
+
+  const [memeData, setMemeData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch('https://api.imgflip.com/get_memes').
+      then(response => response.json()).
+      then(data => setMemeData(data));
+  },[]);
+
+  function handleClick() {
+    const index = Math.floor(Math.random() * 100);
+    const memeImg = memeData.data.memes[index].url;
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      imgUrl: memeImg
+    }));
+  }
+
 
   function handleChange(event) {
     const {value, name} = event.currentTarget;
@@ -40,7 +58,11 @@ export default function Main() {
         </div>
       </div>
 
-      <button>Get a new meme image <img src="/src/assets/img-icon.png" width='16px'/></button>
+      <button 
+        onClick={handleClick}>
+        Get a new meme image 
+        <img src="/src/assets/img-icon.png" width='16px'/>
+      </button>
 
       <div className="memeSection">
         <img src={meme.imgUrl}/>
