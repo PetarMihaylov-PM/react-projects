@@ -13,12 +13,14 @@ export default function Main() {
   React.useEffect(() => {
     fetch('https://api.imgflip.com/get_memes').
       then(response => response.json()).
-      then(data => setMemeData(data));
+      then(data => setMemeData(data.data.memes));
   },[]);
 
   function handleClick() {
-    const index = Math.floor(Math.random() * 100);
-    const memeImg = memeData.data.memes[index].url;
+    const index = Math.floor(Math.random() * memeData.length);
+    console.log(index);
+    
+    const memeImg = memeData[index].url;
     setMeme(prevMeme => ({
       ...prevMeme,
       imgUrl: memeImg
