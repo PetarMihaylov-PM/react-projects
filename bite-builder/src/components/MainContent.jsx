@@ -24,7 +24,7 @@ export default function MainContent() {
 
   React.useEffect(() => {
     if(recipe !== '' && recipeSectionRef.current !== null){
-      recipeSectionRef.current.scrollIntoView();
+      recipeSectionRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
   },[recipe]);
 

@@ -8,8 +8,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  min-height: 100vh;
+ 
+  
 }
 
 #root {
@@ -19,6 +19,7 @@ body {
   border-radius: 10px;
   overflow: hidden;
   border: solid rgba(126, 126, 126, 0.814) 4px;
+  
 }
 
 .app-header {
