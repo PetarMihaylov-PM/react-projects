@@ -9,7 +9,8 @@ const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
 
 export async function fakeFetch() {
     await new Promise(resolve => {setTimeout(resolve,3000)});
-    return 'Fake AI fetch simulation.'
+    return (
+        'Fake AI fetch simulation. Start by patting the chicken breasts dry and seasoning both sides with paprika, oregano, salt, and black pepper. Heat a tablespoon of olive oil in a skillet over medium heat and cook the chicken for about five to six minutes per side until golden brown and fully cooked. Once done, remove the chicken from the pan and set it aside. In the same pan, reduce the heat to low and melt two tablespoons of butter. Add minced garlic and sauté for about 30 seconds until fragrant. Next, add the broccoli, sliced carrots, bell pepper, and zucchini to the pan. Season the vegetables with salt, pepper, and garlic powder, then sauté for about five minutes until they are tender but still slightly crisp.')
 }
 
 export async function getRecipeFromMistral(ingredientsArr) {

@@ -7,7 +7,7 @@ export default function Main() {
     bottomText: 'Walk into Mordor',
     imgUrl: "https://i.imgflip.com/1ur9b0.jpg"
   });
-
+  
   const [memeData, setMemeData] = React.useState(null);
 
   React.useEffect(() => {
@@ -18,8 +18,6 @@ export default function Main() {
 
   function handleClick() {
     const index = Math.floor(Math.random() * memeData.length);
-    console.log(index);
-    
     const memeImg = memeData[index].url;
     setMeme(prevMeme => ({
       ...prevMeme,

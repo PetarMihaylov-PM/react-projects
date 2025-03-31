@@ -8,7 +8,7 @@ import { getRecipeFromMistral, fakeFetch } from "../ai/ai.js";
 
 export default function MainContent() {
 
-  const [ingredients, setIngredients] = React.useState(['beef','eggs','corn','beans']);
+  const [ingredients, setIngredients] = React.useState(['beef','eggs','corn', 'potatoes']);
   const mapIngredients = ingredients.map(element => {
     return(
       <li key={element}> {element} </li>
@@ -18,6 +18,15 @@ export default function MainContent() {
   const [recipe, setRecipe] = React.useState('');
 
   const [loading, setLoading] = React.useState(false);
+
+  const recipeSectionRef = React.useRef(null);
+  console.log(recipeSectionRef);
+
+  React.useEffect(() => {
+    if(recipe !== '' && recipeSectionRef.current !== null){
+      recipeSectionRef.current.scrollIntoView();
+    }
+  },[recipe]);
 
 
   /*approach with onSubmit
@@ -57,7 +66,9 @@ export default function MainContent() {
     <main className="mainContent">
       <IngredientForm addIngredient={addIngredient}/>
 
-      <IngredientSection mapIngredients={mapIngredients} getRecipe={getRecipe} recipe={recipe}/>
+      <IngredientSection 
+      ref={recipeSectionRef}
+      mapIngredients={mapIngredients} getRecipe={getRecipe} recipe={recipe}/>
 
       { recipe ? <RecipeSection recipe={recipe}/> : <LoadingBar loading={loading}/>}
     </main>
