@@ -5,9 +5,9 @@ import { nanoid } from 'nanoid';
 
 export default function App(){
 
-  const [dice, setDice] = React.useState(randomNumber());
+  const [dice, setDice] = React.useState(getAllDice());
 
-  function randomNumber() {
+  function getAllDice() {
   const randomNumbers = new Array(10)
     .fill(0)
     .map(() => ({
@@ -20,11 +20,29 @@ export default function App(){
  }
  
   function rollDice(){
-    setDice(randomNumber());
+    setDice(prevDice => prevDice.map(die => 
+      die.isHeld ? 
+        die : 
+        {
+          ...die,
+          value: Math.ceil(Math.random() * 6),
+        }
+    ));
   } 
 
   function hold(id) {
-    console.log(id);
+    setDice(prevDice => {
+      return prevDice.map(die => {
+        if(die.id === id){
+          return {
+            ...die,
+            isHeld: !die.isHeld
+          }
+        } else {
+          return die
+        }
+      })
+    })
   }
   
  
