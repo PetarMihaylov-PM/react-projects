@@ -7,6 +7,11 @@ export default function App(){
 
   const [dice, setDice] = React.useState(getAllDice());
 
+  const isGameWon =  
+    dice.every(die => die.isHeld) && 
+    dice.every(die => die.value === dice[0].value) ? console.log(true) : console.log(false);
+    
+
   function getAllDice() {
   const randomNumbers = new Array(10)
     .fill(0)
@@ -58,6 +63,8 @@ export default function App(){
   return(
     <>
       <main className="mainContent">
+        <h1 className="title">Tenzies</h1>
+        <p className="instructions">Roll 10 dice and hold matching numbers. Keep rolling the rest until all dice show the same number. Win in the fewest rolls!</p>
         <div className="dice-container">
           {diceComponents} 
         </div>

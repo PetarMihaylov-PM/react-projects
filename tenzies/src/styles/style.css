@@ -29,6 +29,8 @@ body {
   background-color: rgb(249, 249, 249);
   height: 100%;
   border-radius: 8px;
+  min-height: 600px;
+  padding-bottom: 30px;
 }
 
 .dice-container{
@@ -76,6 +78,20 @@ body {
 
 .dice-button:active{
   opacity: 0.7;
+}
+
+.instructions {
+  font-size: 17px;
+  width: 350px;
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 5px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 750;
+  letter-spacing: 5px;
 }
 
 
