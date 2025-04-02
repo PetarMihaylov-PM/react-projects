@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: Karla, sans-serif;
 }
 
 body {
@@ -47,5 +48,34 @@ body {
   font-size: 1.75rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.15s;
 }
+
+.dice-container button:hover {
+  background-color: rgb(237, 237, 237);
+}
+
+.dice-button {
+  width: 130px;
+  height: 50px;
+  margin-top: 50px;
+  font-size: 1.3rem;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgb(0, 85, 255);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.dice-button:hover{
+  background-color: rgb(0, 96, 222);
+}
+
+.dice-button:active{
+  opacity: 0.7;
+}
+
 

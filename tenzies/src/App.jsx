@@ -4,23 +4,34 @@ import Die from "./components/Die";
 
 export default function App(){
 
-  const [dice, setDice] = React.useState(generateAllDice());
+ const [dice, setDice] = React.useState(randomNumber());
 
-  function generateAllDice() {
-    return new Array(10)
-      .fill(0)
-      .map(() => Math.ceil(Math.random() * 6));
-  }
+ function randomNumber() {
+  const randomNumbers = new Array(10)
+    .fill(0)
+    .map(() => Math.floor(Math.random() * 6));
 
-  const diceElements = dice.map(num => <Die value={num}/>)
-  
+  return randomNumbers;
+ }
+ 
+  function rollDice(){
+    setDice(randomNumber());
+  } 
+ 
+ 
+ const diceComponents = dice.map(num => <Die value={num}/>);
+ 
   return(
     <>
       <main className="mainContent">
         <div className="dice-container">
-          {diceElements}
+          {diceComponents} 
         </div>
-        
+        <button 
+          onClick={rollDice}
+          className="dice-button">
+            Roll Dice
+        </button>
       </main>
     </>
   )
