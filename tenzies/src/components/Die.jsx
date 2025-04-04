@@ -1,11 +1,12 @@
+import '/src/styles/style.css';
 export default function Die(props) {
-  const styles = {
-    backgroundColor: props.isHeld ? 'lightgreen' : 'white'
-  }
+  const styles = props.isHeld ? 'dice-clicked' : 'dice'
+  
   return(
     <>
       <button 
-        style={styles}
+        className={styles}
+        
         onClick={() => props.hold(props.id)}
       >{props.value}</button>
     </>

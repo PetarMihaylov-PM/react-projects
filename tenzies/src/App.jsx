@@ -14,15 +14,15 @@ export default function App(){
     
     
   function getAllDice() {
-  const randomNumbers = new Array(10)
-    .fill(0)
-    .map(() => ({
-      value: Math.ceil(Math.random() * 6),
-      isHeld: false,
-      id: nanoid()
-    }));
+    const randomNumbers = new Array(10)
+      .fill(0)
+      .map(() => ({
+        value: Math.ceil(Math.random() * 6),
+        isHeld: false,
+        id: nanoid()
+      }));
 
-  return randomNumbers;
+    return randomNumbers;
  }
  
   function rollDice(){
@@ -58,18 +58,24 @@ export default function App(){
   
  
   const diceComponents = dice.map(
-  diceObj => <Die 
-    key={diceObj.id} 
-    value={diceObj.value} 
-    isHeld={diceObj.isHeld}
-    hold={hold}
-    id={diceObj.id}/>
+    diceObj => <Die 
+      key={diceObj.id} 
+      value={diceObj.value} 
+      isHeld={diceObj.isHeld}
+      hold={hold}
+      id={diceObj.id}/>
   );
  
   return(
     <>
       <main className="mainContent">
-        {isGameWon ? <Confetti className="confetti"/> : null}
+        {isGameWon ? 
+          <Confetti 
+            width={1800} 
+            height={1800}
+            numberOfPieces={700}
+            className="confetti"
+          /> : null}
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll 10 dice and hold matching numbers. Keep rolling the rest until all dice show the same number. Win in the fewest rolls!</p>
         <div className="dice-container">
