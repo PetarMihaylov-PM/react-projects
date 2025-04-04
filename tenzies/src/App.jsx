@@ -1,6 +1,7 @@
 import React from "react";
 import Die from "./components/Die";
 import { nanoid } from 'nanoid';
+import Confetti from 'react-confetti'
 
 
 export default function App(){
@@ -9,9 +10,9 @@ export default function App(){
 
   const isGameWon =  
     dice.every(die => die.isHeld) && 
-    dice.every(die => die.value === dice[0].value) ? console.log(true) : console.log(false);
+    dice.every(die => die.value === dice[0].value) ? true : false;
     
-
+    
   function getAllDice() {
   const randomNumbers = new Array(10)
     .fill(0)
@@ -63,6 +64,7 @@ export default function App(){
   return(
     <>
       <main className="mainContent">
+        {isGameWon ? <Confetti className="confetti"/> : null}
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll 10 dice and hold matching numbers. Keep rolling the rest until all dice show the same number. Win in the fewest rolls!</p>
         <div className="dice-container">
@@ -71,7 +73,7 @@ export default function App(){
         <button 
           onClick={rollDice}
           className="dice-button">
-            Roll Dice
+            { isGameWon ? 'New Game' : 'Roll Dice'}
         </button>
       </main>
     </>
