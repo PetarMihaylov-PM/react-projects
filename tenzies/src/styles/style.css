@@ -40,6 +40,11 @@ body {
   gap: 30px;
 }
 
+button:focus {
+  outline: 4px solid rgba(0, 110, 255, 0.24); /* Change color as needed */
+  outline-offset: 2px; /* Adds spacing around the outline */
+}
+
 .dice {
   width: 55px;
   height: 55px;

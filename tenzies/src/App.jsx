@@ -7,17 +7,24 @@ import Confetti from 'react-confetti'
 export default function App(){
 
   const [dice, setDice] = React.useState(() => getAllDice());
+  const buttonRef = React.useRef(null);
 
   const isGameWon =  
     dice.every(die => die.isHeld) && 
     dice.every(die => die.value === dice[0].value) ? true : false;
     
+  React.useEffect(() => {
+    if(isGameWon) {
+      buttonRef.current.focus();
+    }
+  }, [isGameWon])
     
   function getAllDice() {
     const randomNumbers = new Array(10)
       .fill(0)
       .map(() => ({
         value: Math.ceil(Math.random() * 6),
+        // value: 6,
         isHeld: false,
         id: nanoid()
       }));
@@ -59,6 +66,7 @@ export default function App(){
  
   const diceComponents = dice.map(
     diceObj => <Die 
+      className={diceObj.className}
       key={diceObj.id} 
       value={diceObj.value} 
       isHeld={diceObj.isHeld}
@@ -82,6 +90,7 @@ export default function App(){
           {diceComponents} 
         </div>
         <button 
+          ref={buttonRef}
           onClick={rollDice}
           className="dice-button">
             { isGameWon ? 'New Game' : 'Roll Dice'}
