@@ -7,8 +7,47 @@ body {
   color: white;
 }
 
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header-container {
-    font-family: "Bungee Spice", sans-serif;
+    font-family: "Boldonse", system-ui;
+    font-size: 12px;
+    letter-spacing: 3px;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
+    width: 450px;
+}
+
+.status-bar {
+  margin-top: 15px;
+  background-color: green;
+  text-align: center;
+  border-radius: 5px;
+  width: 480px;
+}
+
+.status-bar > h2 {
+  font-size: 28px;
+  margin: 10px;
+}
+
+.status-bar > p {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.chips button {
+  padding: 15px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 350px;
 }
