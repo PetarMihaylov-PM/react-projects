@@ -1,5 +1,21 @@
 import React from "react";
+import { languages } from "../languages";
 
+
+function Chip (props) {
+  return (
+    <button style={props.style}>
+      {props.name}
+    </button>
+  )
+}
+
+const chips = languages.map(chip => <Chip 
+  name={chip.name}
+  style={{
+    backgroundColor: chip.backgroundColor,
+    color: chip.color
+}}/>)
 
 export default function Main() {
   return(
@@ -13,16 +29,7 @@ export default function Main() {
           <p>Well Done!</p>
       </section>
       <section className="chips">
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      
+        {chips}
       </section>
     </main>
   )
