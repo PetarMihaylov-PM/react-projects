@@ -56,5 +56,18 @@ main{
 }
 
 .chip-element{
-  padding: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.word {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.word > span {
+  padding: 5px;
+  background-color: brown;
+  margin: 5px;
+  
 }

@@ -2,25 +2,32 @@ import React from "react";
 import { languages } from "../languages";
 
 
-function Chip (props) {
-  return (
-    <span 
-    className='chip-element'
-    key={props.name}
-    style={props.style}>
-      {props.name}
-    </span>
-  )
-}
-
-const chips = languages.map(chip => <Chip 
-  name={chip.name}
-  style={{
-    backgroundColor: chip.backgroundColor,
-    color: chip.color,
-}}/>)
-
 export default function Main() {
+
+  const [currentWord, setCurrentWord] = React.useState('React');
+
+
+  function Chip (props) {
+    return (
+      <span 
+      className='chip-element'
+      key={props.name}
+      style={props.style}>
+        {props.name}
+      </span>
+    )
+  }
+  
+  const chips = languages.map(chip => <Chip 
+    key={chip.name}
+    name={chip.name}
+    style={{
+      backgroundColor: chip.backgroundColor,
+      color: chip.color,
+  }}/>)
+
+
+
   return(
     <main>
       <header className="header-container">
@@ -33,6 +40,13 @@ export default function Main() {
       </section>
       <section className="chips">
         {chips}
+      </section>
+      <section className="word">
+        <span>R</span>
+        <span>E</span>
+        <span>A</span>
+        <span>C</span>
+        <span>T</span>
       </section>
     </main>
   )
