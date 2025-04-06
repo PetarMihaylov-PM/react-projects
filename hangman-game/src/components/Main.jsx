@@ -4,9 +4,12 @@ import { languages } from "../languages";
 
 function Chip (props) {
   return (
-    <button style={props.style}>
+    <span 
+    className='chip-element'
+    key={props.name}
+    style={props.style}>
       {props.name}
-    </button>
+    </span>
   )
 }
 
@@ -14,7 +17,7 @@ const chips = languages.map(chip => <Chip
   name={chip.name}
   style={{
     backgroundColor: chip.backgroundColor,
-    color: chip.color
+    color: chip.color,
 }}/>)
 
 export default function Main() {
