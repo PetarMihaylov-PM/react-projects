@@ -106,7 +106,15 @@ main{
   background-color: #07ef2a;
 }
 
+.keyboard-button.correct:hover {
+  background-color: #07ef2a;
+}
+
 .keyboard-button.wrong {
+  background-color: tomato;
+}
+
+.keyboard-button.wrong:hover {
   background-color: tomato;
 }
 

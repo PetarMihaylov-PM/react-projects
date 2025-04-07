@@ -4,16 +4,25 @@ import clsx from "clsx";
 
 
 export default function Main() {
-
+  // State values
   const [currentWord, setCurrentWord] = React.useState('react');
-
   const [guessedLetters, setGuessedLetters] = React.useState([]);
+  const [wrongGuessCount, setWrongGuessCount] = React.useState(null);
+
+  // Static values
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
 
   function getLetter(letter) {
     if(!guessedLetters.includes(letter)){
       setGuessedLetters(prevLetters => [...prevLetters, letter]); // if the letter is in the array, app will not re-render
+      if(!currentWord.includes(letter)) {
+        setWrongGuessCount(prevNumber => prevNumber += 1);
+      }
     }
   }
+  
+  console.log(wrongGuessCount);
+  
 
   function Chip (props) {
     return (
@@ -26,15 +35,30 @@ export default function Main() {
     )
   }
   
-  const chips = languages.map(chip => <Chip 
-    key={chip.name}
-    name={chip.name}
-    style={{
-      backgroundColor: chip.backgroundColor,
-      color: chip.color,
-  }}/>);
+  const chips = languages.map((chip, index) => {
 
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const isDead = wrongGuessCount === (index + 1);
+
+    return( 
+      <Chip 
+        key={chip.name}
+        name={chip.name}
+        style={isDead ? 
+          {
+            backgroundColor: chip.backgroundColor,
+            color: chip.color,
+            opacity: '0.5'
+          } 
+          :
+          {
+            backgroundColor: chip.backgroundColor,
+            color: chip.color,
+          }
+        }
+      />
+    )
+  });
+
   const keyboardButtons = alphabet.split('').map(letter => {
 
     const isGuessed = guessedLetters.includes(letter);
@@ -49,7 +73,7 @@ export default function Main() {
       <button 
         key={letter}
         className={className}
-        onClick={() => getLetter(letter)} 
+        onClick={() => getLetter(letter, isCorrect)} 
         
       >
         {letter.toLocaleUpperCase()}
@@ -62,7 +86,7 @@ export default function Main() {
       <span 
         key={index}
       >
-        {letter.toLocaleUpperCase()}
+        {guessedLetters.includes(letter) ? letter.toLocaleUpperCase(): ''}
       </span>
     ) 
   }) :
