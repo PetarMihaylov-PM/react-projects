@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(72, 68, 68);
+  background-color: rgb(45, 45, 45);
   color: white;
 }
 
@@ -66,8 +66,14 @@ main{
 }
 
 .word > span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
   padding: 5px;
-  background-color: brown;
+  background-color: rgba(67, 67, 67, 0.711);
   margin: 5px;
-  
+  border-radius: 5px;
 }

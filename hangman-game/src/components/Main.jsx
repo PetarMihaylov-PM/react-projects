@@ -26,7 +26,13 @@ export default function Main() {
       color: chip.color,
   }}/>)
 
-
+  const letters = currentWord.split('').map(letter => {
+    return (
+      <span>
+        {letter.toLocaleUpperCase()}
+      </span>
+    )
+  })
 
   return(
     <main>
