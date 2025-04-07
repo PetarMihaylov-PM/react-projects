@@ -4,7 +4,7 @@ import { languages } from "../languages";
 
 export default function Main() {
 
-  const [currentWord, setCurrentWord] = React.useState('React');
+  const [currentWord, setCurrentWord] = React.useState('react');
 
 
   function Chip (props) {
@@ -24,15 +24,25 @@ export default function Main() {
     style={{
       backgroundColor: chip.backgroundColor,
       color: chip.color,
-  }}/>)
+  }}/>);
 
-  const letters = currentWord.split('').map(letter => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.toLocaleUpperCase();
+  const keyboardButtons = alphabet.split('').map(keyButton => {
     return (
-      <span>
-        {letter.toLocaleUpperCase()}
-      </span>
+      <button className="keyboard-button" key={keyButton}>{keyButton}</button>
     )
   })
+
+  const letters = currentWord ? currentWord.split('').map((letter, index) => {
+    return (
+      <span 
+        key={index}
+      >
+        {letter.toLocaleUpperCase()}
+      </span>
+    ) 
+  }) :
+  null;
 
   return(
     <main>
@@ -48,11 +58,10 @@ export default function Main() {
         {chips}
       </section>
       <section className="word">
-        <span>R</span>
-        <span>E</span>
-        <span>A</span>
-        <span>C</span>
-        <span>T</span>
+        {letters}
+      </section>
+      <section className="keyboard-container">
+        {keyboardButtons}
       </section>
     </main>
   )

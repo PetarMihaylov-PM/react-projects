@@ -61,8 +61,10 @@ main{
 }
 
 .word {
+  display: flex;
   margin-top: 20px;
   font-size: 30px;
+  gap: 5px;
 }
 
 .word > span {
@@ -74,6 +76,32 @@ main{
   line-height: 40px;
   padding: 5px;
   background-color: rgba(67, 67, 67, 0.711);
-  margin: 5px;
+  border-radius: 3px;
+  border-bottom: solid 2px;
+}
+
+.keyboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 450px;
+  margin-top: 20px;
+}
+
+.keyboard-button {
+  width: 35px;
+  height: 35px;
+  border: none;
   border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #ffd900;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.keyboard-button:hover {
+  background-color: #ffae00;;
 }
