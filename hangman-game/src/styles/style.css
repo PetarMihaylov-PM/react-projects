@@ -85,7 +85,7 @@ main{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 9px;
   max-width: 450px;
   margin-top: 20px;
 }
@@ -103,5 +103,29 @@ main{
 }
 
 .keyboard-button:hover {
-  background-color: #ffae00;;
+  background-color: #ffae00;
+  outline: 3px solid rgba(255, 251, 0, 0.266);
+}
+
+.newGame-button{
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  width: 190px;
+  height: 40px;
+  background-color: rgb(0, 183, 255);
+  border-radius: 5px;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.newGame-button:hover {
+  background-color: rgb(0, 161, 225);
+}
+
+.newGame-button:active {
+  opacity: 0.8;
 }

@@ -6,6 +6,16 @@ export default function Main() {
 
   const [currentWord, setCurrentWord] = React.useState('react');
 
+  const [guessedLetters, setGuessedLetters] = React.useState([]);
+
+  console.log(guessedLetters);
+
+  function getLetter(letter) {
+    if(!guessedLetters.includes(letter)){
+      setGuessedLetters(prevLetters => [...prevLetters, letter]); // if the letter is in the array, app will not rerender
+    }
+    
+  }
 
   function Chip (props) {
     return (
@@ -29,7 +39,7 @@ export default function Main() {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.toLocaleUpperCase();
   const keyboardButtons = alphabet.split('').map(keyButton => {
     return (
-      <button className="keyboard-button" key={keyButton}>{keyButton}</button>
+      <button onClick={() => getLetter(keyButton)} className="keyboard-button" key={keyButton}>{keyButton}</button>
     )
   })
 
@@ -63,6 +73,7 @@ export default function Main() {
       <section className="keyboard-container">
         {keyboardButtons}
       </section>
+      <button className="newGame-button">New Game</button>
     </main>
   )
 }
