@@ -1,5 +1,6 @@
 import React from "react";
 import { languages } from "../languages";
+import clsx from "clsx";
 
 
 export default function Main() {
@@ -8,13 +9,10 @@ export default function Main() {
 
   const [guessedLetters, setGuessedLetters] = React.useState([]);
 
-  console.log(guessedLetters);
-
   function getLetter(letter) {
     if(!guessedLetters.includes(letter)){
-      setGuessedLetters(prevLetters => [...prevLetters, letter]); // if the letter is in the array, app will not rerender
+      setGuessedLetters(prevLetters => [...prevLetters, letter]); // if the letter is in the array, app will not re-render
     }
-    
   }
 
   function Chip (props) {
@@ -36,10 +34,26 @@ export default function Main() {
       color: chip.color,
   }}/>);
 
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.toLocaleUpperCase();
-  const keyboardButtons = alphabet.split('').map(keyButton => {
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const keyboardButtons = alphabet.split('').map(letter => {
+
+    const isGuessed = guessedLetters.includes(letter);
+    const isCorrect = isGuessed && currentWord.includes(letter);
+    const isWrong = isGuessed && !currentWord.includes(letter);
+    const className = clsx('keyboard-button', {
+      correct: isCorrect,
+      wrong: isWrong
+    })
+
     return (
-      <button onClick={() => getLetter(keyButton)} className="keyboard-button" key={keyButton}>{keyButton}</button>
+      <button 
+        key={letter}
+        className={className}
+        onClick={() => getLetter(letter)} 
+        
+      >
+        {letter.toLocaleUpperCase()}
+      </button>
     )
   })
 

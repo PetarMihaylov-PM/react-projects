@@ -102,6 +102,14 @@ main{
   transition: all 0.12s;
 }
 
+.keyboard-button.correct {
+  background-color: #07ef2a;
+}
+
+.keyboard-button.wrong {
+  background-color: tomato;
+}
+
 .keyboard-button:hover {
   background-color: #ffae00;
   outline: 3px solid rgba(255, 251, 0, 0.266);
@@ -129,3 +137,4 @@ main{
 .newGame-button:active {
   opacity: 0.8;
 }
+
