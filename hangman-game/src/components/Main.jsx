@@ -11,7 +11,7 @@ export default function Main() {
 
   // Static values
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-  const isGameLost = wrongGuessCount > (languages.length - 1) ? true : false;
+  const isGameLost = wrongGuessCount >= (languages.length - 1) ? true : false;
   const isGameWon = currentWord.split('').every(letter => guessedLetters.includes(letter)) && wrongGuessCount < languages.length;
   const isGameOver = isGameLost || isGameWon;
 
@@ -106,8 +106,15 @@ export default function Main() {
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
       <section className={statusBarClassName}>
-          <h2>{isGameWon ? 'You win!' : 'Game over!'}</h2>
-          <p>{isGameWon ? 'Well Done!' : 'You lose! Better luck next time!'}</p>
+          { isGameOver ?(
+            <>
+              <h2>{isGameWon ? 'You win!' : 'Game over!'}</h2>
+              <p>{isGameWon ? 'Well Done!' : 'You lose! Better luck next time!'}</p>
+            </>
+            ) : (
+              null
+            )
+          }
       </section>
       <section className="chips">
         {chips}
