@@ -104,11 +104,14 @@ export default function Main() {
 
   function renderStatusBar () {
     if(!isGameOver && !isLastGuessCorrect){
+      
       if(guessedLetters.length <= 0){
         return null;
       } else {
         return (
-          <p className="farewell-message">bye!</p>
+          <p className="farewell-message">
+            {getFarewellText(languages[wrongGuessCount - 1].name)} 😧
+          </p>
         )
       }
       
