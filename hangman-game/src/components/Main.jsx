@@ -1,6 +1,7 @@
 import React from "react";
 import { languages } from "../languages";
 import clsx from "clsx";
+import { getFarewellText } from "../utils";
 
 
 export default function Main() {
@@ -14,9 +15,12 @@ export default function Main() {
   const isGameLost = wrongGuessCount >= (languages.length - 1) ? true : false;
   const isGameWon = currentWord.split('').every(letter => guessedLetters.includes(letter)) && wrongGuessCount < languages.length;
   const isGameOver = isGameLost || isGameWon;
+  const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
+  const isLastGuessCorrect = guessedLetters.length > 0 ? currentWord.includes(lastGuessedLetter) : undefined;
+  
 
-  console.log(isGameLost);
-  console.log(isGameWon);
+  console.log(isLastGuessCorrect);
+  
 
   function getLetter(letter) {
     if(!guessedLetters.includes(letter)){
@@ -26,7 +30,6 @@ export default function Main() {
       }
     }
   }
-  
 
   function Chip (props) {
     return (
@@ -99,6 +102,32 @@ export default function Main() {
     lost: isGameLost
   });
 
+  function renderStatusBar () {
+    if(!isGameOver && !isLastGuessCorrect){
+      if(guessedLetters.length <= 0){
+        return null;
+      } else {
+        return (
+          <p className="farewell-message">bye!</p>
+        )
+      }
+      
+    }
+    
+    if (isGameLost || isGameWon) {
+      return (
+        <>
+          <h2>{isGameWon ? 'You win!' : 'Game over!'}</h2>
+          <p>{isGameWon ? '🎉 Well Done! 🎉' : '😥 You lose! Better luck next time! 😥'}</p>
+        </>
+      )
+    } 
+    
+    else {
+        return null
+    }
+  }
+
   return(
     <main>
       <header className="header-container">
@@ -106,15 +135,7 @@ export default function Main() {
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
       <section className={statusBarClassName}>
-          { isGameOver ?(
-            <>
-              <h2>{isGameWon ? 'You win!' : 'Game over!'}</h2>
-              <p>{isGameWon ? 'Well Done!' : 'You lose! Better luck next time!'}</p>
-            </>
-            ) : (
-              null
-            )
-          }
+        {renderStatusBar()}
       </section>
       <section className="chips">
         {chips}

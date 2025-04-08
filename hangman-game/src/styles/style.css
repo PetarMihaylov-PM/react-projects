@@ -54,6 +54,24 @@ main{
   margin: 5px
 }
 
+.farewell-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+  border-radius: 5px;
+  width: 480px;
+  height: 80px;
+}
+
+.status-bar > p.farewell-message {
+  font-style: italic;
+  font-size: 20px;
+  margin: 5px;
+  background-color: rgb(152, 97, 207);
+}
+
 .chips button {
   padding: 15px;
 }
