@@ -11,6 +11,12 @@ export default function Main() {
 
   // Static values
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  const isGameLost = wrongGuessCount > (languages.length - 1) ? true : false;
+  const isGameWon = currentWord.split('').every(letter => guessedLetters.includes(letter)) && wrongGuessCount < languages.length;
+  const isGameOver = isGameLost || isGameWon;
+
+  console.log(isGameLost);
+  console.log(isGameWon);
 
   function getLetter(letter) {
     if(!guessedLetters.includes(letter)){
@@ -20,8 +26,6 @@ export default function Main() {
       }
     }
   }
-  
-  console.log(wrongGuessCount);
   
 
   function Chip (props) {
@@ -36,14 +40,12 @@ export default function Main() {
   }
   
   const chips = languages.map((chip, index) => {
-
-    const isDead = wrongGuessCount === (index + 1);
-
+    const isLanguageLost = index < wrongGuessCount;
     return( 
       <Chip 
         key={chip.name}
         name={chip.name}
-        style={isDead ? 
+        style={isLanguageLost ? 
           {
             backgroundColor: chip.backgroundColor,
             color: chip.color,
@@ -92,15 +94,20 @@ export default function Main() {
   }) :
   null;
 
+  const statusBarClassName = clsx('status-bar', {
+    won: isGameWon,
+    lost: isGameLost
+  });
+
   return(
     <main>
       <header className="header-container">
         <h1>HangMan: Dev edition</h1>
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
-      <section className="status-bar">
-          <h2>You win!</h2>
-          <p>Well Done!</p>
+      <section className={statusBarClassName}>
+          <h2>{isGameWon ? 'You win!' : 'Game over!'}</h2>
+          <p>{isGameWon ? 'Well Done!' : 'You lose! Better luck next time!'}</p>
       </section>
       <section className="chips">
         {chips}
@@ -111,7 +118,7 @@ export default function Main() {
       <section className="keyboard-container">
         {keyboardButtons}
       </section>
-      <button className="newGame-button">New Game</button>
+      {isGameOver ? <button className="newGame-button">New Game</button> : null}
     </main>
   )
 }
