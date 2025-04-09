@@ -32,6 +32,13 @@ main{
   letter-spacing: 1px;
 }
 
+.section-container{
+  margin-top: 15px;
+  border-radius: 5px;
+  width: 480px;
+  height: 80px;
+}
+
 .status-bar {
   display: flex;
   justify-content: center;

@@ -186,15 +186,20 @@ export default function Main() {
         <h1>HangMan: Dev edition</h1>
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
-      <motion.section 
-        aria-live='polite' 
-        role='status' 
-        className={statusBarClassName}
-        initial={{scale: 0}}
-        animate={{scale: 1}}
-        >
-          {renderStatusBar()}
-      </motion.section>
+      <section className="section-container">
+        <motion.section 
+          key={guessedLetters}
+          aria-live='polite' 
+          role='status' 
+          className={statusBarClassName}
+          initial={{scale: 0}}
+          animate={{scale: 1}}
+          transition={{duration: 0.5}}
+          >
+            {renderStatusBar()}
+        </motion.section>
+      </section>
+      
       <section className="chips">
         {chips}
       </section>
