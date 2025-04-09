@@ -2,13 +2,17 @@ import React from "react";
 import { languages } from "../languages";
 import clsx from "clsx";
 import { getFarewellText } from "../utils";
+import ReactConfetti from "react-confetti";
+import { words } from "../words";
 
 
 export default function Main() {
+
   // State values
-  const [currentWord, setCurrentWord] = React.useState('react');
+  const [currentWord, setCurrentWord] = React.useState('react'/*getRandomWord*/);
   const [guessedLetters, setGuessedLetters] = React.useState([]);
   const [wrongGuessCount, setWrongGuessCount] = React.useState(null);
+
 
   // Static values
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -17,9 +21,6 @@ export default function Main() {
   const isGameOver = isGameLost || isGameWon;
   const lastGuessedLetter = guessedLetters[guessedLetters.length - 1]
   const isLastGuessCorrect = guessedLetters.length > 0 ? currentWord.includes(lastGuessedLetter) : undefined;
-  
-
-  console.log(isLastGuessCorrect);
   
 
   function getLetter(letter) {
@@ -78,6 +79,9 @@ export default function Main() {
       <button 
         key={letter}
         className={className}
+        disabled={isGameOver}
+        aria-disabled={guessedLetters.includes(letter)}
+        aria-label={`Letter ${letter}`}
         onClick={() => getLetter(letter, isCorrect)} 
         
       >
@@ -131,14 +135,30 @@ export default function Main() {
     }
   }
 
+  function getRandomWord() {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    return words[randomIndex];
+  }
+
+  function resetGame() {
+    setGuessedLetters([]);
+    setWrongGuessCount(null);
+    setCurrentWord(getRandomWord);
+  }
+
   return(
     <main>
+      {isGameWon ? <ReactConfetti className="confetti"/> : null}
       <header className="header-container">
         <h1>HangMan: Dev edition</h1>
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
-      <section className={statusBarClassName}>
-        {renderStatusBar()}
+      <section 
+        aria-live='polite' 
+        role='status' 
+        className={statusBarClassName}
+        >
+          {renderStatusBar()}
       </section>
       <section className="chips">
         {chips}
@@ -149,7 +169,14 @@ export default function Main() {
       <section className="keyboard-container">
         {keyboardButtons}
       </section>
-      {isGameOver ? <button className="newGame-button">New Game</button> : null}
+      {isGameOver ? 
+        <button 
+          className="newGame-button"
+          onClick={resetGame}
+          >New Game
+        </button> 
+        : 
+        null}
     </main>
   )
 }
