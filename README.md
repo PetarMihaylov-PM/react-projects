@@ -25,6 +25,19 @@ Tenzies is a simple dice game built with React. The goal is to roll until all di
 <img src="https://github.com/user-attachments/assets/311e3d4a-75f5-44ca-9c30-b097755f0856" alt="tenzies" width="300"/>
 
 
+### 🤔 Hang man - Dev mode
+Fully interactive Hangman game created with React, focusing on clean state management and dynamic UI rendering. The game tracks user guesses, validates input, and conditionally updates the word display and keyboard layout. I used the clsx library to efficiently toggle CSS classes based on game state, and integrated Framer Motion to add smooth animations for transitions and feedback. A confetti animation triggers upon a successful game, providing satisfying visual feedback.
+
+<img src="https://github.com/user-attachments/assets/029f2d02-a5ae-4ed2-bcec-45245814d59d" alt="hangman4" width="285"/>
+
+<img src="https://github.com/user-attachments/assets/cde62daf-394f-48ed-8dda-099abaa94c4e" alt="hangman2" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/6f2eb5b1-61ea-4183-9b4f-20039c6f0478" alt="hangman3" width="300"/>
+
+
+
+
+
 ## 📌 Technologies Used  
 - React (JSX, Components, Props, State)  
 - API Fetching & Asynchronous JavaScript  
