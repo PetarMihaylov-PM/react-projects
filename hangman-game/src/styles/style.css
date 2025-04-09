@@ -106,8 +106,14 @@ main{
   padding: 5px;
   background-color: rgba(67, 67, 67, 0.711);
   border-radius: 3px;
-  border-bottom: solid 2px;
+  border-bottom: solid 2px white;
 }
+
+
+.word > span.missed-letter {
+  color: rgb(245, 69, 69);
+}
+
 
 .keyboard-container {
   display: flex;

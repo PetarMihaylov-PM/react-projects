@@ -9,7 +9,7 @@ import { words } from "../words";
 export default function Main() {
 
   // State values
-  const [currentWord, setCurrentWord] = React.useState('react'/*getRandomWord*/);
+  const [currentWord, setCurrentWord] = React.useState('react'/*() => getRandomWord()*/);
   const [guessedLetters, setGuessedLetters] = React.useState([]);
   const [wrongGuessCount, setWrongGuessCount] = React.useState(null);
 
@@ -91,13 +91,30 @@ export default function Main() {
   })
 
   const letters = currentWord ? currentWord.split('').map((letter, index) => {
-    return (
-      <span 
+    // revealing the word when the game is lost
+    if(isGameOver && isGameLost){
+      const letterClassName = clsx(
+        isGameLost && !guessedLetters.includes(letter) && 'missed-letter'
+      )
+      return(
+        <span 
+        className={letterClassName}
         key={index}
       >
-        {guessedLetters.includes(letter) ? letter.toLocaleUpperCase(): ''}
+        {letter.toLocaleUpperCase()}
       </span>
-    ) 
+      )
+    } 
+    // rendering the letter of emply space when playing
+    else {
+      return (
+        <span 
+          key={index}
+        >
+          {guessedLetters.includes(letter) ? letter.toLocaleUpperCase(): ''}
+        </span>
+      )
+    }
   }) :
   null;
 
