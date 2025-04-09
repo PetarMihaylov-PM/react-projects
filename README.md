@@ -19,6 +19,12 @@ A fun project that fetches **100+ random meme images** from an API, allowing you
 <img src="https://github.com/user-attachments/assets/7e6a1c94-8442-4d52-b869-bb0567abbe7a" alt="bite-builder-1" width="300"/>
 
 
+### 🎲 Tenzies
+Tenzies is a simple dice game built with React. The goal is to roll until all dice show the same number. You can click on dice to hold their value between rolls. I used React state, props, and conditional rendering to manage the game logic and UI.
+
+<img src="https://github.com/user-attachments/assets/311e3d4a-75f5-44ca-9c30-b097755f0856" alt="tenzies" width="300"/>
+
+
 ## 📌 Technologies Used  
 - React (JSX, Components, Props, State)  
 - API Fetching & Asynchronous JavaScript  
