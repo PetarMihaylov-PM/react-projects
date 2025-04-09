@@ -4,6 +4,7 @@ import clsx from "clsx";
 import { getFarewellText } from "../utils";
 import ReactConfetti from "react-confetti";
 import { words } from "../words";
+import {motion} from "motion/react";
 
 
 export default function Main() {
@@ -12,6 +13,8 @@ export default function Main() {
   const [currentWord, setCurrentWord] = React.useState('react'/*() => getRandomWord()*/);
   const [guessedLetters, setGuessedLetters] = React.useState([]);
   const [wrongGuessCount, setWrongGuessCount] = React.useState(null);
+
+
 
 
   // Static values
@@ -76,17 +79,22 @@ export default function Main() {
     })
 
     return (
-      <button 
+      <motion.button 
         key={letter}
         className={className}
         disabled={isGameOver}
         aria-disabled={guessedLetters.includes(letter)}
         aria-label={`Letter ${letter}`}
         onClick={() => getLetter(letter, isCorrect)} 
-        
+        whileHover={{
+          transition: {duration: 0.1},
+          scale: 1.1}}
+        whileTap={{
+          transition: {duration: 0.02},
+          scale: 0.95}}
       >
         {letter.toLocaleUpperCase()}
-      </button>
+      </motion.button>
     )
   })
 
@@ -165,18 +173,28 @@ export default function Main() {
 
   return(
     <main>
-      {isGameWon ? <ReactConfetti className="confetti"/> : null}
+      {isGameWon ? 
+        <ReactConfetti 
+          className="confetti"
+          recycle={false}
+          numberOfPieces={1200}
+        /> 
+        : 
+        null
+      }
       <header className="header-container">
         <h1>HangMan: Dev edition</h1>
         <p>Guess the word within 8 attempts to keep the programming world safe from Assembly!</p>
       </header>
-      <section 
+      <motion.section 
         aria-live='polite' 
         role='status' 
         className={statusBarClassName}
+        initial={{scale: 0}}
+        animate={{scale: 1}}
         >
           {renderStatusBar()}
-      </section>
+      </motion.section>
       <section className="chips">
         {chips}
       </section>
