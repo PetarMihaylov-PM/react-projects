@@ -7,7 +7,13 @@ const [newTask, setNewTask] = React.useState('');
 
 function handleChange(event) {
   setNewTask(event.currentTarget.value);
-  console.log(newTask);
+}
+
+console.log(newTask);
+console.log(tasks);
+
+function addTask() {
+  setTasks(prevTasks => [...prevTasks, newTask])
 }
 
   return(
