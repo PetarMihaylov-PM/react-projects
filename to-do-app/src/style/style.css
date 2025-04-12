@@ -18,26 +18,62 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 50px;
+  margin: 50px auto;
   font-size: 40px;
   background-color: lightcoral;
+  width: 800px;
 }
 
 section > div > button {
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 60px;
   border: none;
-  border-radius: 40px;
+  border-radius: 30px;
   font-size: 20px;
   cursor: pointer;
 }
 
 section > div {
+  display: flex;
+  align-items: center;
+  width: 90%;
   margin-top: 20px;
-  background-color: yellowgreen;
 }
 
 section > div > input {
-  width: inherit;
-  height:auto;
+  width: 80vw;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 25px;
+  outline: none;
+}
+
+section > ul {
+  list-style: none;
+  padding: 0;
+}
+
+section > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+}
+
+
+.checkbox-label > input {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.checkbox-label > span {
+  margin-left: 20px;
+}
+
+.checkbox-label .completed {
+  text-decoration: line-through;
+  color: #888;
 }
