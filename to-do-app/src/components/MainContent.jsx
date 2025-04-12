@@ -22,6 +22,12 @@ function addTask() {
   }
 }
 
+function handleKeyDown(event) {
+  if(event.key == 'Enter'){
+    addTask();
+  }
+}
+
 function toggleChange(id) {
   setTasks(prevTasks => 
     prevTasks.map(task => 
@@ -69,6 +75,7 @@ const displayTasks = tasks.map(task => {
           placeholder="Write your task here"
           value={newTask}
           onChange={handleChange}
+          onKeyDown={handleKeyDown}
         />
         <button onClick={addTask}>Add</button>
       </div>
