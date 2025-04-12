@@ -1,0 +1,24 @@
+body {
+  margin: 0
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+header > h1 {
+  letter-spacing: 2px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 50px;
+  font-size: 40px;
+  background-color: lightcoral;
+  
+}
