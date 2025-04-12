@@ -38,14 +38,20 @@ function deleteTask (id) {
 
 const displayTasks = tasks.map(task => {
   return (
-    <li key={task.id}>
+    <li key={task.id} className="task-item">
        <label className="checkbox-label">
-          <input
-            type="checkbox"
-            checked={task.completed}
-            onChange={() => toggleChange(task.id)}
+          <img 
+            className='checked-img' 
+            src={task.completed ? 
+              "src/assets/circle.png" : 
+              "src/assets/checkbox.png"}
           />
-          <span className={task.completed ? "completed" : ''}>{task.text}</span>
+          <span 
+            className={task.completed ? "completed" : ''}
+            onClick={() => toggleChange(task.id)}
+          >
+            {task.text}
+          </span>
         </label>
         <button className="delete-btn" onClick={() => deleteTask(task.id)}>
           ✕
