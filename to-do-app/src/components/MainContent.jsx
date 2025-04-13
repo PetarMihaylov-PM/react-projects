@@ -63,8 +63,7 @@ function deleteTask (id) {
         <button onClick={addTask}>Add</button>
       </div>
       
-      
-        <ul>
+      <ul>
         <AnimatePresence>
           {tasks.map(task => (
             <motion.li 
@@ -81,6 +80,7 @@ function deleteTask (id) {
               <label className="checkbox-label">
                 <img 
                   className='checked-img' 
+                  onClick={() => toggleChange(task.id)}
                   src={task.completed ? 
                     "src/assets/circle.png" : 
                     "src/assets/checkbox.png"}
@@ -97,9 +97,8 @@ function deleteTask (id) {
               </button>
             </motion.li>
           ))}
-          </AnimatePresence>
-        </ul>
-      
+        </AnimatePresence>
+      </ul>
     </section>
   )
 }
