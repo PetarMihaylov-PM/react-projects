@@ -3,8 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function MainContent() {
 
-const [tasks, setTasks] = React.useState([]);
+const [tasks, setTasks] = React.useState(() => {
+  const storedTasks = localStorage.getItem('tasks');
+  return storedTasks ? JSON.parse(storedTasks) : []
+});
 const [newTask, setNewTask] = React.useState('');
+
+React.useEffect(() => {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}, [tasks]);
 
 function handleChange(event) {
   setNewTask(event.currentTarget.value);
@@ -42,37 +49,6 @@ function deleteTask (id) {
     prevTasks.filter(task => task.id !== id)
   )
 }
-
-const displayTasks = tasks.map(task => {
-  return (
-    <motion.li 
-      key={task.id} 
-      className="task-item"
-      initial={{ opacity: 0, y: -10}}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 10}}
-      transition={{ duration: 0.5}}
-    >
-      <label className="checkbox-label">
-        <img 
-          className='checked-img' 
-          src={task.completed ? 
-            "src/assets/circle.png" : 
-            "src/assets/checkbox.png"}
-        />
-        <span 
-          className={task.completed ? "completed" : ''}
-          onClick={() => toggleChange(task.id)}
-        >
-          {task.text}
-        </span>
-      </label>
-      <button className="delete-btn" onClick={() => deleteTask(task.id)}>
-        ✕
-      </button>
-    </motion.li>
-  )
-})
 
   return(
     <section>
