@@ -6,23 +6,32 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: lightblue;
+  background-color: #6aa3f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.422);
 }
 
 header > h1 {
-  letter-spacing: 2px;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 3px;
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
 }
 
 section {
   width: 100%;
   max-width: 500px;
   margin: 60px auto;
-  background-color: #f8f9fa;
+  background-color: #f2f2f2;
   padding: 20px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  font-family: 'Segoe UI', sans-serif;
-  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.267);
+  font-family: "Winky Sans", sans-serif;
 }
 
 .input-group {
@@ -37,7 +46,9 @@ section {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
+  font-style: italic;
   outline: none;
+  font-family: "Winky Sans", sans-serif;
 }
 
 .input-group input:focus {
@@ -45,6 +56,8 @@ section {
 }
 
 .input-group button {
+  font-family: "Winky Sans", sans-serif;
+  font-size: 18px;
   padding: 10px 20px;
   background-color: #4a90e2;
   color: white;
@@ -66,17 +79,31 @@ ul {
 .task-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   background: white;
   padding: 12px 15px;
   margin-bottom: 12px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+ /*
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.4s ease forwards;
+  */
 }
+
+/*
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  */
 
 .checkbox-label {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   cursor: pointer;
 }
@@ -101,15 +128,20 @@ ul {
 }
 
 .delete-btn {
-  background: none;
+  width: 30px;
+  height: 30px;
   border: none;
+  background: none;
   font-size: 18px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 0;
   color: #ff5f5f;
   cursor: pointer;
-  padding: 5px;
   transition: transform 0.2s ease;
 }
 
 .delete-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
+  background-color: #ffadad;
 }
