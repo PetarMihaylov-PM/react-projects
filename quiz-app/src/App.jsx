@@ -44,6 +44,11 @@ function handleAnswerClick(answer) {
   }
 }
 
+function handleNextQuestion(){
+  setCurrentIndex(prev => prev + 1);
+  setSelectedAnswer(null);
+}
+
   return (
     <div className="quiz-app-container">
       <header>
@@ -80,6 +85,13 @@ function handleAnswerClick(answer) {
           </div>
           <div>
             <span>Score: {score}</span>
+            {selectedAnswer ? 
+              <button
+                onClick={handleNextQuestion}
+              >
+                Next question
+              </button> 
+              : null}
           </div>
         </section>) 
         : 
