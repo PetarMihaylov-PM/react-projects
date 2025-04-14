@@ -6,25 +6,26 @@ const [questionsData, setQuestionsData] = React.useState([]);
 const [currentIndex, setCurrentIndex] = React.useState(0);
 const [score, setScore] = React.useState(0);
 const [selectedAnswer, setSelectedAnswer] = React.useState(null);
+const [isQuizOver, setIsQuizOver] = React.useState(false);
+
 
 const currentQuestion = questionsData[currentIndex];
 
 React.useEffect(() => {
-  async function getQuiestions() {
-    const data = 
-      await fetch("https://opentdb.com/api.php?amount=10&type=multiple").
-      then(response => response.json());
-
-      const processedData = data.results.map(question => ({
-        ...question,
-        all_answers: shuffleAnswers(question.correct_answer, question.incorrect_answers)
-      }))
-      
-      setQuestionsData(processedData); 
-  }
-
   getQuiestions();
 }, []);
+
+async function getQuiestions() {
+  const data = 
+    await fetch("https://opentdb.com/api.php?amount=10&type=multiple").
+    then(response => response.json());
+
+    const processedData = data.results.map(question => ({
+      ...question,
+      all_answers: shuffleAnswers(question.correct_answer, question.incorrect_answers)
+    }))
+    setQuestionsData(processedData); 
+}
 
 function shuffleAnswers(correct, incorrect) {
   const combineAnswers = [...incorrect, correct];
@@ -42,12 +43,30 @@ function handleAnswerClick(answer) {
   if(answer === currentQuestion.correct_answer){
     setScore(prev => prev + 1);
   }
+  if(currentIndex === questionsData.length - 1){
+    setIsQuizOver(true);
+  }
 }
 
 function handleNextQuestion(){
-  setCurrentIndex(prev => prev + 1);
-  setSelectedAnswer(null);
+  if(currentIndex < questionsData.length - 1){
+    setCurrentIndex(prev => prev + 1);
+    setSelectedAnswer(null);
+  }
 }
+
+async function startNewQuiz() {
+  await getQuiestions();
+  setCurrentIndex(0);
+  setScore(0);
+  setSelectedAnswer(null);
+  setIsQuizOver(false);
+}
+
+console.log(currentIndex);
+console.log(questionsData.length - 1);
+console.log(isQuizOver)
+console.log(currentIndex === questionsData.length - 1)
 
   return (
     <div className="quiz-app-container">
@@ -85,13 +104,12 @@ function handleNextQuestion(){
           </div>
           <div>
             <span>Score: {score}</span>
-            {selectedAnswer ? 
-              <button
-                onClick={handleNextQuestion}
-              >
-                Next question
-              </button> 
-              : null}
+            {selectedAnswer && !isQuizOver ? 
+            <button onClick={handleNextQuestion}>
+              Next question
+            </button> 
+            : null}
+            {isQuizOver ? <button onClick={startNewQuiz}>New Quiz</button> : null}
           </div>
         </section>) 
         : 
