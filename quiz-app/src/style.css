@@ -29,12 +29,47 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   width: 300px;
 }
 
-.questions-container > button {
+.answer-button {
   background-color: gray;
   width: 300px;
   text-align: center;
   margin: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: rgb(0, 251, 67);
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+  color: white;
+  pointer-events: none;
+  cursor: default;
+}
+
+.incorrect {
+  background-color: rgb(251, 84, 0);
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+  color: white;
+  cursor: default;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  width: 300px;
+  text-align: center;
+  margin: 10px;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
 }
