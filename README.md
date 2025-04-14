@@ -35,7 +35,7 @@ Fully interactive Hangman game created with React, focusing on clean state manag
 <img src="https://github.com/user-attachments/assets/6f2eb5b1-61ea-4183-9b4f-20039c6f0478" alt="hangman3" width="300"/>
 
 
-### To-Do App
+### ⌚ To-Do App
 A simple to-do list app built with React. Users can add, complete, and delete tasks. Built using React components, hooks, and state management.
 
 <img src="https://github.com/user-attachments/assets/bcf0d2b5-ddd6-40c3-9c36-f80179830a19" alt="to-do" width="285"/>
