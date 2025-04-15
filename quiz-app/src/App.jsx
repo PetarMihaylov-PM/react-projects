@@ -7,6 +7,7 @@ const [currentIndex, setCurrentIndex] = React.useState(0);
 const [score, setScore] = React.useState(0);
 const [selectedAnswer, setSelectedAnswer] = React.useState(null);
 const [isQuizOver, setIsQuizOver] = React.useState(false);
+const [timeLeft, setTimeLeft] = React.useState(20);
 
 
 const currentQuestion = questionsData[currentIndex];
@@ -14,6 +15,20 @@ const currentQuestion = questionsData[currentIndex];
 React.useEffect(() => {
   getQuiestions();
 }, []);
+
+React.useEffect(() => {
+  if(!selectedAnswer && timeLeft > 0){
+    const timer = setTimeout(() => {
+      setTimeLeft(prev => prev - 1);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }
+
+  if(timeLeft === 0 && selectedAnswer === null){
+    setSelectedAnswer('timeout');
+  }
+}, [timeLeft, selectedAnswer]);
 
 async function getQuiestions() {
   const data = 
@@ -52,6 +67,7 @@ function handleNextQuestion(){
   if(currentIndex < questionsData.length - 1){
     setCurrentIndex(prev => prev + 1);
     setSelectedAnswer(null);
+    setTimeLeft(20);
   }
 }
 
@@ -63,22 +79,17 @@ async function startNewQuiz() {
   setIsQuizOver(false);
 }
 
-console.log(currentIndex);
-console.log(questionsData.length - 1);
-console.log(isQuizOver)
-console.log(currentIndex === questionsData.length - 1)
-
   return (
     <div className="quiz-app-container">
       <header>
         <h3>Quiz</h3>
         <div className="timer">
-          <p>Time</p>
-          <span>20</span>
+          <p>Time: <span className="timer-counter">{timeLeft}</span> </p>
         </div>
       </header>
       { questionsData.length > 0 ? 
         (<section className="questions-container">
+          <h4 className="question-counter">Question: {currentIndex + 1} / 10</h4>
           <h3>{decodeHtml(currentQuestion.question)}</h3>
           <div className="answers">
             {
@@ -89,7 +100,7 @@ console.log(currentIndex === questionsData.length - 1)
                     selectedAnswer
                       ? answer === currentQuestion.correct_answer
                         ? 'correct'
-                        : answer === selectedAnswer
+                        : answer === selectedAnswer && selectedAnswer !== null
                         ? 'incorrect'
                         : 'disabled'
                       : 'answer-button'
@@ -102,10 +113,12 @@ console.log(currentIndex === questionsData.length - 1)
               ))
             }
           </div>
-          <div>
-            <span>Score: {score}</span>
+          <div className="footer">
+            <span className="score-container">Score: {score}</span>
             {selectedAnswer && !isQuizOver ? 
-            <button onClick={handleNextQuestion}>
+            <button 
+              className="next-button"
+              onClick={handleNextQuestion}>
               Next question
             </button> 
             : null}

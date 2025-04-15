@@ -1,75 +1,136 @@
 
-
-
-
-
 .quiz-app-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1); /* translucent background */
+  backdrop-filter: blur(15px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* soft shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle glass border */
+  font-family: 'Poppins', sans-serif;
+  color: white; /* you can tweak this or use dark text if needed */
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: green;
-  margin: 30px;
+  background-color: #e0e0ff;
+  color: #6c63ff;
+  font-weight: bold;
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #6c63ff;
 }
 
-.questions-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 300px;
-}
-
-.answer-button {
-  background-color: gray;
-  width: 300px;
-  text-align: center;
-  margin: 10px;
+.timer-counter {
+  background: #3ccf4e;
   color: white;
-  cursor: pointer;
+  padding: 0.1rem 0.6rem;
+  border-radius: 50%;
+  font-size: 1rem;
 }
 
-.correct {
-  background-color: rgb(0, 251, 67);
-  width: 300px;
-  text-align: center;
-  margin: 10px;
-  color: white;
-  pointer-events: none;
-  cursor: default;
-}
-
-.incorrect {
-  background-color: rgb(251, 84, 0);
-  width: 300px;
-  text-align: center;
-  margin: 10px;
-  color: white;
-  cursor: default;
-}
-
-.disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  width: 300px;
-  text-align: center;
-  margin: 10px;
+.question-counter {
+  font-weight: 500;
+  color: #6c63ff;
 }
 
 .answers {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
 }
+
+button.answer-button {
+  background: white;
+  color: #333;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.correct {
+  background-color: #3ccf4e;
+  color: white;
+  cursor: default;
+}
+
+.incorrect {
+  background-color: #ff4b5c;
+  color: white;
+  cursor: default;
+}
+
+button.disabled {
+  background-color: #eee;
+  color: #999;
+  cursor: default;
+}
+
+.next-button,
+button {
+  background-color: #6c63ff;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover,
+button:hover {
+  background-color: #574fd8;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ddd;
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.score-container {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.next-button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.score-container, .next-button {
+  align-self: center;
+}
+
+
+
