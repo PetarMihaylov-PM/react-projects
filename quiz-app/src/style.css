@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f6c55c, #af60a8);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .quiz-app-container {
   max-width: 500px;
@@ -5,11 +15,12 @@
   padding: 2rem;
   background: rgba(255, 255, 255, 0.1); /* translucent background */
   backdrop-filter: blur(15px); /* frosted glass effect */
-  -webkit-backdrop-filter: blur(15px); /* Safari support */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); /* soft shadow */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle glass border */
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25); 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 8px;
   font-family: 'Poppins', sans-serif;
-  color: white; /* you can tweak this or use dark text if needed */
+  color: white;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -23,25 +34,26 @@ header {
 }
 
 .timer {
-  background-color: #e0e0ff;
-  color: #6c63ff;
+  background-color: #f4d5ce53;
+  color: #f8f8f8;
   font-weight: bold;
   padding: 0.3rem 1rem;
   border-radius: 10px;
-  border: 1px solid #6c63ff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.237);
 }
 
 .timer-counter {
-  background: #3ccf4e;
+  background: #d08686;
   color: white;
   padding: 0.1rem 0.6rem;
   border-radius: 50%;
   font-size: 1rem;
+ 
 }
 
 .question-counter {
-  font-weight: 500;
-  color: #6c63ff;
+  font-weight: 700;
+  color: #ba0eba;
 }
 
 .answers {
@@ -51,7 +63,7 @@ header {
   margin: 1.5rem 0;
 }
 
-button.answer-button {
+.answer-button {
   background: white;
   color: #333;
   padding: 0.8rem 1.2rem;
@@ -63,27 +75,46 @@ button.answer-button {
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
+.answer-button:hover{
+  background-color: #e0e0ff;
+}
+
 .correct {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   background-color: #3ccf4e;
   color: white;
   cursor: default;
 }
 
 .incorrect {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
   background-color: #ff4b5c;
   color: white;
   cursor: default;
 }
 
-button.disabled {
+.disabled {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
   background-color: #eee;
   color: #999;
   cursor: default;
 }
 
-.next-button,
-button {
-  background-color: #6c63ff;
+.next-button {
+  background-color: #ffc663;
   color: white;
   padding: 0.7rem 1.5rem;
   border: none;
@@ -93,8 +124,7 @@ button {
   transition: background-color 0.3s ease;
 }
 
-.next-button:hover,
-button:hover {
+.next-button:hover {
   background-color: #574fd8;
 }
 

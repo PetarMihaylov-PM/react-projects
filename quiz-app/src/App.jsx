@@ -113,6 +113,7 @@ async function startNewQuiz() {
               ))
             }
           </div>
+          
           <div className="footer">
             <span className="score-container">Score: {score}</span>
             {selectedAnswer && !isQuizOver ? 
