@@ -79,6 +79,19 @@ async function startNewQuiz() {
   setIsQuizOver(false);
 }
 
+function getAnswersClass(answer) {
+  if(selectedAnswer) {
+    if(answer === currentQuestion.correct_answer) {
+      return 'correct'
+    }
+    if(answer === selectedAnswer) {
+      return 'incorrect'
+    }
+    return 'disabled';
+  }
+  return 'answer-button';
+}
+
   return (
     <div className="quiz-app-container">
       {questionsData.length > 0 ? <header>
@@ -96,15 +109,7 @@ async function startNewQuiz() {
               currentQuestion.all_answers.map((answer, i) => (
                 <button 
                   key={i}
-                  className={
-                    selectedAnswer
-                      ? answer === currentQuestion.correct_answer
-                        ? 'correct'
-                        : answer === selectedAnswer && selectedAnswer !== null
-                        ? 'incorrect'
-                        : 'disabled'
-                      : 'answer-button'
-                  }
+                  className={getAnswersClass(answer)}
                   onClick={() => handleAnswerClick(answer)}
                   disabled={selectedAnswer !== null}
                 >
