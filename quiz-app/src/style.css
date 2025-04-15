@@ -8,7 +8,6 @@ body {
   align-items: center;
 }
 
-
 .quiz-app-container {
   max-width: 500px;
   margin: 2rem auto;
@@ -43,12 +42,16 @@ header {
 }
 
 .timer-counter {
-  background: #d08686;
+  background: #e46565;
   color: white;
-  padding: 0.1rem 0.6rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   font-size: 1rem;
- 
+  font-weight: bold;
 }
 
 .question-counter {
@@ -114,18 +117,20 @@ header {
 }
 
 .next-button {
-  background-color: #ffc663;
+  background-color: #b73ec2;
   color: white;
   padding: 0.7rem 1.5rem;
   border: none;
   border-radius: 10px;
   font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .next-button:hover {
-  background-color: #574fd8;
+  background-color: #9b33a4;
 }
 
 .footer {
@@ -134,7 +139,7 @@ header {
   align-items: center;
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
-  background-color: #fff;
+  background-color: #ffffff56;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   border: 1px solid #ddd;
@@ -160,6 +165,23 @@ header {
 
 .score-container, .next-button {
   align-self: center;
+}
+
+.new-quiz-button {
+  background-color: #b73ec2;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.new-quiz-button:hover {
+  background-color: #9b33a4;
 }
 
 

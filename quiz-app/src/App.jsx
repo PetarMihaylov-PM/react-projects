@@ -81,12 +81,12 @@ async function startNewQuiz() {
 
   return (
     <div className="quiz-app-container">
-      <header>
+      {questionsData.length > 0 ? <header>
         <h3>Quiz</h3>
         <div className="timer">
           <p>Time: <span className="timer-counter">{timeLeft}</span> </p>
         </div>
-      </header>
+      </header> : null}
       { questionsData.length > 0 ? 
         (<section className="questions-container">
           <h4 className="question-counter">Question: {currentIndex + 1} / 10</h4>
@@ -123,7 +123,15 @@ async function startNewQuiz() {
               Next question
             </button> 
             : null}
-            {isQuizOver ? <button onClick={startNewQuiz}>New Quiz</button> : null}
+            {isQuizOver ? 
+            <button 
+              className="new-quiz-button"
+              onClick={startNewQuiz}
+            >
+              New Quiz
+            </button> 
+            : 
+            null}
           </div>
         </section>) 
         : 
