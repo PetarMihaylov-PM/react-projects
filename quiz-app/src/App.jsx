@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import Confetti from 'react-confetti';
 
 export default function App() {
 
@@ -9,7 +10,8 @@ const [selectedAnswer, setSelectedAnswer] = React.useState(null);
 const [isQuizOver, setIsQuizOver] = React.useState(false);
 const [timeLeft, setTimeLeft] = React.useState(20);
 
-
+console.log(isQuizOver);
+console.log(score)
 const currentQuestion = questionsData[currentIndex];
 
 React.useEffect(() => {
@@ -77,6 +79,7 @@ async function startNewQuiz() {
   setScore(0);
   setSelectedAnswer(null);
   setIsQuizOver(false);
+  setTimeLeft(20);
 }
 
 function getAnswersClass(answer) {
@@ -93,55 +96,63 @@ function getAnswersClass(answer) {
 }
 
   return (
-    <div className="quiz-app-container">
-      {questionsData.length > 0 ? <header>
-        <h3>Quiz</h3>
-        <div className="timer">
-          <p>Time: <span className="timer-counter">{timeLeft}</span> </p>
-        </div>
-      </header> : null}
-      { questionsData.length > 0 ? 
-        (<section className="questions-container">
-          <h4 className="question-counter">Question: {currentIndex + 1} / 10</h4>
-          <h3>{decodeHtml(currentQuestion.question)}</h3>
-          <div className="answers">
-            {
-              currentQuestion.all_answers.map((answer, i) => (
-                <button 
-                  key={i}
-                  className={getAnswersClass(answer)}
-                  onClick={() => handleAnswerClick(answer)}
-                  disabled={selectedAnswer !== null}
-                >
-                  {decodeHtml(answer)}
-                </button>
-              ))
-            }
+    <>
+      {(isQuizOver && score >= 6 ) ? 
+        <Confetti 
+        numberOfPieces={2000}
+        recycle={false}
+          className="react-confetti" /> 
+        : null}
+      <div className="quiz-app-container">
+        {questionsData.length > 0 ? <header>
+          <h3>Quiz</h3>
+          <div className="timer">
+            <p>Time: <span className="timer-counter">{timeLeft}</span> </p>
           </div>
-          
-          <div className="footer">
-            <span className="score-container">Score: {score}</span>
-            {selectedAnswer && !isQuizOver ? 
-            <button 
-              className="next-button"
-              onClick={handleNextQuestion}>
-              Next question
-            </button> 
-            : null}
-            {isQuizOver ? 
-            <button 
-              className="new-quiz-button"
-              onClick={startNewQuiz}
-            >
-              New Quiz
-            </button> 
-            : 
-            null}
-          </div>
-        </section>) 
-        : 
-        null
-      }
-    </div>
+        </header> : null}
+        { questionsData.length > 0 ? 
+          (<section className="questions-container">
+            <h4 className="question-counter">Question: {currentIndex + 1} / 10</h4>
+            <h3>{decodeHtml(currentQuestion.question)}</h3>
+            <div className="answers">
+              {
+                currentQuestion.all_answers.map((answer, i) => (
+                  <button 
+                    key={i}
+                    className={getAnswersClass(answer)}
+                    onClick={() => handleAnswerClick(answer)}
+                    disabled={selectedAnswer !== null}
+                  >
+                    {decodeHtml(answer)}
+                  </button>
+                ))
+              }
+            </div>
+            
+            <div className="footer">
+              <span className="score-container">Score: {score}</span>
+              {selectedAnswer && !isQuizOver ? 
+              <button 
+                className="next-button"
+                onClick={handleNextQuestion}>
+                Next question
+              </button> 
+              : null}
+              {isQuizOver ? 
+              <button 
+                className="new-quiz-button"
+                onClick={startNewQuiz}
+              >
+                New Quiz
+              </button> 
+              : 
+              null}
+            </div>
+          </section>) 
+          : 
+          null
+        }
+      </div>
+    </>
   )
 }
