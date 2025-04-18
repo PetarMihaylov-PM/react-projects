@@ -1,12 +1,14 @@
 body{
   margin: 40px;
+  background-image: url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D);
+  background-size: cover;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: green;
+ 
 }
 
 .nav-bar-container {
@@ -26,8 +28,7 @@ body{
 }
 
 .nav-bar-container > ul > li {
-  color: rgb(0, 0, 0);
-  
+  color: rgb(255, 255, 255);
 }
 
 a {
@@ -38,6 +39,14 @@ a {
 
 .search-icon {
   width: 20px;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.restaurant-name {
+  font-size: 25px;
+  color: orange;
 }
 
 .home-container {
@@ -45,4 +54,22 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.home-container > h3 {
+  font-size: 60px;
+  font-family: "Italianno", cursive;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+}
+
+.home-container > h4 {
+  font-size: 40px;
+  font-family: "Italianno", cursive;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
 }
