@@ -112,3 +112,13 @@ a {
   width: 40px;
   cursor: pointer;
 }
+
+.menu-container{
+  display: grid;
+  gap: 100px;
+  grid-template: auto auto / repeat(5, 2rem);
+}
+
+.menu-container img {
+  width: 100px;
+}
