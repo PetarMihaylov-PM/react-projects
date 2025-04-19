@@ -1,5 +1,5 @@
 body{
-  margin: 40px;
+  margin: 20px;
   background-image: url(https://www.elitehavens.com/magazine/wp-content/uploads/2017/11/chinh-le-duc-Dghn39rncfY-unsplash-scaled-e1594112172967.jpg);
   background-size: cover;
 }
@@ -122,7 +122,7 @@ a {
 }
 
 .menu-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.653);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -130,6 +130,12 @@ a {
   padding: 1rem;
   cursor: pointer;
   padding-bottom: 0px;
+  transition: all 0.15s ease;
+}
+
+.menu-card:hover{
+  scale: 1.1;
+  background-color: white;
 }
 
 .menu-card img {
@@ -141,4 +147,10 @@ a {
 
 .card-price {
   font-size: 12px;
+}
+
+.card-name{
+  font-family: "Italianno", cursive;
+  font-size: 30px;
+  letter-spacing: 2px;
 }

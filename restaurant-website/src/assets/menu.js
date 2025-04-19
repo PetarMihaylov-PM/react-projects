@@ -68,5 +68,75 @@ export const menuItems = [
     description: "Rich & moist chocolate layer cake.",
     price: "$6.95",
     image: "https://images.unsplash.com/photo-1682596044365-eb5c3bc51555?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }, 
+  {
+    id: 11,
+    name: "BBQ Ribs",
+    description: "Slow-cooked ribs glazed with smoky BBQ sauce.",
+    price: "$16.50",
+    image: "https://plus.unsplash.com/premium_photo-1664478272084-532c1bfebd25?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QkJRJTIwUmlic3xlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 12,
+    name: "Veggie Burger",
+    description: "Grilled veggie patty with lettuce, tomato & vegan mayo.",
+    price: "$11.99",
+    image: "https://images.unsplash.com/photo-1564849012987-56a988d14596?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fFZlZ2dpZSUyMEJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 13,
+    name: "Lobster Roll",
+    description: "Buttery roll stuffed with fresh lobster meat.",
+    price: "$19.75",
+    image: "https://images.unsplash.com/photo-1666380510734-c81855f0afdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: 14,
+    name: "Pad Thai",
+    description: "Stir-fried rice noodles with shrimp, egg & peanuts.",
+    price: "$12.80",
+    image: "https://images.unsplash.com/photo-1707546944460-dda9069b9c1e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UGFkJTIwVGhhaXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 15,
+    name: "French Toast",
+    description: "Thick bread slices soaked in egg & cinnamon, grilled to perfection.",
+    price: "$8.25",
+    image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RnJlbmNoJTIwVG9hc3R8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 16,
+    name: "Greek Salad",
+    description: "Fresh tomatoes, cucumber, olives, and feta cheese.",
+    price: "$9.95",
+    image: "https://images.unsplash.com/photo-1599021419847-d8a7a6aba5b4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8R3JlZWslMjBTYWxhZHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 17,
+    name: "Fried Chicken",
+    description: "Crispy golden fried chicken with herbs and spices.",
+    price: "$13.99",
+    image: "https://images.unsplash.com/photo-1562967914-608f82629710?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEZyaWVkJTIwQ2hpY2tlbnxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 18,
+    name: "Steak Frites",
+    description: "Grilled steak served with golden French fries.",
+    price: "$17.45",
+    image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3RlYWslMjBGcml0ZXN8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 19,
+    name: "Fruit Smoothie Bowl",
+    description: "Mixed berries, banana, granola & chia seeds.",
+    price: "$7.80",
+    image: "https://plus.unsplash.com/premium_photo-1694935557137-07ace0f9c8dc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8RnJ1aXQlMjBTbW9vdGhpZSUyMEJvd2x8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 20,
+    name: "Seafood Paella",
+    description: "Spanish rice with mussels, shrimp & saffron.",
+    price: "$18.90",
+    image: "https://plus.unsplash.com/premium_photo-1719424374504-653c684f12fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8U2VhZm9vZCUyMFBhZWxsYXxlbnwwfHwwfHx8MA%3D%3D"
   }
 ];

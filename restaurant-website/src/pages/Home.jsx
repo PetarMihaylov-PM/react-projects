@@ -6,7 +6,6 @@ export default function Home(){
       <h4>Either way, you’ve come to the right plate.</h4>
       <button className="menu-button">Menu</button>
     </div>
-      
     </>
   )
 }
