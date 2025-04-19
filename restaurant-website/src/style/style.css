@@ -1,6 +1,6 @@
 body{
   margin: 40px;
-  background-image: url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdGF1cmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D);
+  background-image: url(https://www.elitehavens.com/magazine/wp-content/uploads/2017/11/chinh-le-duc-Dghn39rncfY-unsplash-scaled-e1594112172967.jpg);
   background-size: cover;
 }
 
@@ -8,7 +8,7 @@ body{
   display: flex;
   flex-direction: column;
   padding: 10px;
- 
+  min-width: 700px
 }
 
 .nav-bar-container {
@@ -42,6 +42,7 @@ a {
   background-color: white;
   border-radius: 50px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .restaurant-name {
@@ -54,22 +55,60 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-bottom: 100px;
 }
 
 .home-container > h3 {
-  font-size: 60px;
+  font-size: 65px;
+  letter-spacing: 1px;
   font-family: "Italianno", cursive;
   font-weight: 500;
   font-style: normal;
   color: white;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .home-container > h4 {
   font-size: 40px;
+  letter-spacing: 1px;
   font-family: "Italianno", cursive;
   font-weight: 500;
   font-style: normal;
   color: white;
+  margin-top: 10px;
+}
+
+.menu-button {
+  font-size: 30px;
+  font-family: "Italianno", cursive;
+  letter-spacing: 3px;
+  font-weight: 600;
+  width: 140px;
+  height: 40px;
+  background-color: rgb(255, 183, 0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: -30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.menu-button:hover {
+  background-color: rgb(216, 156, 2);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 80px;
+}
+
+.footer-container > img {
+  width: 40px;
+  cursor: pointer;
 }
