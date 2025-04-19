@@ -1,3 +1,5 @@
+import fbLogo from "../assets/fb-logo.png"
+
 export default function Footer() {
   return(
     <div className="footer-container">

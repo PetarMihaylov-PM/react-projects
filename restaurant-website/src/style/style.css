@@ -139,6 +139,7 @@ body{
   justify-content: center;
   gap: 50px;
   margin-top: 80px;
+  height: 40px;
 }
 
 .footer-container > img {

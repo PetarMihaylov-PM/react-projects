@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import restarantLogo from "../assets/restaurant-logo.png"
+import fbLogo from "../assets/fb-logo.png"
+
 
 export default function Navbar() {
 
