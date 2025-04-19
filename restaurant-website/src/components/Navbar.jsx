@@ -1,9 +1,20 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import restarantLogo from "../assets/restaurant-logo.png"
 
 export default function Navbar() {
+
+  const navigate = useNavigate();
+
+  function handleCLickLogo() {
+    navigate('/');
+  }
+
   return(
     <nav className="nav-bar-container">
-      <h3 className="restaurant-name">Pete's restaurant</h3>
+      <img onClick={handleCLickLogo}
+      className="logo"
+      src={restarantLogo} alt="logo" />
       <ul>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/menu'>Menu</Link></li>
