@@ -113,12 +113,32 @@ a {
   cursor: pointer;
 }
 
-.menu-container{
+.menu-container {
+  margin-top: 30px;
+  padding: 2rem;
   display: grid;
-  gap: 100px;
-  grid-template: auto auto / repeat(5, 2rem);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
-.menu-container img {
-  width: 100px;
+.menu-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  padding-bottom: 0px;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-price {
+  font-size: 12px;
 }
