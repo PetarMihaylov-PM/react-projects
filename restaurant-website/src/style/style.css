@@ -250,4 +250,12 @@ body{
   border-radius: 15px;
   width: 300px;
   height: 200px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.contact-information > div:hover {
+  scale: 1.1;
+  background-color: rgba(255, 255, 255, 0.386);
+  backdrop-filter: blur(1px);
 }
