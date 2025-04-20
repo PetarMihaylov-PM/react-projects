@@ -74,6 +74,12 @@ body{
   scale: 1.1;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .restaurant-name {
   font-size: 25px;
   color: orange;

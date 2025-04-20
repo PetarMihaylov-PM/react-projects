@@ -1,8 +1,11 @@
-import { menuItems } from "../assets/menu"
+import { menuItems } from "../assets/menu";
+import { useOutletContext } from "react-router-dom";
 
 export default function Menu(){
 
-  const renderMenu = menuItems.map((food, index) => 
+  const { filtered } = useOutletContext();
+
+  const renderMenu = filtered.map((food, index) => 
     <div key={index} className="menu-card">
       <img src={food.image} alt={food.name} />
       <h1 className="card-name">{food.name}</h1>
@@ -14,7 +17,7 @@ export default function Menu(){
 
   return(
       <div className="menu-container">
-        {renderMenu}
+        {filtered.length > 0 ? renderMenu : 'Dish not found. :('}
       </div>
   )
 }
