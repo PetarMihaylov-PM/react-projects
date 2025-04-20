@@ -1,15 +1,26 @@
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import restarantLogo from "../assets/restaurant-logo.png"
 
 
-
-export default function Navbar() {
+export default function Navbar({onSearch}) {
 
   const navigate = useNavigate();
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
 
   function handleCLickLogo() {
     navigate('/');
+  }
+
+  function handleSearchChange (e) {
+    const value = e.currentTarget.value;
+    setSearchTerm(value);
+    onSearch(value)
+  }
+
+  function toggleSearchBar() {
+    setShowSearch(prev => !prev);
   }
 
   return(
@@ -23,7 +34,24 @@ export default function Navbar() {
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/contact'>Contact</Link></li>
       </ul>
-      <img className='search-icon' src="https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png" alt="search-icon" />
+      <div className="search-container">
+        {showSearch && (
+          <input 
+            type="text"
+            placeholder="Search food..."
+            className="search-input"
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        )}
+        <img 
+          onClick={toggleSearchBar}
+          className='search-icon' 
+          src="https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png" 
+          alt="search-icon" 
+        />
+      </div>
+      
     </nav>
   )
 }
