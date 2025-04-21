@@ -265,3 +265,18 @@ body{
   background-color: rgba(255, 255, 255, 0.386);
   backdrop-filter: blur(1px);
 }
+
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found > h1 {
+  font-family: "Italianno", cursive;
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-size: 60px;
+  color: white;
+}

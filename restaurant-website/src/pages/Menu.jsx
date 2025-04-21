@@ -16,8 +16,17 @@ export default function Menu(){
 
 
   return(
+    <>
+     {filtered.length > 0 ? 
       <div className="menu-container">
-        {filtered.length > 0 ? renderMenu : 'Dish not found. :('}
+          {renderMenu}
+      </div> 
+      :
+      <div className="not-found">
+        <h1>Dish not found.</h1>
       </div>
+      }
+    </>
+     
   )
 }
