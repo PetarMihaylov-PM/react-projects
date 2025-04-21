@@ -7,9 +7,13 @@ body{
 .main-container {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   padding: 10px;
-  min-width: 700px
+  min-width: 700px;
+  box-sizing: border-box;
+  position: relative;
 }
+
 
 /* nav bar */
 .nav-bar-container {
@@ -121,7 +125,6 @@ body{
   color: orange;
 }
 
-
 /* home page */
 .home-container {
   display: flex;
@@ -180,8 +183,10 @@ body{
   align-items: center;
   justify-content: center;
   gap: 50px;
-  margin-top: 80px;
   height: 40px;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 }
 
 .footer-container > img {

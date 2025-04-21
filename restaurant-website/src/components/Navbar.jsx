@@ -16,7 +16,8 @@ export default function Navbar({onSearch}) {
   function handleSearchChange (e) {
     const value = e.currentTarget.value;
     setSearchTerm(value);
-    onSearch(value)
+    onSearch(value);
+    navigate('/menu');
   }
 
   function toggleSearchBar() {
