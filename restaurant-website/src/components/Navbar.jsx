@@ -25,17 +25,25 @@ export default function Navbar({onSearch}) {
 
   return(
     <nav className="nav-bar-container">
-      <img onClick={handleCLickLogo}
-      className="logo"
-      src={restarantLogo} alt="logo" />
-      <ul>
-        <li><Link to='/'>Home</Link></li>
-        <li><Link to='/menu'>Menu</Link></li>
-        <li><Link to='/about'>About</Link></li>
-        <li><Link to='/contact'>Contact</Link></li>
-      </ul>
-      <div className="search-container">
-        {showSearch && (
+      <div className="nav-left">
+      <img 
+        onClick={handleCLickLogo}
+        className="logo"
+        src={restarantLogo} 
+        alt="logo" />
+      </div>
+      
+      <div className="nav-center">
+        <ul>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/menu'>Menu</Link></li>
+          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/contact'>Contact</Link></li>
+        </ul>
+      </div>
+      
+      <div className={`search-container ${showSearch ? 'show' : ''}`}>
+        
           <input 
             type="text"
             placeholder="Search food..."
@@ -43,7 +51,6 @@ export default function Navbar({onSearch}) {
             value={searchTerm}
             onChange={handleSearchChange}
           />
-        )}
         <img 
           onClick={toggleSearchBar}
           className='search-icon' 
@@ -51,7 +58,6 @@ export default function Navbar({onSearch}) {
           alt="search-icon" 
         />
       </div>
-      
     </nav>
   )
 }

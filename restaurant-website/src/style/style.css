@@ -15,8 +15,21 @@ body{
 .nav-bar-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  height: 80px;
   padding: 10px;
+  position: relative;
+}
+
+.nav-left {
+  position: absolute;
+  left: 10px;
+}
+
+.nav-center {
+  position: absolute;
+  left: 54%;
+  transform: translateX(-50%);
 }
 
 .logo {
@@ -30,7 +43,7 @@ body{
   scale: 1.1;
 }
 
-.nav-bar-container > ul {
+.nav-bar-container ul {
   display: flex;
   list-style: none;
   margin: 0;
@@ -39,7 +52,7 @@ body{
   margin-right: 100px;
 }
 
-.nav-bar-container > ul > li {
+.nav-bar-container ul li {
   color: rgb(255, 255, 255);
 }
 
@@ -75,9 +88,32 @@ body{
 }
 
 .search-container {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  z-index: 10;
+}
+
+.search-input {
+  width: 0;
+  opacity: 0;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: white;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+/* When search is shown */
+.search-container.show .search-input {
+  width: 200px;
+  opacity: 1;
+  margin-right: 10px;
 }
 
 .restaurant-name {
@@ -221,8 +257,6 @@ body{
 }
 
 /* Contact page*/
-
-
 .contact-page {
   display: flex;
   flex-direction: column;
