@@ -23,7 +23,7 @@ export default function Menu(){
       </div> 
       :
       <div className="not-found">
-        <h1>Dish not found.</h1>
+        <h1>This dish is not on the menu.</h1>
       </div>
       }
     </>

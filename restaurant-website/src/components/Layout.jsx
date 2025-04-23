@@ -17,12 +17,11 @@ export default function Layout(){
     <>
     <div className="main-container">
       <Navbar onSearch={setSearchedItems}/>
-        <main>
-          <Outlet context={{ filtered }} />
-        </main>
+      <main>
+        <Outlet context={{ filtered }} />
+      </main>
       <Footer />
     </div>
-      
     </>
   )
 }
