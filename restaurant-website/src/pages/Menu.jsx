@@ -11,6 +11,7 @@ export default function Menu(){
       <h1 className="card-name">{food.name}</h1>
       <h5 className="card-description">{food.description}</h5>
       <h6 className="card-price">{food.price}</h6>
+      <button className="card-button">Add to cart</button>
     </div>
   )
 
