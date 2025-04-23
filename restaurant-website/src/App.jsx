@@ -4,6 +4,7 @@ import About from './pages/About';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
+import Cart from './pages/Cart';
 
 export default function App() {
   return(
@@ -13,6 +14,7 @@ export default function App() {
         <Route path='menu' element={<Menu />}/>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>
+        <Route path='cart' element={<Cart />}/>
       </Route>
     </Routes>
   )
