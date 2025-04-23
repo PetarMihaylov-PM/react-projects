@@ -13,6 +13,10 @@ export default function Navbar({onSearch}) {
     navigate('/');
   }
 
+  function handleClickCart() {
+    navigate('/cart');
+  }
+
   function handleSearchChange (e) {
     const value = e.currentTarget.value;
     setSearchTerm(value);
@@ -60,7 +64,10 @@ export default function Navbar({onSearch}) {
       </div>
 
       <div className="cart-icon-container">
-        <img src="./src/assets/cart-logo.png" alt="cart" />
+        <img 
+        onClick={handleClickCart}
+        src="./src/assets/cart-logo.png" alt="cart" 
+        />
       </div>
     </nav>
   )

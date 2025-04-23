@@ -146,6 +146,15 @@ body{
   font-size: 25px;
   letter-spacing: 2px;
   cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.card-button:hover {
+  background-color: rgb(232, 151, 2);
+}
+
+.card-button:active{
+  background-color: rgb(192, 125, 0);
 }
 
 /* When search is shown */
