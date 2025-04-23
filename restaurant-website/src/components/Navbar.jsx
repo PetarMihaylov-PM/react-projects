@@ -44,7 +44,6 @@ export default function Navbar({onSearch}) {
       </div>
       
       <div className={`search-container ${showSearch ? 'show' : ''}`}>
-        
           <input 
             type="text"
             placeholder="Search food..."
@@ -58,6 +57,10 @@ export default function Navbar({onSearch}) {
           src="https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png" 
           alt="search-icon" 
         />
+      </div>
+
+      <div className="cart-icon-container">
+        <img src="./src/assets/cart-logo.png" alt="cart" />
       </div>
     </nav>
   )
