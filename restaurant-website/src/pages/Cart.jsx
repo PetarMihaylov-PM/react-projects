@@ -8,7 +8,8 @@ export default function Cart() {
 
   const [itemQuantity, setItemQuantity] = useState(1);
 
-  const { cartItems } = useOutletContext();
+  const { cartItems, updateQuantity } = useOutletContext();
+  
 
   function increaseQuantity() {
     if(itemQuantity < 10){
@@ -41,14 +42,18 @@ export default function Cart() {
         </h3>
         <div className="cart-item-quantity-container">
           <button
-            onClick={decreaseQuantity}
+            onClick={() => 
+              updateQuantity(item.name, Math.max(1, item.quantity - 1))
+            }
           >
             <img src={minusIcon}/>
           </button>
-          <h3>{itemQuantity}</h3>
+          <h3>{item.quantity}</h3>
 
           <button
-            onClick={increaseQuantity}
+            onClick={() => 
+              updateQuantity(item.name, Math.min(10, item.quantity + 1))
+            }
           >
             <img src={plusIcon}/>
           </button>

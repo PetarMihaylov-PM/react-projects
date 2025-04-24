@@ -45,7 +45,7 @@ export default function Layout(){
             filtered, 
             cartItems,
             addToCart,
-            updateQuantity  
+            updateQuantity 
             }} />
       </main>
       <Footer />
