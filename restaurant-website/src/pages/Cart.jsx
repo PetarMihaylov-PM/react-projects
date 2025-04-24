@@ -6,22 +6,7 @@ import plusIcon from '../assets/plus-icon.svg'
 
 export default function Cart() {
 
-  const [itemQuantity, setItemQuantity] = useState(1);
-
   const { cartItems, updateQuantity } = useOutletContext();
-  
-
-  function increaseQuantity() {
-    if(itemQuantity < 10){
-      setItemQuantity(prev => prev + 1);
-    }
-  }
-
-  function decreaseQuantity() {
-    if(itemQuantity > 1){
-      setItemQuantity(prev => prev - 1);
-    }  
-  }
 
   const renderCartItems = cartItems.map((item, index) => 
       <div 
@@ -75,6 +60,10 @@ export default function Cart() {
           :
           'Cart is empty'
         }
+        <div className="total-price-section">
+          <h1>Total price: <span>$ 100</span></h1>
+          <button className="order-button">Checkout</button>
+        </div>
       </main>
     </div>
   )

@@ -395,6 +395,7 @@ body{
   backdrop-filter: blur(3px);
   box-shadow: 0 0 12px rgba(247, 241, 241, 0.555);
   width: 800px;
+  height: 150px;
   padding: 15px 25px;
   border: none;
   border-radius: 10px;
@@ -467,4 +468,49 @@ body{
 .cart-item-quantity-container h3{
   margin: 0 15px;
   user-select: none;
+}
+
+.cart-container > header h1 {
+  color: white;
+  font-style: italic;
+}
+
+.cart-container > header span {
+  color: orange;
+  font-family: "Italianno", cursive;
+  letter-spacing: 3px;
+  font-size: 70px;
+  font-style: normal;
+}
+
+.total-price-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.total-price-section > h1 {
+  font-family: "Italianno", cursive;
+  letter-spacing: 3px;
+  font-size: 60px;
+  color: white;
+  margin-left: 20px;
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-style: italic;
+  color: white;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: orange;
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
 }
