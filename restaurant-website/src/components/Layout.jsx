@@ -15,8 +15,25 @@ export default function Layout(){
   )
 
   const addToCart = (item) => {
-    setCartItems(prev => [...prev, item]);
-  }
+    setCartItems(prev => {
+      const existing = prev.find(i => i.name === item.name);
+      if (existing) {
+        return prev.map(i=> 
+          i.name === item.name ? {...i, quantity: i.quantity + 1} : 1
+        );
+      } else {
+        return [...prev, {...item, quantity: 1}];
+      }
+    });
+  };
+
+  const updateQuantity = (itemName, newQuantity) => {
+    setCartItems(prev => 
+      prev.map(item => 
+        item.name === itemName ? {...item, quantity: newQuantity} : item
+      )
+    );
+  };
 
   return(
     <>
@@ -27,7 +44,8 @@ export default function Layout(){
           context={{ 
             filtered, 
             cartItems,
-            addToCart  
+            addToCart,
+            updateQuantity  
             }} />
       </main>
       <Footer />
