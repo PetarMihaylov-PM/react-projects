@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState , useEffect} from "react";
 import { useOutletContext } from "react-router-dom";
 import deleteIcon from '../assets/delete-icon.png'
 import minusIcon from '../assets/minus-icon.svg'
@@ -7,6 +7,17 @@ import plusIcon from '../assets/plus-icon.svg'
 export default function Cart() {
 
   const { cartItems, updateQuantity } = useOutletContext();
+  
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    const currentPrice = cartItems.reduce((acc, item) => {
+      const price = parseFloat(item.price.replace('$', ''));
+      return acc + price * item.quantity;
+    }, 0);
+
+    setTotalPrice(currentPrice.toFixed(2));
+  }, [cartItems]);
 
   const renderCartItems = cartItems.map((item, index) => 
       <div 
@@ -60,10 +71,13 @@ export default function Cart() {
           :
           'Cart is empty'
         }
-        <div className="total-price-section">
-          <h1>Total price: <span>$ 100</span></h1>
-          <button className="order-button">Checkout</button>
-        </div>
+        {cartItems.length > 0 ? 
+          <div className="total-price-section">
+            <h1>Total price: <span>$ {totalPrice}</span></h1>
+            <button className="order-button">Checkout</button>
+          </div> 
+          :
+          null}
       </main>
     </div>
   )
