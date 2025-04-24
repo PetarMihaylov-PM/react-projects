@@ -6,7 +6,7 @@ import plusIcon from '../assets/plus-icon.svg'
 
 export default function Cart() {
 
-  const { cartItems, updateQuantity } = useOutletContext();
+  const { cartItems, updateQuantity, removeItemFromCart } = useOutletContext();
   
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -19,9 +19,10 @@ export default function Cart() {
     setTotalPrice(currentPrice.toFixed(2));
   }, [cartItems]);
 
+
   const renderCartItems = cartItems.map((item, index) => 
       <div 
-      key={index}
+      key={item.id}
       className="cart-item-card">
         <img 
           className="food-img"
@@ -56,6 +57,7 @@ export default function Cart() {
         </div>
         <img 
           className="delete-icon"
+          onClick={() => removeItemFromCart(item.id)}
           src={deleteIcon} alt="delete-icon" />
       </div>
   );

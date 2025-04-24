@@ -35,6 +35,10 @@ export default function Layout(){
     );
   };
 
+  const removeItemFromCart = (id) => {
+    setCartItems(prev => prev.filter(item => item.id !== id));
+  }
+
   return(
     <>
     <div className="main-container">
@@ -45,7 +49,8 @@ export default function Layout(){
             filtered, 
             cartItems,
             addToCart,
-            updateQuantity 
+            updateQuantity,
+            removeItemFromCart
             }} />
       </main>
       <Footer />
