@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { useOutletContext } from "react-router-dom";
 import deleteIcon from '../assets/delete-icon.png'
+import minusIcon from '../assets/minus-icon.svg'
+import plusIcon from '../assets/plus-icon.svg'
 
 export default function Cart() {
 
@@ -23,7 +25,11 @@ export default function Cart() {
         >
           {item.price}
         </h3>
-        <input type="number" />
+        <div className="cart-item-quantity-container">
+          <button><img src={minusIcon}/></button>
+          <h3>1</h3>
+          <button><img src={plusIcon}/></button>
+        </div>
         <img 
           className="delete-icon"
           src={deleteIcon} alt="delete-icon" />

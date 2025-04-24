@@ -393,9 +393,9 @@ body{
   align-items: center;
   background: rgba(255, 255, 255, 0.653);
   backdrop-filter: blur(3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 700px;
-  padding: 15px;
+  box-shadow: 0 0 12px rgba(247, 241, 241, 0.555);
+  width: 800px;
+  padding: 15px 25px;
   border: none;
   border-radius: 10px;
 }
@@ -403,21 +403,62 @@ body{
 .cart-item-card .food-img {
   width: 180px;
   border-radius: 40%;
+  user-select: none;
 }
 
 .cart-item-card .cart-item-name {
-
+  font-family: "Italianno", cursive;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: rgb(239, 140, 3);
+  user-select: none;
 }
 
 .cart-item-card .cart-item-price {
-  
-}
-
-.cart-item-card input {
-  height: 30px;
+  font-family: "Italianno", cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  user-select: none;
 }
 
 .cart-item-card .delete-icon {
   width: 30px;
   height: 30px;
+  cursor: pointer;
+  background-color: rgba(233, 233, 233, 0);
+  border-radius: 50%;
+  padding: 5px;
+  transition: all 0.15s ease;
+}
+
+.cart-item-card .delete-icon:hover {
+  background-color: rgba(240, 70, 70, 0.49);
+}
+
+.cart-item-quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-quantity-container button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(219, 130, 6);
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-item-quantity-container img {
+  width: 15px;
+}
+
+.cart-item-quantity-container h3{
+  margin: 0 15px;
+  user-select: none;
 }
