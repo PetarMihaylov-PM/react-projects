@@ -6,7 +6,21 @@ import plusIcon from '../assets/plus-icon.svg'
 
 export default function Cart() {
 
+  const [itemQuantity, setItemQuantity] = useState(1);
+
   const { cartItems } = useOutletContext();
+
+  function increaseQuantity() {
+    if(itemQuantity < 10){
+      setItemQuantity(prev => prev + 1);
+    }
+  }
+
+  function decreaseQuantity() {
+    if(itemQuantity > 1){
+      setItemQuantity(prev => prev - 1);
+    }  
+  }
 
   const renderCartItems = cartItems.map((item, index) => 
       <div 
@@ -26,9 +40,18 @@ export default function Cart() {
           {item.price}
         </h3>
         <div className="cart-item-quantity-container">
-          <button><img src={minusIcon}/></button>
-          <h3>1</h3>
-          <button><img src={plusIcon}/></button>
+          <button
+            onClick={decreaseQuantity}
+          >
+            <img src={minusIcon}/>
+          </button>
+          <h3>{itemQuantity}</h3>
+
+          <button
+            onClick={increaseQuantity}
+          >
+            <img src={plusIcon}/>
+          </button>
         </div>
         <img 
           className="delete-icon"

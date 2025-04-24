@@ -452,6 +452,12 @@ body{
   border-radius: 50px;
   border: none;
   cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cart-item-quantity-container button:hover {
+  scale: 1.1;
+  background-color: rgb(209, 122, 0);
 }
 
 .cart-item-quantity-container img {
