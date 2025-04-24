@@ -289,6 +289,23 @@ body{
 }
 
 
+/*Menu page - when food not found*/
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.not-found > h1 {
+  font-family: "Italianno", cursive;
+  font-weight: 500;
+  letter-spacing: 5px;
+  font-size: 60px;
+  color: white;
+}
+
+
 /* About page*/
 .about-container{
   display: flex;
@@ -356,19 +373,51 @@ body{
 }
 
 
-.not-found {
+/* Cart Page*/
+.cart-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 80px;
+  align-items: center;
 }
 
-.not-found > h1 {
-  font-family: "Italianno", cursive;
-  font-weight: 500;
-  letter-spacing: 5px;
-  font-size: 60px;
-  color: white;
+.orders-cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
+.cart-item-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.653);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 700px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
 
+.cart-item-card .food-img {
+  width: 180px;
+  border-radius: 40%;
+}
+
+.cart-item-card .cart-item-name {
+
+}
+
+.cart-item-card .cart-item-price {
+  
+}
+
+.cart-item-card input {
+  height: 30px;
+}
+
+.cart-item-card .delete-icon {
+  width: 30px;
+  height: 30px;
+}
