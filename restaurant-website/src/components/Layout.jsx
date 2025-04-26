@@ -13,7 +13,7 @@ export default function Layout(){
     return storedCart ? JSON.parse(storedCart) : []
   });
 
-  const [itemAdded, setItemAdded] = useState(false);
+  const [itemAddedId, setItemAddedId] = useState(null);
   const timeOutRef = useRef(null);
 
   useEffect(() => {
@@ -37,14 +37,14 @@ export default function Layout(){
       }
     });
 
-    setItemAdded(true);
+    setItemAddedId(item.id);
 
     if(timeOutRef.current) {
       clearTimeout(timeOutRef.current);
     }
 
     setTimeout(() => {
-      setItemAdded(false);
+      setItemAddedId(null);
     }, 2000);
   };
 
@@ -72,7 +72,7 @@ export default function Layout(){
             addToCart,
             updateQuantity,
             removeItemFromCart,
-            itemAdded
+            itemAddedId
             }} />
       </main>
       <Footer />

@@ -264,6 +264,50 @@ body{
   cursor: pointer;
   padding-bottom: 0px;
   transition: all 0.15s ease;
+  position: relative;
+}
+/* added message */
+.added-message{
+  position: absolute;
+  top: 10px; /* distance from the top of the menu card */
+  right: 10px; /* distance from the right side */
+  background-color: #4caf50; /* nice green color */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  transform: translateX(100%); /* Start off-screen to the right */
+  opacity: 0;
+  animation: slideInFade 0.5s forwards, fadeOut 2s forwards 1.5s;
+}
+
+@keyframes slideInFade {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.added-message h3 {
+  margin: 0;
+  font-size: 14px;
 }
 
 .menu-card:hover{
@@ -528,3 +572,6 @@ body{
   color: orange;
   letter-spacing: 5px;
 }
+
+
+

@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 
 export default function Menu(){
 
-  const { filtered, addToCart, itemAdded } = useOutletContext();
+  const { filtered, addToCart, itemAddedId } = useOutletContext();
 
   const renderMenu = filtered.map((food, index) => 
     <div key={index} className="menu-card">
@@ -12,6 +12,13 @@ export default function Menu(){
       <h5 className="card-description">{food.description}</h5>
       <h6 className="card-price">{food.price}</h6>
       <button className="card-button" onClick={() => addToCart(food)}>Add to cart</button>
+      {itemAddedId === food.id ? 
+        <div className="added-message">
+          <h3>Added</h3>
+        </div>
+        : 
+        null
+      }
     </div>
   )
 
