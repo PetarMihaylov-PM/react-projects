@@ -24,10 +24,12 @@ export default function Cart() {
       <div 
       key={item.id}
       className="cart-item-card">
-        <img 
+        <div className="img-container">
+          <img 
           className="food-img"
           src={item.image} 
           alt="food pic" />
+        </div>
         <h3 
           className="cart-item-name"
         >

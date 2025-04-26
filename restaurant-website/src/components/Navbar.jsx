@@ -50,7 +50,7 @@ export default function Navbar({onSearch}) {
       <div className={`search-container ${showSearch ? 'show' : ''}`}>
           <input 
             type="text"
-            placeholder="Search food..."
+            placeholder="Search for food..."
             className="search-input"
             value={searchTerm}
             onChange={handleSearchChange}
