@@ -30,7 +30,7 @@ export default function Layout(){
       const existing = prev.find(i => i.name === item.name);
       if (existing) {
         return prev.map(i=> 
-          i.name === item.name ? {...i, quantity: i.quantity + 1} : 1
+          i.name === item.name ? {...i, quantity: i.quantity + 1} : i
         );
       } else {
         return [...prev, {...item, quantity: 1}];
@@ -43,7 +43,7 @@ export default function Layout(){
       clearTimeout(timeOutRef.current);
     }
 
-    setTimeout(() => {
+    timeOutRef.current = setTimeout(() => {
       setItemAddedId(null);
     }, 2000);
   };

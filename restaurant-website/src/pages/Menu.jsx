@@ -5,8 +5,8 @@ export default function Menu(){
 
   const { filtered, addToCart, itemAddedId } = useOutletContext();
 
-  const renderMenu = filtered.map((food, index) => 
-    <div key={index} className="menu-card">
+  const renderMenu = filtered.map(food => 
+    <div key={food.id} className="menu-card">
       <img src={food.image} alt={food.name} />
       <h1 className="card-name">{food.name}</h1>
       <h5 className="card-description">{food.description}</h5>

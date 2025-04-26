@@ -12,6 +12,7 @@ export default function Cart() {
 
   useEffect(() => {
     const currentPrice = cartItems.reduce((acc, item) => {
+      if(!item || !item.price) return acc;
       const price = parseFloat(item.price.replace('$', ''));
       return acc + price * item.quantity;
     }, 0);
