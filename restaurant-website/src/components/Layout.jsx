@@ -2,21 +2,24 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
 import { menuItems } from "../assets/menu";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Layout(){
 
   const [searchedItems, setSearchedItems] = useState('');
   const [cartItems, setCartItems] = useState(() => {
-    const storedCart = localStorage.getItem('cartItems');
 
+    const storedCart = localStorage.getItem('cartItems');
     return storedCart ? JSON.parse(storedCart) : []
   });
+
+  const [itemAdded, setItemAdded] = useState(false);
+  const timeOutRef = useRef(null);
 
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
-  
+
 
   const filtered = menuItems.filter(item => 
     item.name.toLowerCase().includes(searchedItems.toLocaleLowerCase())
@@ -33,6 +36,16 @@ export default function Layout(){
         return [...prev, {...item, quantity: 1}];
       }
     });
+
+    setItemAdded(true);
+
+    if(timeOutRef.current) {
+      clearTimeout(timeOutRef.current);
+    }
+
+    setTimeout(() => {
+      setItemAdded(false);
+    }, 2000);
   };
 
   const updateQuantity = (itemName, newQuantity) => {
@@ -58,7 +71,8 @@ export default function Layout(){
             cartItems,
             addToCart,
             updateQuantity,
-            removeItemFromCart
+            removeItemFromCart,
+            itemAdded
             }} />
       </main>
       <Footer />
