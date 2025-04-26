@@ -13,10 +13,10 @@ export default function Layout(){
     return storedCart ? JSON.parse(storedCart) : []
   });
 
-
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
-  },[cartItems])
+  }, [cartItems]);
+  
 
   const filtered = menuItems.filter(item => 
     item.name.toLowerCase().includes(searchedItems.toLocaleLowerCase())

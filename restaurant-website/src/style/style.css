@@ -514,3 +514,17 @@ body{
   position: absolute;
   right: 20px;
 }
+
+.empty-cart{
+  font-family: "Italianno", cursive;
+  font-size: 80px;
+  color: white;
+  letter-spacing: 5px;
+}
+
+.empty-cart span {
+  font-family: "Italianno", cursive;
+  font-size: 80px;
+  color: orange;
+  letter-spacing: 5px;
+}

@@ -19,7 +19,6 @@ export default function Cart() {
     setTotalPrice(currentPrice.toFixed(2));
   }, [cartItems]);
 
-
   const renderCartItems = cartItems.map(item => 
       <div 
       key={item.id}
@@ -71,7 +70,7 @@ export default function Cart() {
         {cartItems.length > 0 ? 
           renderCartItems
           :
-          'Cart is empty'
+          <h1 className="empty-cart"><span>is</span> empty</h1>
         }
         {cartItems.length > 0 ? 
           <div className="total-price-section">
