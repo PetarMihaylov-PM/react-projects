@@ -20,7 +20,7 @@ export default function Cart() {
   }, [cartItems]);
 
 
-  const renderCartItems = cartItems.map((item, index) => 
+  const renderCartItems = cartItems.map(item => 
       <div 
       key={item.id}
       className="cart-item-card">
