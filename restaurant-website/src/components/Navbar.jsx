@@ -1,13 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import restarantLogo from "../assets/restaurant-logo.png"
 
 
-export default function Navbar({onSearch}) {
+export default function Navbar({onSearch, cartItemsQuantity}) {
 
   const navigate = useNavigate();
   const [showSearch, setShowSearch] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+
 
   function handleCLickLogo() {
     navigate('/');
@@ -68,6 +69,7 @@ export default function Navbar({onSearch}) {
         onClick={handleClickCart}
         src="./src/assets/cart-logo.png" alt="cart" 
         />
+        <h3 className="cart-quantity">{cartItemsQuantity}</h3>
       </div>
     </nav>
   )

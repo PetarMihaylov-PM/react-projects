@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 export default function Layout(){
 
   const [searchedItems, setSearchedItems] = useState('');
+  const [cartItemsQuantity, setCartItemsQuantity] = useState(0);
   const [cartItems, setCartItems] = useState(() => {
 
     const storedCart = localStorage.getItem('cartItems');
@@ -18,6 +19,7 @@ export default function Layout(){
 
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    setCartItemsQuantity(countCartItems);
   }, [cartItems]);
 
 
@@ -60,10 +62,17 @@ export default function Layout(){
     setCartItems(prev => prev.filter(item => item.id !== id));
   }
 
+  const countCartItems = () => {
+    const quantity = cartItems.reduce((acc, item) => {
+      return acc + item.quantity;
+    }, 0);
+    return quantity;
+  }
+
   return(
     <>
     <div className="main-container">
-      <Navbar onSearch={setSearchedItems}/>
+      <Navbar onSearch={setSearchedItems} cartItemsQuantity={cartItemsQuantity}/>
       <main>
         <Outlet 
           context={{ 
@@ -72,7 +81,8 @@ export default function Layout(){
             addToCart,
             updateQuantity,
             removeItemFromCart,
-            itemAddedId
+            itemAddedId,
+            cartItemsQuantity
             }} />
       </main>
       <Footer />
