@@ -1,5 +1,6 @@
 body{
-  margin: 20px;
+  margin: 0px;
+  margin-top: 20px;
   background-image: url(https://www.elitehavens.com/magazine/wp-content/uploads/2017/11/chinh-le-duc-Dghn39rncfY-unsplash-scaled-e1594112172967.jpg);
   background-size: cover;
 }
@@ -12,7 +13,6 @@ body{
   min-width: 700px;
   box-sizing: border-box;
   position: relative;
-  
 }
 
 
@@ -24,11 +24,20 @@ body{
   height: 80px;
   padding: 10px;
   position: relative;
+  background-color: rgba(0, 0, 0, 0.385);
+  backdrop-filter: blur(2px);
 }
 
 .nav-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  left: 10px;
+  left: 25px;
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
 }
 
 .nav-center {
@@ -38,7 +47,7 @@ body{
 }
 
 .logo {
-  width: 150px;
+  width: 130px;
   margin: 0;
   cursor: pointer;
   transition: all 0.15s ease;
@@ -94,7 +103,7 @@ body{
 
 .search-container {
   position: absolute;
-  right: 80px;
+  right: 100px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -119,13 +128,14 @@ body{
   justify-content: center;
   align-items: center;
   position: absolute;
-  right: 20px;
+  right: 40px;
   background-color: white;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   transition: all 0.15s ease;
 }
+
 .cart-icon-container img{
   padding: 10px;
   width: 20px;
@@ -133,6 +143,23 @@ body{
 
 .cart-icon-container:hover {
   scale: 1.1;
+}
+
+.cart-icon-container .cart-quantity{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -12px;
+  bottom: 10px;
+  background-color: rgb(255, 145, 0);
+  color: white;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 50px;
 }
 
 .card-button {
