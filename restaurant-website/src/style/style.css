@@ -38,6 +38,7 @@ body{
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  box-shadow: 0 0 25px rgb(255, 255, 255);
 }
 
 .nav-center {
@@ -551,6 +552,10 @@ body{
 .cart-item-quantity-container h3{
   margin: 0 15px;
   user-select: none;
+}
+
+.cart-container > header{
+  margin-top: 30px;
 }
 
 .cart-container > header h1 {
