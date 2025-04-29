@@ -3,6 +3,13 @@ body{
   margin-top: 20px;
   background-image: url(https://www.elitehavens.com/magazine/wp-content/uploads/2017/11/chinh-le-duc-Dghn39rncfY-unsplash-scaled-e1594112172967.jpg);
   background-size: cover;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .main-container {
