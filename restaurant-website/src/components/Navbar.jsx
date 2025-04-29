@@ -1,4 +1,4 @@
-import { Link, useNavigate, useOutletContext } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import restarantLogo from "../assets/restaurant-logo.png"
 
