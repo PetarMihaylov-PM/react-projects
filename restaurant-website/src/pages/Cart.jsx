@@ -1,5 +1,5 @@
 import React, {useState , useEffect} from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import deleteIcon from '../assets/delete-icon.png'
 import minusIcon from '../assets/minus-icon.svg'
 import plusIcon from '../assets/plus-icon.svg'
@@ -7,8 +7,8 @@ import plusIcon from '../assets/plus-icon.svg'
 export default function Cart() {
 
   const { cartItems, updateQuantity, removeItemFromCart } = useOutletContext();
-  
   const [totalPrice, setTotalPrice] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const currentPrice = cartItems.reduce((acc, item) => {
@@ -19,6 +19,10 @@ export default function Cart() {
 
     setTotalPrice(currentPrice.toFixed(2));
   }, [cartItems]);
+
+  function handleClick() {
+    navigate('/checkout');
+  }
 
   const renderCartItems = cartItems.map(item => 
       <div 
@@ -78,7 +82,12 @@ export default function Cart() {
         {cartItems.length > 0 ? 
           <div className="total-price-section">
             <h1>Total price: <span>$ {totalPrice}</span></h1>
-            <button className="order-button">Checkout</button>
+            <button 
+              className="checkout-button"
+              onClick={handleClick}
+            >
+              Checkout
+            </button>
           </div> 
           :
           null}

@@ -591,9 +591,10 @@ body::-webkit-scrollbar {
   font-size: 60px;
   color: white;
   margin-left: 20px;
+  user-select: none;
 }
 
-.order-button {
+.checkout-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -608,6 +609,12 @@ body::-webkit-scrollbar {
   border-radius: 10px;
   position: absolute;
   right: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.checkout-button:hover {
+  scale: 1.1;
 }
 
 .empty-cart{
