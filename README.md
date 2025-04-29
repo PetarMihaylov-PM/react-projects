@@ -61,6 +61,32 @@ This is a dynamic and visually modern Quiz App built with React. It fetches ques
 
 ##
 
+## 🍽️ Cooking Website
+This is a responsive and visually appealing cooking website built using React. It features a multi-page layout powered by React Router, showcasing sections such as Home, Menu, About, Contact, and a fully functional Cart system.
+
+- React Router – Client-side routing for multiple pages.
+- CSS – Custom styling with a touch of glassmorphism for a modern aesthetic.
+- JavaScript – Core logic for components and interactivity.
+- State Management – Shared state across components using React props and hooks
+
+✨ Features
+- Browse a dynamic menu of dishes with images and prices
+- Add/remove items from the cart with quantity controls
+- Responsive design, optimized for both desktop and mobile
+- Clean UI inspired by modern design trends
+
+<img src="https://github.com/user-attachments/assets/121a3af4-180e-405a-9711-3324b61e55c7" alt="cooking1" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/7f724f5b-8ad2-4c0d-a221-bf1a4f7fdb3b" alt="cooking2" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/078e90e2-6abd-42ff-b73e-07024d3d4f3d" alt="cooking3" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/cfc4985d-be62-4f1c-9f52-3e340cfc5780" alt="cooking4" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/6bf589b4-3edd-4acb-b36e-d03b964b702d" alt="cooking5" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/92c3d0be-8078-40ff-bf37-254e73ca4033" alt="cooking6" width="300"/>
+
 ## 📌 Technologies Used  
 - React (JSX, Components, Props, State)  
 - API Fetching & Asynchronous JavaScript  
