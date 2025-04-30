@@ -750,7 +750,7 @@ body::-webkit-scrollbar {
 
 .card-payment-container .card-info {
   display: flex;
-  gap: 30px;
+  gap: 32px;
 }
 .card-payment-container .card-info input{
   width: 72px;
@@ -760,12 +760,24 @@ body::-webkit-scrollbar {
 .card-payment-container .card-buttons {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-top: 20px;
-  width: 300px;
+  width: 289px;
+}
+
+.card-payment-container .card-buttons button {
+  border: none;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  height: 32px;
 }
 
 .pay-btn{
   width: 180px;
+}
+
+.cancel-btn{
+  width: 72px;
 }
 
 /*right section - order summary*/
