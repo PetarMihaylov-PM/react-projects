@@ -64,12 +64,12 @@ export default function Checkout() {
 
           <div className="card-payment-container">
             <img src={creditCard} alt="credit-card-img" />
-            <input type="text" placeholder="CARD NUMBER"/>
-            <input type="text" placeholder="CARDHOLDER NAME"/>
+            <input type="text" placeholder=" CARD NUMBER"/>
+            <input type="text" placeholder=" CARDHOLDER NAME"/>
             <div className="card-info">
-              <input type="text" placeholder="MM"/>
-              <input type="text" placeholder="YY"/>
-              <input type="text" placeholder="CVV"/>
+              <input type="text" placeholder=" MM"/>
+              <input type="text" placeholder=" YY"/>
+              <input type="text" placeholder=" CVV"/>
             </div>
             <div className="card-buttons">
               <button className="pay-btn">PAY NOW</button>
