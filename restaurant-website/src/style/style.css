@@ -682,6 +682,33 @@ body::-webkit-scrollbar {
   height: 25px;
 }
 
+.city-input-container {
+  display: flex;
+  gap: 15px;
+}
+
+.city-input-container input {
+  width: 180px;
+  height: 25px;
+}
+
+.phone-number-container input {
+  width: 385px;
+  height: 25px;
+}
+
+.payment-type-container h4 {
+  text-decoration: underline;
+}
+
+.payment-type-radio-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+
 
 /*right section - order summary*/
 .checkout-right {
