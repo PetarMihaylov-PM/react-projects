@@ -2,7 +2,7 @@
 export default function Checkout() {
   return (
     <div className="checkout-container">
-      <div className="checkout-right">
+      <div className="checkout-left">
         <h1>Checkout</h1>
         <h3>Ship To</h3>
         <div className="name-input-container">
@@ -15,11 +15,15 @@ export default function Checkout() {
             <input type="text" />
           </div>
         </div>
+        <div className="street-address-container">
+          <h4>Street Address <span>required</span></h4>
+          <input type="text" />
+        </div>
       </div>
-      <div className="checkout-left">
-        <div className="checkout-left-header">
+      <div className="checkout-right">
+        <div className="checkout-right-header">
           <h3>Order Summary</h3>
-          <link rel="stylesheet" href=""/> Edit cart
+          <a href="">Edit cart</a>
         </div>
       </div>
     </div>
