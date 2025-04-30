@@ -707,8 +707,21 @@ body::-webkit-scrollbar {
   gap: 10px;
 }
 
+.payment-type-radio-btns label {
+  font-size: 18px;
+}
 
+.payment-type-radio-btns span {
+  font-weight: 600;
+}
 
+.card-payment-container {
+
+}
+
+.card-payment-container img{
+  width: 300px;
+}
 
 /*right section - order summary*/
 .checkout-right {
