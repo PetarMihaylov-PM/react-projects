@@ -1,7 +1,13 @@
+import React, {useState} from 'react'
 import creditCard from '../assets/credit-card.png'
 
 
 export default function Checkout() {
+
+  const [isCardChecked, setIsCardChecked] = useState(false);
+
+  console.log(isCardChecked);
+
   return (
     <div className="checkout-container">
       <div className="checkout-left">
@@ -46,6 +52,7 @@ export default function Checkout() {
           <div className="payment-type-radio-btns">
             <div>
               <input 
+                onChange={() => setIsCardChecked(false)}
                 type="radio"
                 id='cash'
                 name="payment-type"
@@ -54,6 +61,7 @@ export default function Checkout() {
             </div>
             <div>
               <input 
+                onChange={() => setIsCardChecked(true)}
                 type="radio"
                 id='card' 
                 name="payment-type"
@@ -62,20 +70,23 @@ export default function Checkout() {
             </div>
           </div>
 
-          <div className="card-payment-container">
-            <img src={creditCard} alt="credit-card-img" />
-            <input type="text" placeholder=" CARD NUMBER"/>
-            <input type="text" placeholder=" CARDHOLDER NAME"/>
-            <div className="card-info">
-              <input type="text" placeholder=" MM"/>
-              <input type="text" placeholder=" YY"/>
-              <input type="text" placeholder=" CVV"/>
+          {isCardChecked ? 
+            <div className="card-payment-container">
+              <img src={creditCard} alt="credit-card-img" />
+              <input type="text" placeholder=" CARD NUMBER"/>
+              <input type="text" placeholder=" CARDHOLDER NAME"/>
+              <div className="card-info">
+                <input type="text" placeholder=" MM"/>
+                <input type="text" placeholder=" YY"/>
+                <input type="text" placeholder=" CVV"/>
+              </div>
+              <div className="card-buttons">
+                <button className="pay-btn">PAY NOW</button>
+                <button className="cancel-btn">CANCEL</button>
+              </div>
             </div>
-            <div className="card-buttons">
-              <button className="pay-btn">PAY NOW</button>
-              <button className="cancel-btn">CANCEL</button>
-            </div>
-          </div>
+          : 
+            null}
         </div>
       </div>
       <div className="checkout-right">
