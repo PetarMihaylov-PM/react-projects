@@ -773,11 +773,27 @@ body::-webkit-scrollbar {
 }
 
 .pay-btn{
+  background-color: rgb(80, 206, 248);
+  color: white;
   width: 180px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.pay-btn:hover {
+  background-color: rgb(67, 180, 217);
 }
 
 .cancel-btn{
+  background-color: rgb(254, 107, 82);
+  color: white;
   width: 72px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cancel-btn:hover {
+  background-color: rgb(197, 79, 58);
 }
 
 /*right section - order summary*/
