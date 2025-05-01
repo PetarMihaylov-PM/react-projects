@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
+import { useOutletContext } from 'react-router-dom';
 import creditCard from '../assets/credit-card.png'
 
 
 export default function Checkout() {
 
   const [isCardChecked, setIsCardChecked] = useState(false);
+
+  const { totalPrice } = useOutletContext();
 
   console.log(isCardChecked);
 
@@ -93,6 +96,7 @@ export default function Checkout() {
         <div className="checkout-right-header">
           <h3>Order Summary</h3>
           <a href="">Edit cart</a>
+          <h3>total price: {totalPrice}</h3>
         </div>
       </div>
     </div>

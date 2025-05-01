@@ -8,6 +8,7 @@ export default function Layout(){
 
   const [searchedItems, setSearchedItems] = useState('');
   const [cartItemsQuantity, setCartItemsQuantity] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [cartItems, setCartItems] = useState(() => {
 
     const storedCart = localStorage.getItem('cartItems');
@@ -20,6 +21,14 @@ export default function Layout(){
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     setCartItemsQuantity(countCartItems);
+
+    const currentPrice = cartItems.reduce((acc, item) => {
+      if(!item || !item.price) return acc;
+      const price = parseFloat(item.price.replace('$', ''));
+      return acc + price * item.quantity;
+    }, 0);
+
+    setTotalPrice(currentPrice.toFixed(2));
   }, [cartItems]);
 
 
@@ -82,7 +91,8 @@ export default function Layout(){
             updateQuantity,
             removeItemFromCart,
             itemAddedId,
-            cartItemsQuantity
+            cartItemsQuantity,
+            totalPrice
             }} />
       </main>
       <Footer />

@@ -6,19 +6,9 @@ import plusIcon from '../assets/plus-icon.svg'
 
 export default function Cart() {
 
-  const { cartItems, updateQuantity, removeItemFromCart } = useOutletContext();
-  const [totalPrice, setTotalPrice] = useState(0);
+  const { cartItems, updateQuantity, removeItemFromCart, totalPrice } = useOutletContext();
+
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const currentPrice = cartItems.reduce((acc, item) => {
-      if(!item || !item.price) return acc;
-      const price = parseFloat(item.price.replace('$', ''));
-      return acc + price * item.quantity;
-    }, 0);
-
-    setTotalPrice(currentPrice.toFixed(2));
-  }, [cartItems]);
 
   function handleClick() {
     navigate('/checkout');
