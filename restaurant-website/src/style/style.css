@@ -643,6 +643,17 @@ body::-webkit-scrollbar {
   margin-top: 50px;
 }
 
+.checkout-container input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.checkout-container 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /*left section - Checkout*/
 .checkout-left {  
   display: flex;
@@ -709,12 +720,19 @@ body::-webkit-scrollbar {
   gap: 10px;
 }
 
+.payment-type-radio-btns input,
+.payment-type-radio-btns div{
+  cursor: pointer;
+}
+
 .payment-type-radio-btns label {
   font-size: 18px;
+  cursor: pointer;
 }
 
 .payment-type-radio-btns span {
   font-weight: 600;
+  cursor: pointer;
 }
 
 .card-payment-container {
