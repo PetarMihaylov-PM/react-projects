@@ -817,6 +817,18 @@ body::-webkit-scrollbar {
   border-bottom: solid 2px rgb(162, 161, 161);
 }
 
+.header-order-summary > a {
+  color: rgb(248, 162, 1);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.15s ease;
+}
+
+.header-order-summary > a:hover {
+  scale: 1.1;
+  color: rgb(221, 144, 1);
+}
+
 .order-total-price {
   border-top: solid 2px rgb(162, 161, 161);
 }
