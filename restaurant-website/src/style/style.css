@@ -647,10 +647,12 @@ body::-webkit-scrollbar {
 .checkout-left {  
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 500px;
   padding: 15px;
   gap: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.826);
 }
 
 .name-input-container{
@@ -801,6 +803,8 @@ body::-webkit-scrollbar {
   background-color: white;
   width: 250px;
   padding: 10px 18px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.826);
 }
 
 .checkout-right > div {
@@ -813,6 +817,9 @@ body::-webkit-scrollbar {
   border-bottom: solid 2px rgb(162, 161, 161);
 }
 
+.order-total-price {
+  border-top: solid 2px rgb(162, 161, 161);
+}
 
 
 

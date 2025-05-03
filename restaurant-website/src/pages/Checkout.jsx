@@ -1,15 +1,23 @@
 import React, {useState} from 'react'
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useNavigate } from 'react-router-dom';
 import creditCard from '../assets/credit-card.png'
 
 
 export default function Checkout() {
 
   const [isCardChecked, setIsCardChecked] = useState(false);
+  let { totalPrice } = useOutletContext();
+  const navigate = useNavigate();
 
-  const { totalPrice } = useOutletContext();
+  function handleNavigate() {
+    navigate('/cart');
+  }
 
-  console.log(isCardChecked);
+  totalPrice = Number(totalPrice);
+  const shippingPrice = totalPrice * 0.15;
+  const orderTax = totalPrice * 0.2;
+  const buffer = totalPrice + shippingPrice + orderTax;
+  const totalOrderPrice = Math.round((buffer + Number.EPSILON) * 100) / 100;
 
   return (
     <div className="checkout-container">
@@ -95,23 +103,23 @@ export default function Checkout() {
       <div className="checkout-right">
         <div className='header-order-summary'>
           <h3>Order Summary</h3>
-          <a href="">Edit cart</a>
+          <a onClick={handleNavigate}>Edit cart</a>
         </div>
         <div className='order-items'>
           <h4>Items:</h4>
-          <h4>$58</h4>
+          <h4>${totalPrice.toFixed(2)}</h4>
         </div>
         <div className='order-shippin'>
           <h4>Shipping & Handling:</h4>
-          <h4>$10</h4>
-        </div>
+          <h4>${shippingPrice.toFixed(2)}</h4>
+        </div>  
         <div className='order-tax'>
           <h4>Tax:</h4>
-          <h4>$25</h4>
+          <h4>${orderTax.toFixed(2)}</h4>
         </div>
         <div className='order-total-price'>
           <h3>Total price:</h3>
-          <h3>$100</h3>
+          <h3>${totalOrderPrice.toFixed(2)}</h3>
         </div>
       </div>
     </div>
