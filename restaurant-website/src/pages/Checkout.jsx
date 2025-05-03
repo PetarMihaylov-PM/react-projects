@@ -93,20 +93,25 @@ export default function Checkout() {
         </div>
       </div>
       <div className="checkout-right">
-        <div className="checkout-right-header">
-          <div className='header-order-summary'>
-            <h3>Order Summary</h3>
-            <a href="">Edit cart</a>
-          </div>
-          <div className='order-items'>
-            <h4>Items:</h4>
-            <h4>$58</h4>
-          </div>
-          <div className='order-shippin'>
-            <h4>Shipping & Handling:</h4>
-            <h4>$10</h4>
-          </div>
-          <h3>total price: {totalPrice}</h3>
+        <div className='header-order-summary'>
+          <h3>Order Summary</h3>
+          <a href="">Edit cart</a>
+        </div>
+        <div className='order-items'>
+          <h4>Items:</h4>
+          <h4>$58</h4>
+        </div>
+        <div className='order-shippin'>
+          <h4>Shipping & Handling:</h4>
+          <h4>$10</h4>
+        </div>
+        <div className='order-tax'>
+          <h4>Tax:</h4>
+          <h4>$25</h4>
+        </div>
+        <div className='order-total-price'>
+          <h3>Total price:</h3>
+          <h3>$100</h3>
         </div>
       </div>
     </div>

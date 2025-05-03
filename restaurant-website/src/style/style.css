@@ -800,12 +800,17 @@ body::-webkit-scrollbar {
 .checkout-right {
   background-color: white;
   width: 250px;
+  padding: 10px 18px;
 }
 
-.checkout-right-header {
+.checkout-right > div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.header-order-summary {
+  border-bottom: solid 2px rgb(162, 161, 161);
 }
 
 
