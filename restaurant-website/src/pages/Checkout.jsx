@@ -7,11 +7,31 @@ export default function Checkout() {
 
   const [isCardChecked, setIsCardChecked] = useState(false);
   const [isCashChecked, setIsCashChecked] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    address: '',
+    postalCode: '',
+    city: '',
+    phoneNumber: '',
+    paymentType: '',
+    cardNumber: '',
+    cardName: '',
+    mm: '',
+    yy: '',
+    cvv: ''
+  });
+
   let { totalPrice } = useOutletContext();
   const navigate = useNavigate();
 
   function handleNavigate() {
     navigate('/cart');
+  }
+
+  function handleChange (e) {
+    const {name, value} = e.targer;
+    setFormData(prev => ({...prev, [name]: value}));
   }
 
   totalPrice = Number(totalPrice);
@@ -29,28 +49,53 @@ export default function Checkout() {
         <div className="name-input-container">
           <div className="first-name-container">
             <h4>First Name <span>required</span></h4>
-            <input type="text" />
+            <input 
+              type="text" 
+              name='firstName'
+              value={formData.firstName}
+              onChange={handleChange}
+            />
           </div>
 
           <div className="last-name-container">
             <h4>Last Name <span>required</span></h4>
-            <input type="text" />
+            <input 
+              type="text" 
+              name='lastName'
+              value={formData.lastName}
+              onChange={handleChange}
+            />
           </div>
         </div>
 
         <div className="street-address-container">
           <h4>Street Address <span>required</span></h4>
-          <input type="text" />
+          <input 
+            type="text" 
+            name='address'
+            value={formData.address}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="city-input-container">
           <div>
             <h4>Postal Code <span>required</span></h4>
-            <input type="number" />
+            <input 
+              type="number" 
+              name='postalCode'
+              value={formData.postalCode}
+              onChange={handleChange}
+            />
           </div>
           <div>
             <h4>Town/City <span>required</span></h4>
-            <input type="text" />
+            <input 
+              type="text" 
+              name='city'
+              value={formData.city}
+              onChange={handleChange}
+            />
           </div>
         </div>
 
