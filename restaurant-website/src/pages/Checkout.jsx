@@ -34,6 +34,20 @@ export default function Checkout() {
     setFormData(prev => ({...prev, [name]: value}));
   }
 
+  function handlePlaceOrder() {
+    const order = {
+      ...formData,
+      total: totalOrderPrice.toFixed(2),
+      paymentMethod: isCardChecked ? 'Card' : 'Cash'
+    };
+
+    console.log('Order is sent to the server:' , order);
+    
+    alert('Your order has been placed!');
+
+    navigate('/');
+  }
+
   totalPrice = Number(totalPrice);
   const shippingPrice = totalPrice * 0.15;
   const orderTax = totalPrice * 0.2;
@@ -159,9 +173,24 @@ export default function Checkout() {
                 onChange={handleChange}
               />
               <div className="card-info">
-                <input type="text" placeholder=" MM"/>
-                <input type="text" placeholder=" YY"/>
-                <input type="text" placeholder=" CVV"/>
+                <input 
+                  type="text" 
+                  placeholder=" MM"
+                  name='mm'
+                  onChange={handleChange}
+                />
+                <input 
+                  type="text" 
+                  placeholder=" YY"
+                  name='yy'
+                  onChange={handleChange}
+                />
+                <input 
+                  type="text" 
+                  placeholder=" CVV"
+                  name='cvv'
+                  onChange={handleChange}
+                />
               </div>
               <div className="card-buttons">
                 <button className="pay-btn">PAY NOW</button>
