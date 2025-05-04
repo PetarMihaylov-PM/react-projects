@@ -816,6 +816,47 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: rgb(197, 79, 58);
 }
 
+.place-order-btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.place-order-btns-container > button {
+  font-family: "Italianno", cursive;
+  font-size: 32px;
+  letter-spacing: 2px;
+  width: 250px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(255, 196, 0);
+  cursor: pointer;
+  transition: animation 1s ease;
+}
+
+.place-order-btns-container > button:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.place-order-btns-container > button:active {
+  background-color: rgb(234, 179, 0);
+}
+
 /*right section - order summary*/
 .checkout-right {
   background-color: white;
@@ -844,7 +885,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .header-order-summary > a:hover {
   scale: 1.1;
-  color: rgb(221, 144, 1);
 }
 
 .order-total-price {

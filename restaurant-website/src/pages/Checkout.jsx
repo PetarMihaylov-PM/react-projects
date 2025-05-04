@@ -6,6 +6,7 @@ import creditCard from '../assets/credit-card.png'
 export default function Checkout() {
 
   const [isCardChecked, setIsCardChecked] = useState(false);
+  const [isCashChecked, setIsCashChecked] = useState(false);
   let { totalPrice } = useOutletContext();
   const navigate = useNavigate();
 
@@ -63,7 +64,10 @@ export default function Checkout() {
           <div className="payment-type-radio-btns">
             <div>
               <input 
-                onChange={() => setIsCardChecked(false)}
+                onChange={() => {
+                  setIsCardChecked(false)
+                  setIsCashChecked(true)
+                }}
                 type="radio"
                 id='cash'
                 name="payment-type"
@@ -72,7 +76,10 @@ export default function Checkout() {
             </div>
             <div>
               <input 
-                onChange={() => setIsCardChecked(true)}
+                onChange={() => {
+                  setIsCardChecked(true)
+                  setIsCashChecked(false)
+                }}
                 type="radio"
                 id='card' 
                 name="payment-type"
@@ -97,7 +104,13 @@ export default function Checkout() {
               </div>
             </div>
           : 
-            null}
+            isCashChecked ? 
+              <div className='place-order-btns-container'>
+                <button>Place order</button>
+              </div>
+            :
+            null
+            }
         </div>
       </div>
       <div className="checkout-right">
