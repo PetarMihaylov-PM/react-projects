@@ -61,7 +61,7 @@ This is a dynamic and visually modern Quiz App built with React. It fetches ques
 
 ##
 
-## 🍽️ Cooking Website
+### 🍽️ Restaurant Website
 This is a responsive and visually appealing cooking website built using React. It features a multi-page layout powered by React Router, showcasing sections such as Home, Menu, About, Contact, and a fully functional Cart system.
 
 - React Router – Client-side routing for multiple pages.
