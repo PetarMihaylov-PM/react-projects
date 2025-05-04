@@ -35,17 +35,44 @@ export default function Checkout() {
   }
 
   function handlePlaceOrder() {
-    const order = {
-      ...formData,
-      total: totalOrderPrice.toFixed(2),
-      paymentMethod: isCardChecked ? 'Card' : 'Cash'
-    };
 
-    console.log('Order is sent to the server:' , order);
+    // creating the required fields array
+    const requiredFields = [
+      'firstName',
+      'lastName',
+      'address',
+      'postalCode',
+      'city',
+      'phoneNumber',
+      'paymentType'
+    ]
+  
+    // adding required fields if payment type is CARD
+    if (isCardChecked) {
+      requiredFields.push('cardNumber', 'cardName', 'mm', 'yy', 'cvv');
+    }
+
+    const emptyFields = requiredFields.filter(field => !formData[field].trim());
+
+
+    // checking to if there are empty fields ?
+    if (emptyFields.length > 0) {
+      alert('Please fill in all required fields.');
+    } 
     
-    alert('Your order has been placed!');
-
-    navigate('/');
+    else {
+      const order = {
+        ...formData,
+        total: totalOrderPrice.toFixed(2),
+        paymentMethod: isCardChecked ? 'Card' : 'Cash'
+      };
+  
+      console.log('Your order has been sent to the server:' , order);
+      
+      alert('Your order has been placed!');
+  
+      navigate('/');
+    }
   }
 
   totalPrice = Number(totalPrice);
@@ -193,14 +220,23 @@ export default function Checkout() {
                 />
               </div>
               <div className="card-buttons">
-                <button className="pay-btn">PAY NOW</button>
+                <button 
+                  className="pay-btn"
+                  onClick={handlePlaceOrder}
+                >
+                  PAY NOW
+                </button>
                 <button className="cancel-btn">CANCEL</button>
               </div>
             </div>
           : 
             isCashChecked ? 
               <div className='place-order-btns-container'>
-                <button>Place order</button>
+                <button
+                  onClick={handlePlaceOrder}
+                > 
+                  Place order
+                </button>
               </div>
             :
             null
