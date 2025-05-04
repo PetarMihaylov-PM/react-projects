@@ -30,7 +30,7 @@ export default function Checkout() {
   }
 
   function handleChange (e) {
-    const {name, value} = e.targer;
+    const {name, value} = e.target;
     setFormData(prev => ({...prev, [name]: value}));
   }
 
@@ -101,7 +101,13 @@ export default function Checkout() {
 
         <div className="phone-number-container">
           <h4>Phone Number <span>required</span></h4>
-          <input type="number" placeholder=" +359 ..."/>
+          <input 
+            type="number"
+            placeholder=" +359 ..."
+            name='phoneNumber'
+            value={formData.phoneNumber}
+            onChange={handleChange}
+          />
         </div>
 
         <div className="payment-type-container">
@@ -112,10 +118,12 @@ export default function Checkout() {
                 onChange={() => {
                   setIsCardChecked(false)
                   setIsCashChecked(true)
+                  handleChange
                 }}
                 type="radio"
                 id='cash'
-                name="payment-type"
+                name="paymentType"
+                value={formData.paymentType}
               />
               <label htmlFor="cash">Cash <span>on arrival</span></label>
             </div>
@@ -124,10 +132,12 @@ export default function Checkout() {
                 onChange={() => {
                   setIsCardChecked(true)
                   setIsCashChecked(false)
+                  handleChange
                 }}
                 type="radio"
                 id='card' 
-                name="payment-type"
+                name="paymentType"
+                value={formData.paymentType}
               />
               <label htmlFor="card">Card</label>
             </div>
@@ -136,8 +146,18 @@ export default function Checkout() {
           {isCardChecked ? 
             <div className="card-payment-container">
               <img src={creditCard} alt="credit-card-img" />
-              <input type="text" placeholder=" CARD NUMBER"/>
-              <input type="text" placeholder=" CARDHOLDER NAME"/>
+              <input 
+                type="text" 
+                placeholder=" CARD NUMBER" 
+                name='cardNumber'
+                onChange={handleChange}
+              />
+              <input 
+                type="text" 
+                placeholder=" CARDHOLDER NAME"
+                name='cardName'
+                onChange={handleChange}
+              />
               <div className="card-info">
                 <input type="text" placeholder=" MM"/>
                 <input type="text" placeholder=" YY"/>
