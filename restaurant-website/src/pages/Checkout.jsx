@@ -22,7 +22,7 @@ export default function Checkout() {
     cvv: ''
   });
 
-  let { totalPrice } = useOutletContext();
+  let { totalPrice, setCartItems } = useOutletContext();
   const navigate = useNavigate();
 
   function handleNavigate() {
@@ -44,7 +44,6 @@ export default function Checkout() {
       'postalCode',
       'city',
       'phoneNumber',
-      'paymentType'
     ]
   
     // adding required fields if payment type is CARD
@@ -52,14 +51,14 @@ export default function Checkout() {
       requiredFields.push('cardNumber', 'cardName', 'mm', 'yy', 'cvv');
     }
 
+    // checking to if there are empty fields
     const emptyFields = requiredFields.filter(field => !formData[field].trim());
 
-
-    // checking to if there are empty fields ?
     if (emptyFields.length > 0) {
       alert('Please fill in all required fields.');
     } 
     
+    // placing order if all fields are filled.
     else {
       const order = {
         ...formData,
@@ -70,7 +69,9 @@ export default function Checkout() {
       console.log('Your order has been sent to the server:' , order);
       
       alert('Your order has been placed!');
-  
+
+      setCartItems([]);
+      
       navigate('/');
     }
   }

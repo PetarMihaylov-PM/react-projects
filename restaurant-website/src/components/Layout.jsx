@@ -87,6 +87,7 @@ export default function Layout(){
           context={{ 
             filtered, 
             cartItems,
+            setCartItems,
             addToCart,
             updateQuantity,
             removeItemFromCart,
