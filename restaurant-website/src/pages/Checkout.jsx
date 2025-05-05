@@ -261,7 +261,12 @@ export default function Checkout() {
                 >
                   PAY NOW
                 </button>
-                <button className="cancel-btn">CANCEL</button>
+                <button 
+                  className="cancel-btn"
+                  onClick={handleNavigate}
+                >
+                  CANCEL
+                </button>
               </div>
             </div>
           : 

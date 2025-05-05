@@ -138,5 +138,145 @@ export const menuItems = [
     description: "Spanish rice with mussels, shrimp & saffron.",
     price: "$18.90",
     image: "https://plus.unsplash.com/premium_photo-1719424374504-653c684f12fe?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8U2VhZm9vZCUyMFBhZWxsYXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 21,
+    name: "Vegetable Stir-Fry",
+    description: "A mix of fresh vegetables stir-fried in soy sauce.",
+    price: "$11.50",
+    image: "https://images.unsplash.com/photo-1574158622689-bf3068f9746b?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VmVnZXRhYmxlJTIwU3Rpcn1lbnwwfDB8fDB8fHw%3D"
+  },
+  {
+    id: 22,
+    name: "Fettuccine Alfredo",
+    description: "Creamy pasta with butter, garlic, and parmesan.",
+    price: "$14.75",
+    image: "https://images.unsplash.com/photo-1580979362755-3ff88b0b8fc3?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RmV0dHVjY2luaSUyMEFsZmVkcm98ZW58MHx8fDB8fHww"
+  },
+  {
+    id: 23,
+    name: "Pulled Pork Sandwich",
+    description: "Slow-cooked pulled pork with BBQ sauce on a soft bun.",
+    price: "$12.99",
+    image: "https://images.unsplash.com/photo-1517881989150-9b5e0ccab406?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHVsJTIwcG9ya3xlbnwwfDB8fDB8fHw%3D"
+  },
+  {
+    id: 24,
+    name: "Chicken Caesar Wrap",
+    description: "Grilled chicken, romaine lettuce, croutons, and Caesar dressing wrapped in a tortilla.",
+    price: "$9.99",
+    image: "https://images.unsplash.com/photo-1580562949675-78de85b67016?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2hpY2tlbiUyMENhZXNhciUyMFdyYXB8ZW58MHx8fDB8fHww"
+  },
+  {
+    id: 25,
+    name: "Mushroom Risotto",
+    description: "Creamy rice with mushrooms, garlic, and parmesan.",
+    price: "$15.00",
+    image: "https://images.unsplash.com/photo-1596052587777-0d04d4e5b2c1?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TXVzaHJvb20lMjBSaXNvdHRvfGVufDB8fDB8fHww"
+  },
+  {
+    id: 26,
+    name: "Buffalo Wings",
+    description: "Spicy chicken wings served with blue cheese dip.",
+    price: "$10.99",
+    image: "https://images.unsplash.com/photo-1606094062682-d25d92d118f8?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QmFmZmFsb3clMjBXaW5nc3xlbnwwfDB8fDB8fHww"
+  },
+  {
+    id: 27,
+    name: "Cheese Platter",
+    description: "Assorted cheeses with crackers and fruit.",
+    price: "$16.00",
+    image: "https://images.unsplash.com/photo-1600870300777-cbe6d3f69db5?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Q2hlZXNlJTIwUGxhdHRlcnxlbnwwfDB8fDB8fHww"
+  },
+  {
+    id: 28,
+    name: "Shrimp Tacos",
+    description: "Soft tortillas filled with grilled shrimp, cabbage, and salsa.",
+    price: "$11.99",
+    image: "https://images.unsplash.com/photo-1572813661411-b2f430e1ad2b?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8U2hyaW1wJTIwVGFjb3N8ZW58MHx8fDB8fHww"
+  },
+  {
+    id: 29,
+    name: "Lamb Chops",
+    description: "Tender lamb chops grilled to perfection with rosemary.",
+    price: "$22.50",
+    image: "https://images.unsplash.com/photo-1583810192791-ef6f017ab69e?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TGFtYiUyMENob3B8ZW58MHx8fDB8fHww"
+  },
+  {
+    id: 30,
+    name: "BBQ Chicken Pizza",
+    description: "Grilled chicken, BBQ sauce, red onion, and mozzarella.",
+    price: "$14.99",
+    image: "https://images.unsplash.com/photo-1628240768523-d7a06cf1d660?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QkJRJTIwQ2hpY2tlbiUyMFBpemphfGVufDB8fDB8fHww"
+  },
+  {
+    id: 31,
+    name: "Fried Calamari",
+    description: "Lightly battered and fried squid served with marinara sauce.",
+    price: "$10.75",
+    image: "https://images.unsplash.com/photo-1593196937860-41b9ab426601?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RnJpZWQgQ2FsYW1hcmkxfGVufDB8fDB8fHww"
+  },
+  {
+    id: 32,
+    name: "Avocado Toast",
+    description: "Toasted bread topped with mashed avocado, feta & a poached egg.",
+    price: "$8.75",
+    image: "https://images.unsplash.com/photo-1590647036649-beb0c9a29d38?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QXZvY2Fkb3xlJTIwVG9hc3R8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    id: 33,
+    name: "Grilled Salmon",
+    description: "Perfectly grilled salmon served with a side of vegetables.",
+    price: "$18.00",
+    image: "https://images.unsplash.com/photo-1561447568-d3561a140bc2?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8R3JpbGxlZCUyMFNhbG1vbnxlbnwwfDB8fDB8fHww"
+  },
+  {
+    id: 34,
+    name: "Peking Duck",
+    description: "Crispy duck served with hoisin sauce and pancakes.",
+    price: "$24.00",
+    image: "https://images.unsplash.com/photo-1631354323492-d9e8e0723703?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8UGVraW5nJTIwRHVja3xlbnwwfDB8fDB8fHww"
+  },
+  {
+    id: 35,
+    name: "Chili Con Carne",
+    description: "Beef chili with beans, served with rice or cornbread.",
+    price: "$13.50",
+    image: "https://images.unsplash.com/photo-1606070394613-1440352f0229?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpbGklMjBDb25DbmFybmV8ZW58MHx8fDB8fHww"
+  },
+  {
+    id: 36,
+    name: "Eggplant Parmesan",
+    description: "Breaded eggplant with marinara sauce and melted mozzarella.",
+    price: "$12.25",
+    image: "https://images.unsplash.com/photo-1591050544619-b96ad5b34fc6?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWdwbGFudCUyMFBhcmFtZXNhblxlbnwwfDB8fDB8fHww"
+  },
+  {
+    id: 37,
+    name: "Fish & Chips",
+    description: "Crispy battered fish fillets with French fries and tartar sauce.",
+    price: "$14.50",
+    image: "https://images.unsplash.com/photo-1562610189-1f2fa0e7b75c?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RmlzaCUyMEFuZCUyMENoaXBzfGVufDB8fDB8fHww"
+  },
+  {
+    id: 38,
+    name: "Pork Schnitzel",
+    description: "Breaded and fried pork cutlet with a side of mashed potatoes.",
+    price: "$17.50",
+    image: "https://images.unsplash.com/photo-1604622043871-0b8a53638fc9?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UG9yayUyMFNjaG5pdHplbCxlbnwwfDB8fDB8fHww"
+  },
+  {
+    id: 39,
+    name: "Chicken Tenders",
+    description: "Breaded chicken tenders served with honey mustard dip.",
+    price: "$9.50",
+    image: "https://images.unsplash.com/photo-1514670970869-b32709e87f2d?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hpY2tlbiUyMFRlbmRlcnN8ZW58MHx8fDB8fHww"
+  },
+  {
+    id: 40,
+    name: "Cheesecake",
+    description: "Classic cheesecake with a buttery graham cracker crust.",
+    price: "$5.99",
+    image: "https://images.unsplash.com/photo-1623271073193-b745c9fa7401?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2hlZXNlY2FrZXxlbnwwfDB8fDB8fHww"
   }
 ];
