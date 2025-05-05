@@ -57,6 +57,26 @@ export default function Checkout() {
     if (emptyFields.length > 0) {
       alert('Please fill in all required fields.');
     } 
+
+    // Card input validation
+    if (isCardChecked) {
+      if (!/^\d{16}$/.test(formData.cardNumber)) {
+        alert('Card number must be 16 digits.');
+        return;
+      }
+      if (!/^\d{2}$/.test(formData.mm) || +formData.mm < 1 || +formData.mm > 12) {
+        alert('Invalid month.');
+        return;
+      }
+      if (!/^\d{2}$/.test(formData.yy)) {
+        alert('Invalid year.');
+        return;
+      }
+      if (!/^\d{3}$/.test(formData.cvv)) {
+        alert('CVV must be 3 digits.');
+        return;
+      }
+    }
     
     // placing order if all fields are filled.
     else {
@@ -71,7 +91,7 @@ export default function Checkout() {
       alert('Your order has been placed!');
 
       setCartItems([]);
-      
+
       navigate('/');
     }
   }
