@@ -60,28 +60,26 @@ export default function Checkout() {
       }
     });
 
-    if (emptyFields.length > 0) {
-      alert('Please fill in all required fields.');
-    } 
-
     // Card input validation
     if (isCardChecked) {
       if (!/^\d{16}$/.test(formData.cardNumber)) {
-        alert('Card number must be 16 digits.');
-        return;
+        newErrors.cardNumber = 'Card number must be 16 digits.';
       }
       if (!/^\d{2}$/.test(formData.mm) || +formData.mm < 1 || +formData.mm > 12) {
-        alert('Invalid month.');
-        return;
+        newErrors.mm = 'Invalid month';
       }
       if (!/^\d{2}$/.test(formData.yy)) {
-        alert('Invalid year.');
-        return;
+        newErrors.yy = 'Invalid year';
       }
       if (!/^\d{3}$/.test(formData.cvv)) {
-        alert('CVV must be 3 digits.');
-        return;
+        newErrors.cvv = 'CVV must be 3 digits';
       }
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      return;
     }
     
     // placing order if all fields are filled.
@@ -93,11 +91,8 @@ export default function Checkout() {
       };
   
       console.log('Your order has been sent to the server:' , order);
-      
       alert('Your order has been placed!');
-
       setCartItems([]);
-
       navigate('/');
     }
   }

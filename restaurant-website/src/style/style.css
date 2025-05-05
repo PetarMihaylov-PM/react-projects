@@ -891,5 +891,9 @@ input[type=number]::-webkit-outer-spin-button {
   border-top: solid 2px rgb(162, 161, 161);
 }
 
+.input-error {
+  border: 2px solid red;
+}
+
 
 
