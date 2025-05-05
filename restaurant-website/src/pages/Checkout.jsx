@@ -7,6 +7,7 @@ export default function Checkout() {
 
   const [isCardChecked, setIsCardChecked] = useState(false);
   const [isCashChecked, setIsCashChecked] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -35,6 +36,7 @@ export default function Checkout() {
   }
 
   function handlePlaceOrder() {
+    const newErrors = {};
 
     // creating the required fields array
     const requiredFields = [
@@ -52,7 +54,11 @@ export default function Checkout() {
     }
 
     // checking to if there are empty fields
-    const emptyFields = requiredFields.filter(field => !formData[field].trim());
+    const emptyFields = requiredFields.filter(field => {
+      if(!formData[field] || formData[field].trim() === '') {
+        newErrors[field] = 'This field is required';
+      }
+    });
 
     if (emptyFields.length > 0) {
       alert('Please fill in all required fields.');
