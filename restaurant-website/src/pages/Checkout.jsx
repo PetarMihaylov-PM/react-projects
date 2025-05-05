@@ -97,6 +97,8 @@ export default function Checkout() {
     }
   }
 
+  console.log(errors.phoneNumber)
+
   totalPrice = Number(totalPrice);
   const shippingPrice = totalPrice * 0.15;
   const orderTax = totalPrice * 0.2;
@@ -117,6 +119,7 @@ export default function Checkout() {
               name='firstName'
               value={formData.firstName}
               onChange={handleChange}
+              className={errors.firstName ? 'input-error' : ''}
             />
           </div>
 
@@ -127,6 +130,7 @@ export default function Checkout() {
               name='lastName'
               value={formData.lastName}
               onChange={handleChange}
+              className={errors.lastName ? 'input-error' : ''}
             />
           </div>
         </div>
@@ -138,6 +142,7 @@ export default function Checkout() {
             name='address'
             value={formData.address}
             onChange={handleChange}
+            className={errors.address ? 'input-error' : ''}
           />
         </div>
 
@@ -149,6 +154,7 @@ export default function Checkout() {
               name='postalCode'
               value={formData.postalCode}
               onChange={handleChange}
+              className={errors.postalCode ? 'input-error' : ''}
             />
           </div>
           <div>
@@ -158,6 +164,7 @@ export default function Checkout() {
               name='city'
               value={formData.city}
               onChange={handleChange}
+              className={errors.city ? 'input-error' : ''}
             />
           </div>
         </div>
@@ -170,6 +177,7 @@ export default function Checkout() {
             name='phoneNumber'
             value={formData.phoneNumber}
             onChange={handleChange}
+            className={errors.phoneNumber ? 'input-error' : ''}
           />
         </div>
 
@@ -214,12 +222,14 @@ export default function Checkout() {
                 placeholder=" CARD NUMBER" 
                 name='cardNumber'
                 onChange={handleChange}
+                className={errors.cardNumber ? 'input-error' : ''}
               />
               <input 
                 type="text" 
                 placeholder=" CARDHOLDER NAME"
                 name='cardName'
                 onChange={handleChange}
+                className={errors.cardName ? 'input-error' : ''}
               />
               <div className="card-info">
                 <input 
@@ -227,18 +237,21 @@ export default function Checkout() {
                   placeholder=" MM"
                   name='mm'
                   onChange={handleChange}
+                  className={errors.mm ? 'input-error' : ''}
                 />
                 <input 
                   type="text" 
                   placeholder=" YY"
                   name='yy'
                   onChange={handleChange}
+                  className={errors.yy ? 'input-error' : ''}
                 />
                 <input 
                   type="text" 
                   placeholder=" CVV"
                   name='cvv'
                   onChange={handleChange}
+                  className={errors.cvv ? 'input-error' : ''}
                 />
               </div>
               <div className="card-buttons">
