@@ -179,42 +179,42 @@ export const menuItems = [
     name: "Buffalo Wings",
     description: "Spicy chicken wings served with blue cheese dip.",
     price: "$10.99",
-    image: "https://images.unsplash.com/photo-1606094062682-d25d92d118f8?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QmFmZmFsb3clMjBXaW5nc3xlbnwwfDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1631897788978-da06ec45adcb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QnVmZmFsbyUyMFdpbmdzfGVufDB8fDB8fHww"
   },
   {
     id: 27,
     name: "Cheese Platter",
     description: "Assorted cheeses with crackers and fruit.",
     price: "$16.00",
-    image: "https://images.unsplash.com/photo-1600870300777-cbe6d3f69db5?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Q2hlZXNlJTIwUGxhdHRlcnxlbnwwfDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1517093602195-b40af9688b46?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hlZXNlJTIwUGxhdHRlcnxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 28,
     name: "Shrimp Tacos",
     description: "Soft tortillas filled with grilled shrimp, cabbage, and salsa.",
     price: "$11.99",
-    image: "https://images.unsplash.com/photo-1572813661411-b2f430e1ad2b?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8U2hyaW1wJTIwVGFjb3N8ZW58MHx8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1611250188496-e966043a0629?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U2hyaW1wJTIwVGFjb3N8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 29,
     name: "Lamb Chops",
     description: "Tender lamb chops grilled to perfection with rosemary.",
     price: "$22.50",
-    image: "https://images.unsplash.com/photo-1583810192791-ef6f017ab69e?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TGFtYiUyMENob3B8ZW58MHx8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1625944228741-cf30983ecb91?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8TGFtYiUyMENob3BzfGVufDB8fDB8fHww"
   },
   {
     id: 30,
     name: "BBQ Chicken Pizza",
     description: "Grilled chicken, BBQ sauce, red onion, and mozzarella.",
     price: "$14.99",
-    image: "https://images.unsplash.com/photo-1628240768523-d7a06cf1d660?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QkJRJTIwQ2hpY2tlbiUyMFBpemphfGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QkJRJTIwQ2hpY2tlbiUyMFBpenphfGVufDB8fDB8fHww"
   },
   {
     id: 31,
     name: "Fried Calamari",
     description: "Lightly battered and fried squid served with marinara sauce.",
     price: "$10.75",
-    image: "https://images.unsplash.com/photo-1593196937860-41b9ab426601?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RnJpZWQgQ2FsYW1hcmkxfGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1682264895449-f75b342cbab6?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RnJpZWQlMjBDYWxhbWFyaXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 32,
