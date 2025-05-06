@@ -97,8 +97,6 @@ export default function Checkout() {
     }
   }
 
-  console.log(errors.phoneNumber)
-
   totalPrice = Number(totalPrice);
   const shippingPrice = totalPrice * 0.15;
   const orderTax = totalPrice * 0.2;

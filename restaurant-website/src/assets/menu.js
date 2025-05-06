@@ -221,62 +221,76 @@ export const menuItems = [
     name: "Avocado Toast",
     description: "Toasted bread topped with mashed avocado, feta & a poached egg.",
     price: "$8.75",
-    image: "https://images.unsplash.com/photo-1590647036649-beb0c9a29d38?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8QXZvY2Fkb3xlJTIwVG9hc3R8ZW58MHx8MHx8fDA%3D"
+    image: "https://images.unsplash.com/photo-1603046891726-36bfd957e0bf?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8QXZvY2FkbyUyMFRvYXN0fGVufDB8fDB8fHww"
   },
   {
     id: 33,
     name: "Grilled Salmon",
     description: "Perfectly grilled salmon served with a side of vegetables.",
     price: "$18.00",
-    image: "https://images.unsplash.com/photo-1561447568-d3561a140bc2?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8R3JpbGxlZCUyMFNhbG1vbnxlbnwwfDB8fDB8fHww"
+    image: "https://plus.unsplash.com/premium_photo-1723478417559-2349252a3dda?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8R3JpbGxlZCUyMFNhbG1vbnxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 34,
     name: "Peking Duck",
     description: "Crispy duck served with hoisin sauce and pancakes.",
     price: "$24.00",
-    image: "https://images.unsplash.com/photo-1631354323492-d9e8e0723703?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8UGVraW5nJTIwRHVja3xlbnwwfDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1598514982205-f36b96d1e8d4?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UGVraW5nJTIwRHVja3xlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 35,
     name: "Chili Con Carne",
     description: "Beef chili with beans, served with rice or cornbread.",
     price: "$13.50",
-    image: "https://images.unsplash.com/photo-1606070394613-1440352f0229?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpbGklMjBDb25DbmFybmV8ZW58MHx8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1658308766948-01c85ade2737?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q2hpbGklMjBDb24lMjBDYXJuZXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 36,
     name: "Eggplant Parmesan",
     description: "Breaded eggplant with marinara sauce and melted mozzarella.",
     price: "$12.25",
-    image: "https://images.unsplash.com/photo-1591050544619-b96ad5b34fc6?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RWdwbGFudCUyMFBhcmFtZXNhblxlbnwwfDB8fDB8fHww"
+    image: "https://plus.unsplash.com/premium_photo-1701013639018-8cdf9f5a7b80?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RWdncGxhbnQlMjBQYXJtZXNhbnxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 37,
     name: "Fish & Chips",
     description: "Crispy battered fish fillets with French fries and tartar sauce.",
     price: "$14.50",
-    image: "https://images.unsplash.com/photo-1562610189-1f2fa0e7b75c?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RmlzaCUyMEFuZCUyMENoaXBzfGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1576777647209-e8733d7b851d?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RmlzaCUyMCUyNiUyMENoaXBzfGVufDB8fDB8fHww"
   },
   {
     id: 38,
     name: "Pork Schnitzel",
     description: "Breaded and fried pork cutlet with a side of mashed potatoes.",
     price: "$17.50",
-    image: "https://images.unsplash.com/photo-1604622043871-0b8a53638fc9?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UG9yayUyMFNjaG5pdHplbCxlbnwwfDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1606898425987-62733fb7dbe7?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFBvcmslMjBTY2huaXR6ZWx8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 39,
     name: "Chicken Tenders",
     description: "Breaded chicken tenders served with honey mustard dip.",
     price: "$9.50",
-    image: "https://images.unsplash.com/photo-1514670970869-b32709e87f2d?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2hpY2tlbiUyMFRlbmRlcnN8ZW58MHx8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1623653387945-2fd25214f8fc?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2hpY2tlbiUyMFRlbmRlcnN8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 40,
     name: "Cheesecake",
     description: "Classic cheesecake with a buttery graham cracker crust.",
     price: "$5.99",
-    image: "https://images.unsplash.com/photo-1623271073193-b745c9fa7401?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2hlZXNlY2FrZXxlbnwwfDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1708175313856-8573b2bf8a3a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q2hlZXNlY2FrZXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    id: 41,
+    name: "Beef Tacos",
+    description: "Soft tortillas filled with seasoned beef, lettuce, and cheese.",
+    price: "$8.75",
+    image: "https://plus.unsplash.com/premium_photo-1661730314652-911662c0d86e?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmVlZiUyMFRhY29zfGVufDB8fDB8fHww"
+  },
+  {
+    id: 42,
+    name: "Veggie Pasta",
+    description: "Pasta tossed with seasonal vegetables and olive oil.",
+    price: "$11.25",
+    image: "https://images.unsplash.com/photo-1724365858492-743b85c95ac4?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VmVnZ2llJTIwUGFzdGF8ZW58MHx8MHx8fDA%3D"
   }
 ];
