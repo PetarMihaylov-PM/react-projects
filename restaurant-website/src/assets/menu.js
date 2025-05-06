@@ -144,35 +144,35 @@ export const menuItems = [
     name: "Vegetable Stir-Fry",
     description: "A mix of fresh vegetables stir-fried in soy sauce.",
     price: "$11.50",
-    image: "https://images.unsplash.com/photo-1574158622689-bf3068f9746b?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8VmVnZXRhYmxlJTIwU3Rpcn1lbnwwfDB8fDB8fHw%3D"
+    image: "https://plus.unsplash.com/premium_photo-1664472637341-3ec829d1f4df?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8VmVnZXRhYmxlJTIwU3RpciUyMEZyeXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: 22,
     name: "Fettuccine Alfredo",
     description: "Creamy pasta with butter, garlic, and parmesan.",
     price: "$14.75",
-    image: "https://images.unsplash.com/photo-1580979362755-3ff88b0b8fc3?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8RmV0dHVjY2luaSUyMEFsZmVkcm98ZW58MHx8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RmV0dHVjY2luZSUyMEFsZnJlZG98ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 23,
     name: "Pulled Pork Sandwich",
     description: "Slow-cooked pulled pork with BBQ sauce on a soft bun.",
     price: "$12.99",
-    image: "https://images.unsplash.com/photo-1517881989150-9b5e0ccab406?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHVsJTIwcG9ya3xlbnwwfDB8fDB8fHw%3D"
+    image: "https://images.unsplash.com/photo-1709581529998-11b7b2e17f55?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UHVsbGVkJTIwUG9yayUyMFNhbmR3aWNofGVufDB8fDB8fHww"
   },
   {
     id: 24,
     name: "Chicken Caesar Wrap",
     description: "Grilled chicken, romaine lettuce, croutons, and Caesar dressing wrapped in a tortilla.",
     price: "$9.99",
-    image: "https://images.unsplash.com/photo-1580562949675-78de85b67016?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q2hpY2tlbiUyMENhZXNhciUyMFdyYXB8ZW58MHx8fDB8fHww"
+    image: "https://plus.unsplash.com/premium_photo-1700677185925-81d4d3edc860?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpY2tlbiUyMENhZXNhciUyMFdyYXB8ZW58MHx8MHx8fDA%3D"
   },
   {
     id: 25,
     name: "Mushroom Risotto",
     description: "Creamy rice with mushrooms, garlic, and parmesan.",
     price: "$15.00",
-    image: "https://images.unsplash.com/photo-1596052587777-0d04d4e5b2c1?w=600&auto=format&fit=crop&q=60&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TXVzaHJvb20lMjBSaXNvdHRvfGVufDB8fDB8fHww"
+    image: "https://images.unsplash.com/photo-1609770424775-39ec362f2d94?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TXVzaHJvb20lMjBSaXNvdHRvfGVufDB8fDB8fHww"
   },
   {
     id: 26,
