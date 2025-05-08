@@ -1,10 +1,14 @@
 import React from 'react';
-import './Main.css'
+import './Main.css';
+import { assets } from '../../assets/assets.js';
 
 export const Main = () => {
   return (
-    <div>
-      
+    <div className='main'>
+      <div className="nav">
+        <p>Gemini</p>
+        <img src={assets.user_icon} alt="user_icon" />
+      </div>
     </div>
   )
 }
