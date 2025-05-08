@@ -7,7 +7,7 @@ const Sidebar = () => {
 
   const [extended, setExtended] = useState(false);
 
-  function handleExtendedChange() {
+  function handleExtendedSideBar() {
     setExtended(prev => !prev);
   }
 
@@ -15,7 +15,7 @@ const Sidebar = () => {
     <div className='sidebar'>
       <div className="top">
         <img 
-          onClick={handleExtendedChange}
+          onClick={handleExtendedSideBar}
           className='menu' 
           src={assets.menu_icon} 
           alt="menu_icon" />
