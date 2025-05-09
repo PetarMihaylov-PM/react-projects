@@ -25,7 +25,7 @@
 }
 
 .main .greet {
-  margin: 50px 0px;
+  margin: 40px 0px;
   font-size: 56px;
   color: rgb(188, 188, 188);
   font-weight: 500;
@@ -43,6 +43,7 @@
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 15px;
   padding: 20px;
+  margin: 50px 0px;
 }
 
 .main .card {
@@ -72,4 +73,50 @@
 
 .main .card:hover {
   background-color: #dbe0e6;
+}
+
+.main-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  padding: 0px 20px;
+  margin: auto;
+}
+
+.main-bottom .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #f0f4f9;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.search-box img {
+  width: 24px;
+  cursor: pointer;
+}
+
+.search-box input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 9px;
+  font-size: 18px;
+}
+
+.search-box div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.main .bottom-info {
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
 }
