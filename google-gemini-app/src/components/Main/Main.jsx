@@ -3,6 +3,7 @@ import './Main.css';
 import { assets } from '../../assets/assets.js';
 
 const Main = () => {
+
   return (
     <div className='main'>
       <div className="nav">
