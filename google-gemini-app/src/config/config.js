@@ -7,9 +7,9 @@ import {
   GoogleGenAI,
 } from '@google/genai';
 
-async function main() {
+async function runChat(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: "AIzaSyCgHGQSlgWFctKf6hxdzDmqZ2F79Qp5_Is",
+    apiKey: process.env.API_KEY,
   });
   const config = {
     responseMimeType: 'text/plain',
@@ -20,7 +20,7 @@ async function main() {
       role: 'user',
       parts: [
         {
-          text: `INSERT_INPUT_HERE`,
+          text: prompt,
         },
       ],
     },
@@ -36,4 +36,4 @@ async function main() {
   }
 }
 
-main();
+export default runChat;
