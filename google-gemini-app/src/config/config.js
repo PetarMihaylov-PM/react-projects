@@ -1,4 +1,19 @@
 
+import { GoogleGenAI } from "@google/genai";
+
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY });
+
+async function runChat(prompt) {
+  const response = await ai.models.generateContent({
+    model: "gemini-2.0-flash",
+    contents: prompt,
+  });
+  console.log(response.text);
+}
+
+export default runChat;
+
+/*
 async function runChat(prompt) {
   const API_KEY = import.meta.env.VITE_API_KEY;
   const API_URL = "https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent";
@@ -29,6 +44,7 @@ async function runChat(prompt) {
 }
 
 export default runChat;
+*/
 
 /*
 import {
