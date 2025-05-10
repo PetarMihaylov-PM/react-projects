@@ -24,9 +24,10 @@ const ContextProvider = (props) => {
     setLoading(true);
     setShowResult(true);
     setRecentPrompt(input);
+    setPreviousPrompts(prev => [...prev, input]);
     const response = await runChat(input);
     const responseArray = response.split('**');
-    let newResponse;
+    let newResponse = '';
     responseArray.forEach((word, index) => {
       if(index === 0 || index % 2 === 0) {
         newResponse += word
