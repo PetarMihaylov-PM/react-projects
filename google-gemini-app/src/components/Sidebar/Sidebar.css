@@ -3,7 +3,7 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(228, 239, 245);
   padding: 25px 15px;
 }
 
@@ -23,7 +23,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 15px;
-  background-color: rgb(213, 213, 213);
+  background-color: rgb(208, 217, 222);
   border-radius: 50px;
   font-size: 14px;
   color: grey;
@@ -53,7 +53,7 @@
 }
 
 .sidebar .recent-entry:hover {
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(208, 217, 222);
 }
 
 .sidebar .bottom {
