@@ -43,6 +43,6 @@
 .board{
   height: 600px;
   width: 600px;
-  display: flex;
+  display: grid;
   margin: auto;
 }

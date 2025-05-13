@@ -39,29 +39,40 @@ export const TicTacToe = () => {
 
     const newBoard = [...board];
     newBoard[index] = isXTurn ? 'X' : 'O';
+
+    const result = checkWinner(newBoard);
+    if(result) {
+      setWinner(result);
+    }
+
+    setBoard(newBoard);
+    setIsXTurn(!isXTurn);
+  }
+
+  const resetGame = () => {
+    setBoard(Array(9).fill(''));
+    setIsXTurn(true);
+    setWinner(null);
+  };
+
+  function renderIcon(value) {
+    if(value === 'X') return <img src={cross_icon} alt='X'/>
+    if(value === 'O') return <img src={circle_icon} alt='O'/>
+    return null;
   }
 
   return (
     <div className='container'>
       <h1 className="title">Tic Tac Toe Game in <span>React</span></h1>
+      {winner && <h2 className="winner">🎉 Winner: {winner}</h2>}
       <div className="board">
-        <div className="row1">
-          <div className="boxes"></div>
-          <div className="boxes"></div>
-          <div className="boxes"></div>
-        </div>
-        <div className="row2">
-          <div className="boxes"></div>
-          <div className="boxes"></div>
-          <div className="boxes"></div>
-        </div>
-        <div className="row3">
-          <div className="boxes"></div>
-          <div className="boxes"></div>
-          <div className="boxes"></div>
-        </div>
+        {board.map((value, idx) => (
+          <div key={idx} className="boxes" onClick={() => handleClick(idx)}>
+            {renderIcon(value)}
+          </div>
+        ))}
       </div>
-      <button className='reset-button'>Reset</button>
+      <button className='reset-button' onClick={resetGame}>Reset</button>
     </div>
-  )
+  );
 }
