@@ -26,14 +26,14 @@
   background: rgb(74, 78, 126);
   font-size: 26px;
   color: aqua;
-  margin-top: 25px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .boxes {
   display: flex;
-  height: 180px;
-  width: 180px;
+  height: 120px;
+  width: 120px;
   background: rgb(74, 78, 126);
   border-radius: 12px;
   cursor: pointer;
@@ -41,8 +41,12 @@
 }
 
 .board{
-  height: 600px;
-  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;  
+  height: 500px;
+  width: 500px;
   display: grid;
   margin: auto;
 }
