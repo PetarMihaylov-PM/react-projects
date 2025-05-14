@@ -1,5 +1,9 @@
 .container{
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .title {
@@ -7,8 +11,6 @@
   color: white;
   font-size: 60px;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .title span {
@@ -17,8 +19,8 @@
 }
 
 .reset-button {
-  width: 250px;
-  height: 100px;
+  width: 220px;
+  height: 80px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -32,12 +34,12 @@
 
 .boxes {
   display: flex;
-  height: 120px;
-  width: 120px;
+  align-items: center;
+  justify-content: center;
   background: rgb(74, 78, 126);
   border-radius: 12px;
   cursor: pointer;
-  margin: 10px 5px;
+  
 }
 
 .board{
@@ -45,8 +47,11 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 15px;  
-  height: 500px;
-  width: 500px;
-  display: grid;
-  margin: auto;
+  height: 400px;
+  width: 400px;
+}
+
+.winner {
+  font-size: 35px;
+  color: white;
 }
