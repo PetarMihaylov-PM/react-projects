@@ -19,6 +19,7 @@ export const TicTacToe = () => {
   const [board, setBoard] = useState(Array(9).fill(''));
   const [isXTurn, setIsXTurn] = useState(true);
   const [winner, setWinner] = useState(null);
+  const [winningCombo, setWinningCombo] = useState([]);
 
   function checkWinner(newBoard) {
     for (let pattern of winningPattern) {
@@ -28,7 +29,7 @@ export const TicTacToe = () => {
         newBoard[a] === newBoard[b] && 
         newBoard[a] === newBoard[c]
       ) {
-        return newBoard[a];
+        return { winner: newBoard[a], pattern };
       }
     }
     return null;
@@ -42,7 +43,8 @@ export const TicTacToe = () => {
 
     const result = checkWinner(newBoard);
     if(result) {
-      setWinner(result);
+      setWinner(result.winner);
+      setWinningCombo(result.pattern);
     }
 
     setBoard(newBoard);
@@ -53,6 +55,7 @@ export const TicTacToe = () => {
     setBoard(Array(9).fill(''));
     setIsXTurn(true);
     setWinner(null);
+    setWinningCombo([]);
   };
 
   function renderIcon(value) {
@@ -67,7 +70,11 @@ export const TicTacToe = () => {
       {winner && <h2 className="winner">🎉 Winner: {winner}</h2>}
       <div className="board">
         {board.map((value, idx) => (
-          <div key={idx} className="boxes" onClick={() => handleClick(idx)}>
+          <div 
+            key={idx} 
+            className={`boxes ${winningCombo.includes(idx) ? 'winning' : ''}`} 
+            onClick={() => handleClick(idx)}
+            >
             {renderIcon(value)}
           </div>
         ))}

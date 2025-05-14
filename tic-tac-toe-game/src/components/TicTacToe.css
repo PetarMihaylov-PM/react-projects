@@ -30,6 +30,12 @@
   color: aqua;
   margin-top: 50px;
   margin-bottom: 50px;
+  transition: all 0.15s ease;
+}
+
+.reset-button:hover {
+  background: rgb(67, 70, 111);
+  scale: 1.05;
 }
 
 .boxes {
@@ -39,7 +45,12 @@
   background: rgb(74, 78, 126);
   border-radius: 12px;
   cursor: pointer;
-  
+  transition: all 0.15s ease;
+}
+
+.boxes:hover {
+  background: rgb(67, 70, 111);
+  border: 1px solid white;
 }
 
 .board{
@@ -54,4 +65,15 @@
 .winner {
   font-size: 35px;
   color: white;
+}
+
+.winning {
+  position: relative;
+  animation: pulse 0.5s infinite alternate;
+  box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
 }
