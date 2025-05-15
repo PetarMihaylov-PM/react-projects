@@ -87,6 +87,31 @@ This is a responsive and visually appealing cooking website built using React. I
 
 <img src="https://github.com/user-attachments/assets/92c3d0be-8078-40ff-bf37-254e73ca4033" alt="cooking6" width="300"/>
 
+##
+
+### 🤖 Google Gemini AI
+
+This project is a lightweight and interactive chatbot interface built using React and powered by the Google Gemini (Generative Language) API. It allows users to enter natural language prompts and receive intelligent, AI-generated responses in real time.
+
+The application uses React with Vite for fast development and optimized performance. The Gemini API integration is handled using fetch with async/await syntax to send POST requests and receive streamed responses. Environment variables are securely managed using Vite's import.meta.env, keeping the API key hidden and configurable through a .env file.
+
+<img src="https://github.com/user-attachments/assets/71fbf473-842b-418b-a31a-6a2adb2087547" alt="cooking1" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/9fb2dbb5-6edf-4db9-b03f-7be07a0108e3" alt="cooking2" width="300"/>
+
+<img src="https://github.com/user-attachments/assets/8053e268-4318-45dc-80e0-576f9c56385b" alt="cooking2" width="300"/>
+
+##
+
+### 🎮 Tic Tac Toe Game
+
+This project is a fully functional Tic Tac Toe game built using React, providing a classic player-vs-player experience with intuitive interactions and a clean design.
+
+The core of the game logic is managed using React Hooks—specifically useState—to keep track of the game board, current player's turn, and the game winner. A simple array of 9 elements represents the game board, and each move updates the board and toggles the turn between X and O.
+
+<img src="https://github.com/user-attachments/assets/527644c4-3b31-44bb-aad4-27c3a0e4f58d" alt="cooking1" width="300"/>
+
+
 ## 📌 Technologies Used  
 - React (JSX, Components, Props, State)  
 - API Fetching & Asynchronous JavaScript  
