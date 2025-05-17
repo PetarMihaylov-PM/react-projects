@@ -3,17 +3,46 @@
   width: 100vw;
   max-width: 75rem;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
 }
 
 .person-img {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1rem;
+  right: -10rem;
   z-index: -1;
-  object-fit: cover;
-  height: 100vh;
+  object-fit:cover;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 656px) {
+  .person-img {
+    top: 10rem;
+    right: -18rem;
+  }
+  .intro-content {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .person-img {
+    top: 20rem;
+    right: -25rem;
+  }
+  .intro-content {
+    font-size: 15vw;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .person-img {
+    top: 30rem;
+    right: -25rem;
+  }
+  .intro-content {
+    font-size: 15vw;
+  }
 }
 
 .intro-content {
@@ -37,16 +66,36 @@
 }
 
 .intro-content > p {
-  font-size: medium;
-  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
 
 .hire-button {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: white;
+  width: 140px;
   margin: 1rem 0;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.15s ease
+}
+
+.hire-button:hover {
+  background-color: yellow;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.619);
+}
+
+.hire-button img {
+  object-fit: cover;
+  margin-right: 10px;
+  height: 1rem;
+}
+
+.link-hire-me {
+  pointer-events: none;
 }

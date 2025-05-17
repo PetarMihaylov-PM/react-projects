@@ -46,7 +46,7 @@
 
 .navbar-menu-btn:hover {
   background-color: yellow;
-  scale: 1.1;
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.619);
 }
 
 .navbar-menu-btn .dektop-icon {
