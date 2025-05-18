@@ -13,6 +13,29 @@ function About() {
       <span className="about-description">
         I'm a web developer with a strong foundation in JavaScript and React, passionate about building responsive, user-friendly web applications.
       </span>
+      <div className="about-bars">
+        <div className="about-bar">
+          <img src={UIDesign} alt="uidesign-icon" />
+          <div className="about-bar-text">
+            <h2>UI/UX Design</h2>
+            <p>Some text here</p>
+          </div>
+        </div>
+        <div className="about-bar">
+          <img src={webDesign} alt="webdesign-icon" />
+          <div className="about-bar-text">
+            <h2>Web Design</h2>
+            <p>Some text here</p>
+          </div>
+        </div>
+        <div className="about-bar">
+          <img src={appDesign} alt="appdesign-icon" />
+          <div className="about-bar-text">
+            <h2>App Design</h2>
+            <p>Some text here</p>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }
