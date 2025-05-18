@@ -19,5 +19,35 @@
 
   .about-description {
     font-size: 1rem;
+    font-weight: 400;
+    max-width: 50rem;
+    padding: 0 2rem;
+  }
+
+  .about-bars {
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+  }
+
+  .about-bar {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: rgb(54, 54, 54);
+  }
+
+  .about-bar img {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+  }
+
+  .about-bar-text p {
+    font-size: 1rem;
     font-weight: 200;
   }

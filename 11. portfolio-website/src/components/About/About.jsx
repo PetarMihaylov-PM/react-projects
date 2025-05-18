@@ -11,7 +11,7 @@ function About() {
         What I do
       </span>
       <span className="about-description">
-        I'm a web developer with a strong foundation in JavaScript and React, passionate about building responsive, user-friendly web applications.
+        I'm a web developer with a strong foundation in JavaScript and React, passionate about building responsive, user-friendly web applications. Combining design sensibility with development skills, I transform ideas into functional, visually appealing web experiences.
       </span>
       <div className="about-bars">
         <div className="about-bar">
