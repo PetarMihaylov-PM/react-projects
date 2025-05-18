@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Intro from './components/Intro/Intro';
 import About from './components/About/About';
+import Portfolio from './components/Portfolio/Portfolio';
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
       </Routes>
       <Intro />
       <About />
+      <Portfolio />
     </div>
   )
 }
