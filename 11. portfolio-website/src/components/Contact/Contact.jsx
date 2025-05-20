@@ -1,5 +1,9 @@
 import React from 'react';
-import './Contact.css'
+import './Contact.css';
+import facebookIcon from '../../assets/facebook-icon.png';
+import twitterIcon from '../../assets/twitter.png';
+import youtubeIcon from '../../assets/youtube.png';
+import instagramIcon from '../../assets/instagram.png';
 
 const Contact = () => {
   return (
@@ -7,17 +11,17 @@ const Contact = () => {
       <h2 className="contact-page-title">
         Contact me
       </h2>
-      <span>
+      <span className='contact-description'>
         Please fill out the form below to discuss potential work opportunities.
       </span>
       <form className='contact-form'>
         <input type="text" className='name' placeholder='Your Name'/>
-        <input type="email" className="contact-email" placeholder='Your Email'/>
+        <input type="email" className="email" placeholder='Your Email'/>
         <textarea 
           name="message" 
           rows='5' 
           placeholder='Your Message'
-          className='contact-page-message'></textarea>
+          className='message'></textarea>
           <button 
             type='submit'
             value='Send'
@@ -26,7 +30,10 @@ const Contact = () => {
             Submit
           </button>
           <div className="links">
-            <img src={} alt="link" className='link'/>
+            <img src={facebookIcon} alt="facebookIcon" className='link'/>
+            <img src={twitterIcon} alt="twitterIcon" className='link'/>
+            <img src={youtubeIcon} alt="youtubeIcon" className='link'/>
+            <img src={instagramIcon} alt="instagramIcon" className='link'/>
           </div>
       </form>
     </section>

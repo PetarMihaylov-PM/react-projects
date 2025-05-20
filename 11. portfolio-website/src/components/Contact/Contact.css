@@ -14,3 +14,53 @@
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+
+.contact-description{
+  padding: 1rem;
+  font-size: medium;
+  font-weight: 300;
+}
+
+.contact-form {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  max-width: 60rem;
+}
+
+.name, .email, .message {
+  font-size: medium;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(40, 40, 40);
+}
+
+.submit-button {
+  background: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 3.5rem;
+  margin: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link {
+  object-fit: cover;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 0.75rem;
+}
