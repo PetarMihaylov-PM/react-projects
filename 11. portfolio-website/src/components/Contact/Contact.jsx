@@ -7,7 +7,7 @@ import instagramIcon from '../../assets/instagram.png';
 
 const Contact = () => {
   return (
-    <section className="contact-page">
+    <section id="contact-page">
       <h2 className="contact-page-title">
         Contact me
       </h2>

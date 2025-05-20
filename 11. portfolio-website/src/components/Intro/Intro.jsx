@@ -1,12 +1,11 @@
 import React from 'react';
 import './Intro.css';
-import { Link } from 'react-router-dom';
 import personImg from '../../assets/image.png';
 import hireIcon from '../../assets/hireme.png'
 
 const Intro = () => {
   return (
-    <section className='intro'>
+    <section id='intro'>
       <div className="intro-content">
         <span className='hello'>Hello,</span>
         <span className='intro-text'>I'm <span className='intro-name'>Kermit</span> <br /> Website Designer</span>

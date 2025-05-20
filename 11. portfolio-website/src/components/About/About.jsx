@@ -6,7 +6,7 @@ import appDesign from '../../assets/app-design.png'
 
 function About() {
   return (
-    <section className="about">
+    <section id="about">
       <span className="about-title">
         What I do
       </span>
