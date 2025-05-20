@@ -62,10 +62,10 @@ const Navbar = () => {
       <img 
         src={menu} 
         alt="Menu" 
-        className='mobile-menu'
+        className='mobile-menu-img'
         onClick={() => setShowMenu(!showMenu)}/>
       <div 
-        className="mobile-navbar-menu" 
+        className="mobile-menu" 
         style={{display: showMenu ? 'flex' : 'none'}}>
         <Link 
           className="list-item" 

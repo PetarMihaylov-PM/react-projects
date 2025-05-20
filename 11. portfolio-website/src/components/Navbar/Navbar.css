@@ -24,6 +24,7 @@
   margin: 1rem;
   cursor: pointer;
   transition: all 0.15s ease;
+  user-select: none;
 }
 
 .navbar-menu-list-item:hover {
@@ -71,4 +72,34 @@
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
+  height: fit-content;
+  min-width: 15rem;
+  background: rgb(40,40,40);
+  border-radius: 1rem;
+}
+
+.mobile-menu-img {
+  display: none;
+  object-fit: cover;
+  height: 1.8rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .mobile-menu-img{
+    display: flex;
+  }
+  .navbar-menu {
+    display: none;
+  }
+  .navbar-menu-btn {
+    display: none;
+  }
+}
+
+.list-item {
+  color: white;
+  padding: 0.5rem 3rem;
+  margin: 0.25rem;
+  background: rgb(30,30,30);
 }
