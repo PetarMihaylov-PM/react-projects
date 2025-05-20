@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import contactImg from '../../assets/contact.png'
@@ -6,6 +6,9 @@ import { Link } from 'react-scroll';
 import menu from '../../assets/menu.png'
 
 const Navbar = () => {
+
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <nav className="nav-bar">
       <img src={logo} alt="logo" className='logo'/>
@@ -56,8 +59,14 @@ const Navbar = () => {
         Contact me
       </button>
 
-      <img src={menu} alt="Menu" className='mobile-menu'/>
-      <div className="mobile-navbar-menu">
+      <img 
+        src={menu} 
+        alt="Menu" 
+        className='mobile-menu'
+        onClick={() => setShowMenu(!showMenu)}/>
+      <div 
+        className="mobile-navbar-menu" 
+        style={{display: showMenu ? 'flex' : 'none'}}>
         <Link 
           className="list-item" 
           activeClass='active'
@@ -66,6 +75,7 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
+          onClick={() => setShowMenu(false)}
           >Home</Link>
         <Link 
           className="list-item" 
@@ -75,6 +85,7 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
+          onClick={() => setShowMenu(false)}
           >About</Link>
         <Link 
           className="list-item" 
@@ -84,6 +95,7 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
+          onClick={() => setShowMenu(false)}
           >Portfolio</Link>
         <Link 
           className="list-item" 
@@ -93,6 +105,7 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
+          onClick={() => setShowMenu(false)}
           >Clients</Link>
            <Link 
           className="list-item" 
@@ -102,6 +115,7 @@ const Navbar = () => {
           smooth={true}
           offset={-50}
           duration={500}
+          onClick={() => setShowMenu(false)}
           >Contact </Link>
       </div>
     </nav>
