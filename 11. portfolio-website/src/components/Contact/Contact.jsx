@@ -14,10 +14,10 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.
-      sendForm( 'your service id', 
-                'your template', 
+      sendForm( 'service_sx7k3nh', 
+                'template_8hmwtud', 
                 form.current,
-                'your public key')
+                'nwWAvJVux0UXdjy4z')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -33,9 +33,9 @@ const Contact = () => {
       <span className='contact-description'>
         Please fill out the form below to discuss potential work opportunities.
       </span>
-      <form className='contact-form' ref={form}>
-        <input type="text" className='name' placeholder='Your Name'/>
-        <input type="email" className="email" placeholder='Your Email'/>
+      <form className='contact-form' ref={form} onSubmit={sendEmail}>
+        <input type="text" className='name' placeholder='Your Name'name='from_name'/>
+        <input type="email" className="email" placeholder='Your Email' name='from_email'/>
         <textarea 
           name="message" 
           rows='5' 
