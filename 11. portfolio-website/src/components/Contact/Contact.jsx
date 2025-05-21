@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Contact.css';
 import facebookIcon from '../../assets/facebook-icon.png';
 import twitterIcon from '../../assets/twitter.png';
 import youtubeIcon from '../../assets/youtube.png';
 import instagramIcon from '../../assets/instagram.png';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+
+  const form = useRef();
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.
+      sendForm( 'your service id', 
+                'your template', 
+                form.current,
+                'your public key')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  }
+
   return (
     <section id="contact-page">
       <h2 className="contact-page-title">
@@ -14,7 +33,7 @@ const Contact = () => {
       <span className='contact-description'>
         Please fill out the form below to discuss potential work opportunities.
       </span>
-      <form className='contact-form'>
+      <form className='contact-form' ref={form}>
         <input type="text" className='name' placeholder='Your Name'/>
         <input type="email" className="email" placeholder='Your Email'/>
         <textarea 
