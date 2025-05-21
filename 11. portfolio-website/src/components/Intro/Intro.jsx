@@ -10,8 +10,13 @@ const Intro = () => {
         <span className='hello'>Hello,</span>
         <span className='intro-text'>I'm <span className='intro-name'>Kermit</span> <br /> Website Designer</span>
         <p>I'm a web designer skilled in creating responsive, visually appealing websites <br /> using modern frameworks like React.</p>
-        <button className="hire-button">
-          <img src={hireIcon} alt="hire-me" />
+        <button 
+          className="hire-button"
+          onClick={() => {
+            document.getElementById('contact-page').  scrollIntoView({behavior: 'smooth'});
+          }}>
+          <img src={hireIcon} alt="hire-me" 
+            />
           <p>
             Hire me
           </p>
