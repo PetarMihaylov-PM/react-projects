@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Contact.css';
 import facebookIcon from '../../assets/facebook-icon.png';
 import twitterIcon from '../../assets/twitter.png';
@@ -7,11 +7,26 @@ import instagramIcon from '../../assets/instagram.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const form = useRef();
 
   function sendEmail(e) {
     e.preventDefault();
+
+    if(!name || !email || !message) {
+      setError(true);
+      setErrorMessage('Please fill all inputs');
+      return;
+    }
+
+    if(message.length > 500) {
+      setErrorMessage('Message too long. Max 500 characters.');
+      setError(true);
+    }
 
     emailjs.
       sendForm( 'service_sx7k3nh', 
@@ -24,6 +39,7 @@ const Contact = () => {
         console.log(error.text);
       });
   }
+  console.log(errorMessage);
 
   return (
     <section id="contact-page">
@@ -34,13 +50,13 @@ const Contact = () => {
         Please fill out the form below to discuss potential work opportunities.
       </span>
       <form className='contact-form' ref={form} onSubmit={sendEmail}>
-        <input type="text" className='name' placeholder='Your Name'name='from_name'/>
-        <input type="email" className="email" placeholder='Your Email' name='from_email'/>
+        <input type="text" className={`name ${!name && error ? 'error' : ''}`} placeholder='Your Name' name='from_name' onChange={(e) => setName(e.target.value)}/>
+        <input type="email" className={`email ${!email && error ? 'error' : ''}`} placeholder='Your Email' name='from_email' onChange={(e) => setEmail(e.target.value)}/>
         <textarea 
           name="message" 
           rows='5' 
           placeholder='Your Message'
-          className='message'></textarea>
+          className={`message ${!message && error ? 'error' : ''}`} onChange={(e) => setMessage(e.target.value)}></textarea>
           <button 
             type='submit'
             value='Send'
