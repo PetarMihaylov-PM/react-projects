@@ -20,6 +20,12 @@ const Contact = () => {
     if(!name || !email || !message) {
       setError(true);
       setErrorMessage('Please fill all inputs');
+
+
+      setTimeout(() => {
+        setErrorMessage('');
+      }, 3000);
+
       return;
     }
 
@@ -43,6 +49,14 @@ const Contact = () => {
 
   return (
     <section id="contact-page">
+      {errorMessage 
+        ? 
+        <div className='error-message'>
+        Please fill all required fields.
+        </div> 
+        : 
+        null
+      }
       <h2 className="contact-page-title">
         Contact me
       </h2>
