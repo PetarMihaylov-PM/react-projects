@@ -18,21 +18,21 @@ function About() {
           <img src={UIDesign} alt="uidesign-icon" />
           <div className="about-bar-text">
             <h2>UI/UX Design</h2>
-            <p>Some text here</p>
+            <p>I aim to deliver designs that align with business goals while keeping the user at the core.</p>
           </div>
         </div>
         <div className="about-bar">
           <img src={webDesign} alt="webdesign-icon" />
           <div className="about-bar-text">
             <h2>Web Design</h2>
-            <p>Some text here</p>
+            <p>I focus on building designs that are responsive, accessible, and optimized for a seamless experience across all devices.</p>
           </div>
         </div>
         <div className="about-bar">
           <img src={appDesign} alt="appdesign-icon" />
           <div className="about-bar-text">
             <h2>App Design</h2>
-            <p>Some text here</p>
+            <p>My goal is to build apps that look great and offer a smooth, user-friendly experience.</p>
           </div>
         </div>
       </div>
