@@ -1,9 +1,9 @@
 import React from 'react';
 import './Portfolio.css';
-import portfolio1 from '../../assets/portfolio-1.png';
-import portfolio2 from '../../assets/portfolio-2.png';
-import portfolio3 from '../../assets/portfolio-3.png';
-import portfolio4 from '../../assets/portfolio-4.png';
+import portfolio1 from '../../assets/cooking1.JPG';
+import portfolio2 from '../../assets/ai1.JPG';
+import portfolio3 from '../../assets/quiz.jpg';
+import portfolio4 from '../../assets/hangman.jpg';
 import portfolio5 from '../../assets/portfolio-5.png';
 import portfolio6 from '../../assets/portfolio-6.png';
 

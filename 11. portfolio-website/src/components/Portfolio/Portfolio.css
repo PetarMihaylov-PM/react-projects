@@ -29,12 +29,15 @@
   flex-wrap: wrap;
   width: 100vw;
   max-width: 65rem;
+  margin-top: 1rem;
 }
 
 .portfolio-img {
   object-fit: cover;
   height: 20rem;
+  width: 20rem;
   margin: 0.5rem;
+  border-radius: 0.75rem;
 }
 
 .portfolio-btn {
