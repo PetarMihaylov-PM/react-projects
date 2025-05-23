@@ -33,9 +33,9 @@
 }
 
 .portfolio-img {
-  object-fit: cover;
-  height: 20rem;
-  width: 20rem;
+  object-fit:cover;
+  height: 24rem;
+  width: 23rem;
   margin: 0.5rem;
   border-radius: 0.75rem;
 }

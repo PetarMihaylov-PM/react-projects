@@ -19,7 +19,7 @@ const Navbar = () => {
           to='intro'
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-70}
           duration={500}
           >Home</Link>
         <Link 
@@ -28,7 +28,7 @@ const Navbar = () => {
           to='about'
           spy={true}
           smooth={true}
-          offset={-50}
+          offset={-70}
           duration={500}
           >About</Link>
         <Link 
