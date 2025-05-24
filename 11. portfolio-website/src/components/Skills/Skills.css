@@ -1,0 +1,41 @@
+.skills {
+  margin: 0 auto;
+  width: 100vw;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.skills-title {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.skills-description {
+  font-weight: 300;
+  font-size: 1rem;
+  max-width: 45rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 65rem;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.skills-container > img {
+  width: 5rem;
+  height: 5rem;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.433);
+  border-radius: 1rem;
+  padding: 0.5rem;
+
+}
