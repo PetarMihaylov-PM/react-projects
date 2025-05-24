@@ -24,7 +24,8 @@ function Portfolio() {
         <img src={portfolio5} alt="" className="portfolio-img" />
         <img src={portfolio6} alt="" className="portfolio-img" />
       </div>
-      <a href="https://github.com/PetarMihaylov-PM/react-projects"
+      <a 
+        href="https://github.com/PetarMihaylov-PM/react-projects"
         target='_blank'>
         <button className='portfolio-btn'>See more</button>
       </a>
