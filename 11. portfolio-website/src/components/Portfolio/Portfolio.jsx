@@ -18,13 +18,16 @@ function Portfolio() {
       </span>
       <div className="portfolio-imgs-container">
         <img src={portfolio1} alt="" className="portfolio-img" />
-        <img src={portfolio2} alt="" className="portfolio-img" />
-        <img src={portfolio3} alt="" className="portfolio-img" />
         <img src={portfolio4} alt="" className="portfolio-img" />
+        <img src={portfolio3} alt="" className="portfolio-img" />
+        <img src={portfolio2} alt="" className="portfolio-img" />
         <img src={portfolio5} alt="" className="portfolio-img" />
         <img src={portfolio6} alt="" className="portfolio-img" />
       </div>
-      <button className='portfolio-btn'>See more</button>
+      <a href="https://github.com/PetarMihaylov-PM/react-projects"
+        target='_blank'>
+        <button className='portfolio-btn'>See more</button>
+      </a>
     </section>
   )
 }

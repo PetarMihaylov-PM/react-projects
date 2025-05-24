@@ -38,6 +38,12 @@
   width: 23rem;
   margin: 0.5rem;
   border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.portfolio-img:hover {
+  scale: 1.05;
 }
 
 .portfolio-btn {
@@ -47,6 +53,13 @@
   border: none;
   border-radius: 2rem;
   font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease; 
+}
+
+.portfolio-btn:hover {
+  background-color: yellow;
+  box-shadow: 0 0 15px yellow;
 }
 
 @media screen and (max-width: 585px) {
