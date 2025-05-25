@@ -17,33 +17,6 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 656px) {
-  .person-img {
-    
-  }
-  .intro-content {
-    font-size: 10vw;
-  }
-}
-
-@media screen and (max-width: 560px) {
-  .person-img {
-  
-  }
-  .intro-content {
-    font-size: 15vw;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .person-img {
-    
-  }
-  .intro-content {
-    font-size: 15vw;
-  }
-}
-
 .intro-content {
   height: 100vh;
   width: 100vw;
@@ -97,4 +70,56 @@
 
 .link-hire-me {
   pointer-events: none;
+}
+
+@media screen and (max-width: 1114px) {
+  .intro-content > p{
+    width: 55vw;;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .person-img {
+    right: -1vw;
+  }
+}
+
+
+@media screen and (max-width: 810px) {
+  .person-img {
+    right: -5vw;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .person-img {
+    right: -15vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .person-img {
+    top: 3rem;
+    right: -20vw;
+    height: 90vh;
+  }
+  .intro-content > p {
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .person-img {
+    right: -20vw;
+    height: 85vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .intro-content > p {
+    color: yellow;
+    font-weight: 700;
+  }
 }
