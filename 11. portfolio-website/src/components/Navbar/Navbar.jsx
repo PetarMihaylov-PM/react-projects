@@ -43,12 +43,12 @@ const Navbar = () => {
         <Link 
           className="navbar-menu-list-item" 
           activeClass='active'
-          to='contact-page'
+          to='skills'
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
-          >Clients</Link>
+          >Skills</Link>
       </div>
       <button 
         className="navbar-menu-btn"
@@ -100,13 +100,13 @@ const Navbar = () => {
         <Link 
           className="list-item" 
           activeClass='active'
-          to='contact-page'
+          to='skills'
           spy={true}
           smooth={true}
           offset={-50}
           duration={500}
           onClick={() => setShowMenu(false)}
-          >Clients</Link>
+          >Skills</Link>
            <Link 
           className="list-item" 
           activeClass='active'

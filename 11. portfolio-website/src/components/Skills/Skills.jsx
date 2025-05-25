@@ -9,7 +9,7 @@ import nodeIcon from '../../assets/node.png';
 
 const Skills = () => {
   return (
-    <section className='skills'>
+    <section id='skills'>
       <h2 className="skills-title">
         Skills
       </h2>

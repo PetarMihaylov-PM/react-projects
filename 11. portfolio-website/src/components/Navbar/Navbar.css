@@ -20,6 +20,7 @@
 }
 
 .navbar-menu-list-item {
+  letter-spacing: 0.1rem;
   color: white;
   margin: 1rem;
   cursor: pointer;

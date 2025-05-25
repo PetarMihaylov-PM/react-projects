@@ -9,17 +9,17 @@
 
 .person-img {
   position: absolute;
-  top: 1rem;
-  right: -10rem;
+  top: 0;
+  right: 5rem;
   z-index: -1;
   object-fit:cover;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 656px) {
   .person-img {
-    top: 10rem;
-    right: -18rem;
+    
   }
   .intro-content {
     font-size: 10vw;
@@ -28,8 +28,7 @@
 
 @media screen and (max-width: 560px) {
   .person-img {
-    top: 20rem;
-    right: -25rem;
+  
   }
   .intro-content {
     font-size: 15vw;
@@ -38,8 +37,7 @@
 
 @media screen and (max-width: 390px) {
   .person-img {
-    top: 30rem;
-    right: -25rem;
+    
   }
   .intro-content {
     font-size: 15vw;
