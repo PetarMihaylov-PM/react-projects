@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import logo from '../../assets/logo.png';
 import logo2 from '../../assets/logo2.png';
 import contactImg from '../../assets/contact.png'
 import { Link } from 'react-scroll';
@@ -51,17 +50,19 @@ const Navbar = () => {
           duration={500}
           >Skills</Link>
       </div>
-      <button 
+      <Link
+        to='contact-page'
+        smooth={true}
+        offset={-50}
+        duration={500}>
+        <button 
         className="navbar-menu-btn"
-        onClick={() => {
-          document.getElementById('contact-page').scrollIntoView({
-            block: 'start',
-            behavior: 'smooth'
-          });
-        }}>
+        >
         <img src={contactImg} alt="contact-icon" className="dektop-icon" />
         Contact me
       </button>
+      </Link>
+      
 
       <img 
         src={menu} 

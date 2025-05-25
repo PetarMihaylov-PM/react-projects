@@ -15,6 +15,7 @@
   object-fit:cover;
   height: 100vh;
   overflow: hidden;
+  opacity: 0.8;
 }
 
 .intro-content {
@@ -75,7 +76,6 @@
 @media screen and (max-width: 1114px) {
   .intro-content > p{
     width: 55vw;
-    color: rgb(191, 191, 0);
     letter-spacing: 0.1rem;
     font-weight: 500;
   }
@@ -83,31 +83,30 @@
 
 @media screen and (max-width: 900px) {
   .person-img {
-    right: -1vw;
+    right: 5vw;
   }
 }
 
 
 @media screen and (max-width: 810px) {
   .person-img {
-    right: -5vw;
+    right: -2vw;
   }
 }
 
 @media screen and (max-width: 670px) {
   .person-img {
-    right: -15vw;
+    right: -10vw;
   }
 }
 
 @media screen and (max-width: 480px) {
   .person-img {
     top: 3rem;
-    right: -20vw;
+    right: -15vw;
     height: 90vh;
   }
   .intro-content > p {
-    font-weight: 400;
     letter-spacing: 0.1rem;
     font-size: 1rem;
   }
@@ -123,7 +122,5 @@
 @media screen and (max-width: 400px) {
   .intro-content > p {
     width: 90vw;
-    color: rgb(191, 191, 0);
-    font-weight: 500;
   }
 }

@@ -17,6 +17,12 @@
   object-fit: cover;
   height: 5rem;
   width: 5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.logo:hover{
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.982);
 }
 
 .navbar-menu-list-item {
