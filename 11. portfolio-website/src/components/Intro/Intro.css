@@ -54,7 +54,7 @@
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  transition: all 0.15s ease
+  transition: all 0.15s ease;
 }
 
 .hire-button:hover {
@@ -74,7 +74,10 @@
 
 @media screen and (max-width: 1114px) {
   .intro-content > p{
-    width: 55vw;;
+    width: 55vw;
+    color: rgb(191, 191, 0);
+    letter-spacing: 0.1rem;
+    font-weight: 500;
   }
 }
 
@@ -119,7 +122,8 @@
 
 @media screen and (max-width: 400px) {
   .intro-content > p {
-    color: yellow;
-    font-weight: 700;
+    width: 90vw;
+    color: rgb(191, 191, 0);
+    font-weight: 500;
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.png';
+import logo2 from '../../assets/logo2.png';
 import contactImg from '../../assets/contact.png'
 import { Link } from 'react-scroll';
 import menu from '../../assets/menu.png'
@@ -11,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav-bar">
-      <img src={logo} alt="logo" className='logo'/>
+      <img src={logo2} alt="logo" className='logo'/>
       <div className="navbar-menu">
         <Link 
           className="navbar-menu-list-item" 
@@ -53,7 +54,10 @@ const Navbar = () => {
       <button 
         className="navbar-menu-btn"
         onClick={() => {
-          document.getElementById('contact-page').scrollIntoView({behavior: 'smooth'});
+          document.getElementById('contact-page').scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+          });
         }}>
         <img src={contactImg} alt="contact-icon" className="dektop-icon" />
         Contact me
