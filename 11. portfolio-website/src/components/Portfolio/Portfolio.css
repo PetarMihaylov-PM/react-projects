@@ -1,5 +1,6 @@
 .portfolio {
   margin: 0 auto;
+  margin-bottom: 2rem;
   min-height: calc(100vh - 4rem);
   width: 100vw;
   max-width: 60rem;

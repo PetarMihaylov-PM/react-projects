@@ -1,5 +1,6 @@
 .skills {
   margin: 0 auto;
+  margin-bottom: 2rem;
   width: 100vw;
   max-width: 60rem;
   display: flex;
@@ -32,10 +33,17 @@
 }
 
 .skills-container > img {
+  margin: 2rem 0.5rem;
   width: 5rem;
   height: 5rem;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.433);
   border-radius: 1rem;
   padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
 
+.skills-container > img:hover {
+  scale: 1.1;
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.714);
 }
