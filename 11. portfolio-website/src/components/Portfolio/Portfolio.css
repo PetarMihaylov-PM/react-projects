@@ -43,6 +43,15 @@
   transition: all 0.15s ease;
 }
 
+.wide-img {
+  object-fit:inherit;
+  width: 47rem;
+}
+
+.portfolio-img2 {
+  object-fit:inherit;
+}
+
 .portfolio-img:hover {
   scale: 1.05;
 }
@@ -63,8 +72,19 @@
   box-shadow: 0 0 15px yellow;
 }
 
+@media screen and (max-width: 767px) {
+  .wide-img {
+    width: 23rem;
+  }
+}
+
 @media screen and (max-width: 585px) {
   .portfolio-img{
     height: 50vw;
+    width: 23rem;
+  }
+  .portfolio-img2{
+    object-fit:cover;
   }
 }
+

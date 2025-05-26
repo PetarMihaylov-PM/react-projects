@@ -17,12 +17,12 @@ function Portfolio() {
         A showcase of my work as a web designer and developer, featuring projects that highlight my skills in modern UI design, responsive layouts, and clean, functional code.
       </span>
       <div className="portfolio-imgs-container">
-        <img src={portfolio1} alt="" className="portfolio-img" />
-        <img src={portfolio4} alt="" className="portfolio-img" />
+        <img src={portfolio1} alt="" className="portfolio-img wide-img" />
+        <img src={portfolio4} alt="" className="portfolio-img portfolio-img2" />
         <img src={portfolio3} alt="" className="portfolio-img" />
-        <img src={portfolio2} alt="" className="portfolio-img" />
+        <img src={portfolio2} alt="" className="portfolio-img wide-img" />
         <img src={portfolio5} alt="" className="portfolio-img" />
-        <img src={portfolio6} alt="" className="portfolio-img" />
+        <img src={portfolio6} alt="" className="portfolio-img portfolio-img2" />
       </div>
       <a 
         href="https://github.com/PetarMihaylov-PM/react-projects"
