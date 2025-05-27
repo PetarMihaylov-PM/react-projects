@@ -45,6 +45,7 @@
 
 .wide-img {
   object-fit:inherit;
+  height: 23rem;
   width: 47rem;
 }
 
@@ -75,16 +76,21 @@
 @media screen and (max-width: 767px) {
   .wide-img {
     width: 23rem;
+    height: 12rem;
   }
 }
 
 @media screen and (max-width: 585px) {
   .portfolio-img{
     height: 50vw;
-    width: 23rem;
+    width: 21rem;
   }
   .portfolio-img2{
     object-fit:cover;
+  }
+  .wide-img {
+    width: 21rem;
+    height: 12rem;
   }
 }
 
