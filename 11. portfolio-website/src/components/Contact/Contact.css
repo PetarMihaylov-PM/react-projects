@@ -68,15 +68,30 @@
 
 .link {
   object-fit: cover;
-  height: 3rem;
-  width: 3rem;
-  margin: 0 0.75rem;
+  height: 3.1rem;
+  width: 3.1rem;
+  margin: 1rem 2rem;
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .link:hover {
   scale: 1.1;
+}
+
+.github-icon{
+  height: 2.7rem;
+  width: 2.7rem;
+}
+
+.linkedin-icon {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.phone-icon {
+  height: 2.7rem;
+  width: 2.7rem;
 }
 
 .error {

@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import './Contact.css';
 import facebookIcon from '../../assets/facebook-icon.png';
-import twitterIcon from '../../assets/twitter.png';
-import youtubeIcon from '../../assets/youtube.png';
-import instagramIcon from '../../assets/instagram.png';
+import githubIcon from '../../assets/github.png';
+import linkedinIcon from '../../assets/linkedin.png';
+import phoneIcon from '../../assets/phone.png';
+
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -79,10 +80,18 @@ const Contact = () => {
             Submit
           </button>
           <div className="links">
-            <img src={facebookIcon} alt="facebookIcon" className='link'/>
-            <img src={twitterIcon} alt="twitterIcon" className='link'/>
-            <img src={youtubeIcon} alt="youtubeIcon" className='link'/>
-            <img src={instagramIcon} alt="instagramIcon" className='link'/>
+            <a href="https://www.facebook.com/Petar.Mihaylovv" target='_blank'>
+              <img src={facebookIcon} alt="facebookIcon" className='link'/>
+            </a>
+            <a href="https://github.com/PetarMihaylov-PM" target='_blank'>
+              <img src={githubIcon} alt="githubIcon" className='link github-icon'/>
+            </a>
+            <a href="https://linkedin.com/in/petar-mihaylovv" target='_blank'>
+              <img src={linkedinIcon} alt="linkedinIcon" className='link linkedin-icon'/>
+            </a>
+            <a href="https://linkedin.com/in/petar-mihaylovv" target='_blank'>
+              <img src={phoneIcon} alt="phoneIcon" className='link phone-icon'/>
+            </a>
           </div>
       </form>
     </section>
