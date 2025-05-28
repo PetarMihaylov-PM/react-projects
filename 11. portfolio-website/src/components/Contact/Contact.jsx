@@ -20,7 +20,7 @@ const Contact = () => {
     setIsPhoneClicked(true);
     setTimeout(()=> {
       setIsPhoneClicked(false);
-    }, 5000)
+    }, 10000)
   }
   
   function sendEmail(e) {
@@ -112,12 +112,18 @@ const Contact = () => {
               src={phoneIcon} 
               alt="phoneIcon" 
               className='link phone-icon' 
-              onClick={()=> isPhoneClicked(true)}/>
-            <div className='phone-num'>
-              +359 899831374
-            </div>
+              onClick={()=> phoneClick()}/>
+            
           </div>
       </form>
+      {isPhoneClicked 
+        ? 
+        <div className='phone-num'>
+          +359 899831374
+        </div>
+        :
+        null
+      }
     </section>
   )
 }

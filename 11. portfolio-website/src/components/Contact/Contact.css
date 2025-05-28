@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+  position: relative;
 }
 
 .contact-page-title{
@@ -64,7 +64,6 @@
 .links {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .link {
@@ -74,6 +73,7 @@
   margin: 1rem 2rem;
   cursor: pointer;
   transition: all 0.15s ease;
+  user-select: none;
 }
 
 .link:hover {
@@ -96,11 +96,14 @@
 }
 
 .phone-num {
+  display: flex;
+  flex-wrap: nowrap;
   position: absolute;
-  right: 7.5rem;
-  bottom: -2.5rem;
+  left: 50%;
+  bottom: 2rem;
+  transform: translateX(-50%);
   background-color: rgba(56, 56, 56, 0.699);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.719);
+  box-shadow: 0 0 1rem rgba(255, 255, 255, 0.719);
   padding: 0.5rem;
   border-radius: 0.75rem;
   letter-spacing: 0.2rem;
@@ -134,4 +137,23 @@
   position: fixed;
   top: 6rem;
   z-index: 999;
+}
+
+@media screen and (max-width: 484px) {
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  }    
+}
+
+@media screen and (max-width: 376px) {
+    .phone-num {
+      font-size: 0.8rem;
+    }   
+}
+
+@media screen and (max-width: 325px) {
+    .phone-num {
+      font-size: 0.6rem;
+    }   
 }
