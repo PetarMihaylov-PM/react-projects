@@ -16,6 +16,13 @@ const Contact = () => {
   const [isPhoneClicked, setIsPhoneClicked] = useState(false);
   const form = useRef();
 
+  function phoneClick() {
+    setIsPhoneClicked(true);
+    setTimeout(()=> {
+      setIsPhoneClicked(false);
+    }, 5000)
+  }
+  
   function sendEmail(e) {
     e.preventDefault();
 
@@ -32,6 +39,8 @@ const Contact = () => {
 
       return;
     }
+
+
 
     emailjs.
       sendForm( 'service_sx7k3nh', 
@@ -51,7 +60,7 @@ const Contact = () => {
         setSubmitMessage('');
       }, 3000);
   }
-  console.log(submitMessage);
+  
 
   return (
     <section id="contact-page">
@@ -99,9 +108,14 @@ const Contact = () => {
             <a href="https://linkedin.com/in/petar-mihaylovv" target='_blank'>
               <img src={linkedinIcon} alt="linkedinIcon" className='link linkedin-icon'/>
             </a>
-            <a href="https://linkedin.com/in/petar-mihaylovv" target='_blank'>
-              <img src={phoneIcon} alt="phoneIcon" className='link phone-icon'/>
-            </a>
+            <img 
+              src={phoneIcon} 
+              alt="phoneIcon" 
+              className='link phone-icon' 
+              onClick={()=> isPhoneClicked(true)}/>
+            <div className='phone-num'>
+              +359 899831374
+            </div>
           </div>
       </form>
     </section>

@@ -64,6 +64,7 @@
 .links {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .link {
@@ -92,6 +93,17 @@
 .phone-icon {
   height: 2.7rem;
   width: 2.7rem;
+}
+
+.phone-num {
+  position: absolute;
+  right: 7.5rem;
+  bottom: -2.5rem;
+  background-color: rgba(56, 56, 56, 0.699);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.719);
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  letter-spacing: 0.2rem;
 }
 
 .error {
