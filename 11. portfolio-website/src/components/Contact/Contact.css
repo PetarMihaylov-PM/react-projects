@@ -102,8 +102,21 @@
   min-width: 30vw;
   max-width: 60rem;
   background-color: rgb(195, 6, 6);
-  box-shadow: 0 0 20px rgba(209, 3, 3, 0.847);
-  padding: 10px;
+  box-shadow: 0 0 1rem rgba(209, 3, 3, 0.847);
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  position: fixed;
+  top: 6rem;
+  z-index: 999;
+}
+
+.successful-message {
+  min-width: 30vw;
+  max-width: 60rem;
+  background-color: rgb(8, 139, 2);
+  box-shadow: 0 0 1rem rgba(92, 142, 88, 0.847);
+  padding: 1rem;
   border: none;
   border-radius: 0.5rem;
   position: fixed;

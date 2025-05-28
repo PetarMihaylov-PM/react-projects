@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { use, useRef, useState } from 'react';
 import './Contact.css';
 import facebookIcon from '../../assets/facebook-icon.png';
 import githubIcon from '../../assets/github.png';
@@ -12,27 +12,25 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState('');
+  const [isPhoneClicked, setIsPhoneClicked] = useState(false);
   const form = useRef();
 
   function sendEmail(e) {
     e.preventDefault();
 
-    if(!name || !email || !message) {
+    if(!name || !email || !message || message.length > 500) {
       setError(true);
-      setErrorMessage('Please fill all inputs');
-
+      !message ? 
+        setSubmitMessage('Please fill all inputs') 
+        : 
+        setSubmitMessage('Message too long. Max 500 characters.');
 
       setTimeout(() => {
-        setErrorMessage('');
+        setSubmitMessage('');
       }, 3000);
 
       return;
-    }
-
-    if(message.length > 500) {
-      setErrorMessage('Message too long. Max 500 characters.');
-      setError(true);
     }
 
     emailjs.
@@ -45,16 +43,28 @@ const Contact = () => {
       }, (error) => {
         console.log(error.text);
       });
+    
+    setError(false);
+    setSubmitMessage('Your message has been sent successfully!');
+
+    setTimeout(() => {
+        setSubmitMessage('');
+      }, 3000);
   }
-  console.log(errorMessage);
+  console.log(submitMessage);
 
   return (
     <section id="contact-page">
-      {errorMessage 
+      {submitMessage
         ? 
-        <div className='error-message'>
-        Please fill all required fields.
-        </div> 
+          error ? 
+          <div className='error-message'>
+          {submitMessage}
+          </div> 
+          :
+          <div className='successful-message'>
+          {submitMessage}
+          </div>
         : 
         null
       }
