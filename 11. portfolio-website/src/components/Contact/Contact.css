@@ -157,3 +157,9 @@
       font-size: 0.6rem;
     }   
 }
+
+@media screen and (max-height: 888px){
+    .phone-num {
+      bottom: 0
+    }   
+}
