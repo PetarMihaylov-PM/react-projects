@@ -15,7 +15,9 @@
   box-shadow: 0 0 10px 4px rgba(255, 255, 0, 0.8);
   width: 5px;
   height: 5px;
+  opacity: 0;
   animation: move linear infinite, blink 2s infinite ease-in-out;
+ 
 }
 
 @keyframes move {
@@ -38,7 +40,7 @@
 
 @keyframes blink {
   0%, 100% {
-    opacity: 0.1;
+    opacity: 0.02;
   }
   50% {
     opacity: 1;

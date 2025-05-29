@@ -13,9 +13,8 @@ const Fireflies = () => {
           top: `${getRandom(0, 100)}vh`,
           left: `${getRandom(0, 100)}vw`,
           animationDuration: `${getRandom(10, 30)}s`,
-          animationDelay: `${getRandom(0, 10)}s`,
+          animationDelay: `${getRandom(0, 1)}s`,
         };
-
         return <div className="firefly" style={style} key={i} />;
       })}
     </div>
