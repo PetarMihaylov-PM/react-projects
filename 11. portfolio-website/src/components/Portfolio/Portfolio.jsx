@@ -14,7 +14,7 @@ function Portfolio() {
         My Portfolio
       </h2>
       <span className='portfolio-description'>
-        A showcase of my work as a web designer and developer, featuring projects that highlight my skills in modern UI design, responsive layouts, and clean, functional code.
+        A collection of my work as a front-end developer, featuring projects that demonstrate my skills in responsive design, modern UI, and clean, efficient code.
       </span>
       <div className="portfolio-imgs-container">
         <img src={portfolio1} alt="" className="portfolio-img wide-img" />

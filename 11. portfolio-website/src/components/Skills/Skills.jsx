@@ -6,6 +6,8 @@ import cssIcon from '../../assets/css.png';
 import htmlIcon from '../../assets/html.png';
 import reactIcon from '../../assets/react.png';
 import nodeIcon from '../../assets/node.png';
+import bootstrapIcon from '../../assets/bootstrap.png';
+import viteIcon from '../../assets/vite.png';
 
 const Skills = () => {
   return (
@@ -14,7 +16,7 @@ const Skills = () => {
         Skills
       </h2>
       <span className='skills-description'>
-        I'm a front-end developer with a strong foundation in HTML, CSS, JavaScript, React, and Git. I'm passionate about building clean, responsive user interfaces and continuously learning to grow my skills and stay up to date with modern web development practices.
+        I have a strong foundation in HTML, CSS, JavaScript, React, Git, Bootstrap, and Vite. I’m continuously learning and expanding my skill set to stay up to date with modern front-end development practices.
       </span>
       <div className="skills-container">
         <img src={htmlIcon} alt="html-icon" />
@@ -23,6 +25,8 @@ const Skills = () => {
         <img src={reactIcon} alt="react-icon" />
         <img src={gitIcon} alt="git-icon" />
         <img src={nodeIcon} alt="node-icon" />
+        <img src={bootstrapIcon} alt="bootstrap-icon" />
+        <img src={viteIcon} alt="vite-icon" />
       </div>
     </section>
   )
