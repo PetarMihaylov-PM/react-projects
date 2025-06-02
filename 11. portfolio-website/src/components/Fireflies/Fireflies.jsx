@@ -4,7 +4,8 @@ import './Fireflies.css';
 const getRandom = (min, max) => Math.random() * (max - min) + min;
 
 const Fireflies = () => {
-  const fireflyCount = 50;
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  const fireflyCount = isSafari ? 20 : 40;
 
   return (
     <div className="fireflies">
