@@ -66,7 +66,7 @@
   object-fit: cover;
   height: 1rem;
   width: 1rem;
-  margin: 1rem;
+  margin: 0.9rem 0.5rem;
 }
 
 .active {
@@ -96,6 +96,13 @@
   cursor: pointer;
 }
 
+.list-item {
+  color: white;
+  padding: 0.5rem 3rem;
+  margin: 0.25rem;
+  background: rgb(30,30,30);
+}
+
 @media screen and (max-width: 720px) {
   .mobile-menu-img{
     display: flex;
@@ -108,9 +115,16 @@
   }
 }
 
-.list-item {
-  color: white;
-  padding: 0.5rem 3rem;
-  margin: 0.25rem;
-  background: rgb(30,30,30);
+@media (max-height: 300px){
+  .mobile-menu{
+    flex-direction: row;
+    right: 0;
+    
+  }
+
+  .list-item{
+    padding: 0.3rem 1rem;
+    margin: 0.25rem;
+  }
 }
+

@@ -45,14 +45,13 @@
 }
 
 .submit-button {
-  background: white;
-  color: black;
+  width: 10rem;
+  margin: 3rem 0;
+  padding: 0.5rem 2.5rem;
+  background-color: white;
   border: none;
-  border-radius: 1rem;
-  padding: 0.75rem 3.5rem;
-  margin: 2rem;
+  border-radius: 2rem;
   font-size: 1rem;
-  font-weight: 400;
   cursor: pointer;
   transition: all 0.15s ease;
 }
