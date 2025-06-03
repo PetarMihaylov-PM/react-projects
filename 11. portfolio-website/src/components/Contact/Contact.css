@@ -45,10 +45,17 @@
 }
 
 .submit-button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   width: 10rem;
   margin: 3rem 0;
   padding: 0.5rem 2.5rem;
   background-color: white;
+  color: black;
+  /*
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  */
   border: none;
   border-radius: 2rem;
   font-size: 1rem;

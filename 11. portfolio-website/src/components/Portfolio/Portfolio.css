@@ -62,6 +62,7 @@
   margin: 3rem 0;
   padding: 0.5rem 2.5rem;
   background-color: white;
+  color: black !important;
   border: none;
   border-radius: 2rem;
   font-size: 1rem;
@@ -72,6 +73,10 @@
 .portfolio-btn:hover {
   background-color: yellow;
   box-shadow: 0 0 15px yellow;
+}
+
+.portolio-btn-link{
+  color: black;
 }
 
 @media screen and (max-width: 767px) {
