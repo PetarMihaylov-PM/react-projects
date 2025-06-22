@@ -93,7 +93,7 @@ This is a responsive and visually appealing cooking website built using React. I
 
 This project is a lightweight and interactive chatbot interface built using React and powered by the Google Gemini (Generative Language) API. It allows users to enter natural language prompts and receive intelligent, AI-generated responses in real time.
 
-The application uses React with Vite for fast development and optimized performance. The Gemini API integration is handled using fetch with async/await syntax to send POST requests and receive streamed responses. Environment variables are securely managed using Vite's import.meta.env, keeping the API key hidden and configurable through a .env file.
+The application uses React with Vite for fast development and optimized performance. The Gemini API integration is handled using fetch with async/await syntax to send requests and receive streamed responses.
 
 <img src="https://github.com/user-attachments/assets/71fbf473-842b-418b-a31a-6a2adb2087547" alt="cooking1" width="300"/>
 
